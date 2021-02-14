@@ -1,5 +1,9 @@
 /* Reset Style */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,4 +13,83 @@ body {
 
 body {
     font-family: 'Karla', sans-serif;
+    font-size: 18px;
+}
+
+/* Grid */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row.vertical-center {
+    align-items: center;
+}
+
+/* Header */
+
+header {
+    padding: 10px 0;
+}
+
+header .logo {
+    margin-right: 50px;
+}
+
+header .logo img {
+    max-height: 70px;
+    width: auto;
+}
+
+header .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .main-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header .main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+header .main-nav ul li a {
+    display: inline-block;
+    color: #f55500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .profile-link {
+    margin-left: auto;
+}
+
+header .profile-link .profile-link__trigger {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    cursor: 0;
+}
+
+header .profile-link .profile-link__trigger .image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+header .profile-link .profile-link__trigger .image img {
+    width: 100%;
+    height: auto;
 }
