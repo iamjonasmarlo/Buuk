@@ -1,0 +1,12 @@
+/* Reset Style */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global */
+
+body {
+    font-family: 'Karla', sans-serif;
+}
