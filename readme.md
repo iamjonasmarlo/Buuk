@@ -69,4 +69,4 @@
 
 ## Aufgaben & Bugs
 
-Bisher nichts vorhanden.
+- Automatisierte Ausgabe der Standorte

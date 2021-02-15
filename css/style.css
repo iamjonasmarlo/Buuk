@@ -9,11 +9,29 @@ body {
     padding: 0;
 }
 
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 /* Global */
 
 body {
     font-family: 'Karla', sans-serif;
     font-size: 18px;
+}
+
+/* Font */
+
+h1 {
+    color: #f55500;
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
 }
 
 /* Header */
@@ -32,6 +50,7 @@ header .header-top .header-top__inner {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 header .header-top .header-top__inner .contact-list {
@@ -83,6 +102,7 @@ header .header-bottom .header-bottom__inner {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    padding: 0 15px;
 }
 
 header .header-bottom .header-bottom__inner .logo {
@@ -217,4 +237,190 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul li:hover a {
     background: #dc4c00;
+}
+
+/* Content */
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 80px 0;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Main */
+
+#content main {
+    flex: 0 0 75%;
+    width: 75%;
+    padding: 0 15px;
+}
+
+/* Aside */
+
+#content aside {
+    flex: 0 0 25%;
+    width: 25%;
+    padding: 0 15px;
+}
+
+#content aside .aside-box {
+    margin-bottom: 30px;
+}
+
+#content aside .aside-box .title {
+    background: #dc4c00;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#content aside .aside-box .content {
+    background: #f55500;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+#content aside .aside-box .content .single-news {
+    border-bottom: dashed 1px #fff;
+    margin: 0 -20px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#content aside .aside-box .content .single-news:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+#content aside .aside-box .content .single-news .title {
+    background: transparent;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Headline */
+
+.headline {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Locations */
+
+.locations-overview {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -15px;
+}
+
+.locations-overview .location {
+    display: block;
+    flex: 0 0 33.33333%;
+    width: 33.33333%;
+    padding: 0 15px;
+}
+
+.locations-overview .location .location__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.locations-overview .location .location__info {
+    background: #f55500;
+    padding: 20px;
+    color: #fff;
+}
+
+.locations-overview .location .location__info .title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.locations-overview .location .location__info address {
+    font-style: normal;
+}
+
+.locations-overview .location .location__link {
+    background: #dc4c00;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.locations-overview .location .location__link i {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.locations-overview .location .location__link:hover i {
+    margin-left: 10px;
+}
+
+/* Footer */
+
+footer .footer-top {
+    background: #f55500;
+    padding: 20px 0;
+}
+
+footer .footer-top .footer-top__inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer .footer-top .footer-top__inner .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-top .footer-top__inner .footer-nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+footer .footer-top .footer-top__inner .footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+footer .footer-top .footer-top__inner .footer-nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .footer-bottom {
+    padding: 15px 0;
+}
+
+footer .footer-bottom .footer-bottom__inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer .footer-bottom .footer-bottom__inner .credit i {
+    color: #f03434;
+    position: relative;
+    top: 2px;
 }
