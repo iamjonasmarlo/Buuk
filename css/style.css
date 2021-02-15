@@ -16,72 +16,150 @@ body {
     font-size: 18px;
 }
 
-/* Grid */
+/* Header */
 
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+header .header-top {
+    background:#dc4c00;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
-.row {
+header .header-top .header-top__inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.row.vertical-center {
+header .header-top .header-top__inner .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .header-top .header-top__inner .contact-list li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+header .header-top .header-top__inner .contact-list li:last-child {
+    margin-right: 0;
+}
+
+header .header-top .header-top__inner .contact-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .header-top .header-top__inner .contact-list li a i {
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+}
+
+header .header-top .header-top__inner .fh-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .header-top .header-top__inner .fh-link i {
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+}
+
+header .header-bottom {
+    background: #f55500;
+    padding: 20px 0;
+}
+
+header .header-bottom .header-bottom__inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
     align-items: center;
 }
 
-/* Header */
-
-header {
-    padding: 10px 0;
+header .header-bottom .header-bottom__inner .logo {
+    margin-right: 100px;
 }
 
-header .logo {
-    margin-right: 50px;
-}
-
-header .logo img {
-    max-height: 70px;
+header .header-bottom .header-bottom__inner .logo img {
+    max-height: 45px;
     width: auto;
+    display: block;
 }
 
-header .main-nav ul {
+header .header-bottom .header-bottom__inner .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header .main-nav ul li {
+header .header-bottom .header-bottom__inner .main-nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
-header .main-nav ul li:last-child {
+header .header-bottom .header-bottom__inner .main-nav ul li:last-child {
     margin-right: 0;
 }
 
-header .main-nav ul li a {
+header .header-bottom .header-bottom__inner .main-nav ul li a {
     display: inline-block;
-    color: #f55500;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
-header .profile-link {
-    margin-left: auto;
+header .header-bottom .header-bottom__inner .main-nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    width: 0;
+    height: 1px;
+    display: block;
+    margin-top: 2px;
+    transition: all 0.3s ease;
 }
 
-header .profile-link .profile-link__trigger {
+header .header-bottom .header-bottom__inner .main-nav ul li.active a:after,
+header .header-bottom .header-bottom__inner .main-nav ul li:hover a:after {
+    width: 100%;
+}
+
+header .header-bottom .header-bottom__inner .profile-link {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    cursor: 0;
+    padding-left: 20px;
+    margin-left: auto;
+    position: relative;
 }
 
-header .profile-link .profile-link__trigger .image {
+header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger i {
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger .image {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -89,7 +167,54 @@ header .profile-link .profile-link__trigger .image {
     margin-right: 10px;
 }
 
-header .profile-link .profile-link__trigger .image img {
+header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger .image img {
     width: 100%;
     height: auto;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f55500;
+    white-space: nowrap;
+    margin-top: 28px;
+    display: none;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu.visible {
+    display: block;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #f55500;
+    }
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul li:hover a {
+    background: #dc4c00;
 }
