@@ -9,7 +9,7 @@
     - Buchdetails
 - Autoren
     - Autordetails
-- Standorte
+- ~~Standorte~~
     - Emil-Figge-Straße 44 (Detail)
     - Sonnenstraße (Detail)
     - Max-Ophüls-Platz (Detail)
