@@ -471,6 +471,12 @@
         #content main .information form .form__full {
             flex: 0 0 100%;
         }
+        
+        #content main .information form .form__full hr {
+            color: rgba(172, 171, 171, 0.445);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
         /* Aside */
         
         #content aside {

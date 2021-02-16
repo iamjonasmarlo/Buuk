@@ -53,7 +53,7 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Reservierungsdetails</h1>
+            <h1>Buch reservieren</h1>
         </section>
         <main>
 
@@ -61,57 +61,49 @@
             <section class="information ">
 
                 <form>
-                    <div class="form__image">
-                        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
-                    </div>
 
-                    <div class="form__half">
-                        <label for="buch ">Buch:
-                        <input id="buch" name="buch" disabled value="Buchname" type="text">
-                    </label>
-                        <label for="autor">Autor:
-                        <input id="autor" name="autor" disabled value="Autorname" type="text">
-                    </label>
-                        <label for="ejahr">Erscheinungsjahr:
-                        <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
-                    </label>
-
-
-                    </div>
 
                     <div class="form__full">
 
 
                         <label for="ejahr">ISBN:
-                            <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
-                        </label>
-                        <label for="resvon">Reserviert von:
-                            <input id="resvon" name="resvon" disabled  value="1990-01-01"type="date">
+                            <input id="isbn" name="isbn" value="ISBN eingeben" type="text" maxlength="11">
                         </label>
 
-                        <label for="resbis">Reserviert bis:
-                            <input id="resbis" name="resbis" disabled  value="1999-12-31"type="date">
+                        <label for="buch ">Buch:
+                            <input id="buch" name="buch" disabled value="Buchname" type="text">
+                        </label>
+                        <label for="autor">Autor:
+                            <input id="autor" name="autor" disabled value="Autorname" type="text">
+                        </label>
+                        <label for="ejahr">Erscheinungsjahr:
+                            <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
                         </label>
 
                         <label for="standort">Standort:
-                            <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
+                            <select id="standort" name="standort">
+                                <option value="Standort 1"> Standort 1</option>
+                                <option value="Standort 2"> Standort 2</option>
+                                <option value="Standort 3"> Standort 3</option>
+                                </select>
                         </label>
 
-                        <label for="regal">Regal:
-                            <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
+                        <label for="resvon">Reservieren von:
+                            <input id="resvon" name="resvon" value="1990-01-01"type="date">
                         </label>
 
-                        <label for="regal">Reservierungs-ID:
-                            <input id="resId" name="resId" disabled  value="1457-4874-4548-4488-1415-12"type="text">
+                        <label for="resbis">Reservieren bis:
+                            <input id="resbis" name="resbis" value="1999-12-31"type="date">
                         </label>
+
                         <button class="button__delete">
                             <div class="button__text">
-                                <a href="">Reservierung löschen</a>
+                                <a href="">Reservierung abbrechen</a>
                             </div>
                         </button>
                         <button class="button__edit">
                             <div class="button__text">
-                                <a href="">Reservierung bearbeiten</a>
+                                <a href="">Reservierung bestätigen</a>
                             </div>
                         </button>
                     </div>

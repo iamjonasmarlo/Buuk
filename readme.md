@@ -2,27 +2,71 @@
 
 ## Seiten
 
-### Seiten
 
+#### HTML Fortschritt
+- Startseite (Index)
 - Dashboard
 - Bücher
+    - Bücherliste
     - Buchdetails
 - Autoren
+    - Autorenliste
     - Autordetails
-- ~~Standorte~~
-    - Emil-Figge-Straße 44 (Detail)
-    - Sonnenstraße (Detail)
-    - Max-Ophüls-Platz (Detail)
+- Standorte
+    - ~~Standortliste~~
+        - ~~Emil-Figge-Straße 44~~
+        - ~~Sonnenstraße~~
+        - ~~Max-Ophüls-Platz ~~
+    - Standortdetails
 
-### Profil
+- Persönliche
+    - ~~Mein Profil~~
+    - ~~Reservierungen~~
+        - ~~Reservierungsliste~~
+        - ~~Reservierungsdetails~~    
+        - ~~Reservieren~~
+    - ~~Ausleihen~~
+        - ~~Ausleihenliste~~
+        - ~~Ausleihendetails / Strafendetails~~
+    - ~~Strafen~~
+        - ~~Strafenliste~~
+        - ~~Ausleihendetails / Strafendetails~~
+    - ~~Login~~
+    - ~~Logout~~
 
-- Mein Profil
-- Meine Reservierung
-    - Reservierungdetails
-- Meine Ausleihen
-    - Ausleihdetails
-- Meine Strafen
-    - Strafdetails
+
+#### Java Script Fortschritt
+- Startseite (Index)
+- Dashboard
+- Bücher
+    - Bücherliste
+    - Buchdetails
+- Autoren
+    - Autorenliste
+    - Autordetails
+- Standorte
+    - Standortliste
+        - Emil-Figge-Straße 44
+        - Sonnenstraße
+        - ~ax-Ophüls-Platz 
+    - Standortdetails
+
+- Persönliche
+    - Mein Profil
+    - Reservierungen
+        - Reservierungsliste
+        - Reservierungsdetails   
+        - Reservieren
+    - Ausleihen
+        - Ausleihenliste
+        - Ausleihendetails / Strafendetails
+    - Strafen
+        - Strafenliste
+        - ~usleihendetails / Strafendetails
+    - Login
+    - Logout
+
+
 
 ## Klassen
 
