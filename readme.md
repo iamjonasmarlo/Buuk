@@ -40,8 +40,11 @@
 - Kunde
     - id (int)
     - name (string)
-    - adresse (string)
+    - Straße (string)
+    - Stadt (string)
+    - Postleitzahl (int(5))
     - typ (string)
+    - Fachrichtung(string)
 - Standort
     - id (int)
     - name (string)

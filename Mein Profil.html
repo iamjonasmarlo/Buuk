@@ -42,7 +42,7 @@
                             <li class="active"><a href="#">Mein Profil</a></li>
                             <li><a href="#">Meine Reservierungen</a></li>
                             <li><a href="meine_ausleihen.html">Meine Ausleihen</a></li>
-                            <li><a href="#">Meine Strafen</a></li>
+                            <li><a href="meine_strafen.html">Meine Strafen</a></li>
                             <li><a href="#">Abmelden</a></li>
                         </ul>
                     </div>
@@ -56,68 +56,87 @@
             <h1>Mein Profil</h1>
         </section>
         <main>
-            <section class="information">
-                <img src="http://www.placehold.it/300x300" alt="">
 
-                <form id="block1">
-                    <label for="vname">Vorname:
-                        <input id="vname" name="vname">
+
+            <section class="information ">
+
+                <form>
+                    <div class="form__image">
+                        <img src="http://www.placehold.it/800x800" alt=" ">
+                    </div>
+
+                    <div class="form__half">
+                        <label for="vnam ">Vorname:
+                        <input id="vname" name="vname" disabled value="Max" type="text">
                     </label>
-                    <label for="name">Nachname:
-                        <input id="name" name="name">
+                        <label for="name">Nachname:
+                        <input id="name" name="name" disabled value="Mustermann" type="text">
                     </label>
-                    <label for="gtag">Geburtstag:
-                        <input type="date" id="gtag" name="gtag">
+                        <label for="gtag">Geburtstag:
+                        <input id="gtag" name="gtag" disabled value="1990-01-01"type="datetime-local">
                     </label>
+                    </div>
+
+                    <div class="form__full">
+                        <label for="studiengang">Fachrichtung:
+                            <select id="fachrichtung" name="fachrichtung" disabled value="Praktische Informatik">
+                            <option value="pi ">Praktische Informatik</option>
+                            <option value="ti ">Technische Informatik</option>
+                            <option value="mi ">Medizinische Informatik</option>
+                            <option value="wi ">Wirtschafts Informatik</option>
+                         </select>
+                        </label>
+
+                        <label for="name ">Hauptstandort:
+                            <select id="studiengang " name="studiengang " disabled value="Standort 1">
+                             <option value="s1 ">Standort 1</option>
+                             <option value="s2 ">Standort 2</option>
+                             <option value="s3 ">Standort 3</option>
+                             <option value="s4 ">Standort 4</option>
+                            </select>
+                        </label>
+
+
+                        <label for="studiengang">Straße:
+                            <input id="street" name="street" disabled value="Musterstraße" type="text">
+                         </label>
+
+                        <div id="city">
+                            <label id="city__label" for="studiengang">Stadt:
+                                <input id="city__input"name="city" disabled value="Musterstadt" type="text">
+                            </label>
+                        </div>
+
+                        <div id="postal">
+                            <label for="studiengang">Postleitzahl:
+                                <input id="postal__input" name="postal" disabled value="00000" type="number" maxlenght="5">
+                            </label>
+                        </div>
+                    </div>
+
                 </form>
-
-
-                <form id="block2">
-                    <label for="studiengang">Studiengang:
-                        <select id="studiengang" name="studiengang">
-                            <option value="pi">Praktische Informatik</option>
-                            <option value="ti">Technische Informatik</option>
-                            <option value="mi">Medizinische Informatik</option>
-                            <option value="wi">Wirtschafts Informatik</option>
-                        </select>
-                    </label>
-                    <label for="name">Hauptstandort:
-                        <select id="studiengang" name="studiengang">
-                            <option value="s1">Standort 1</option>
-                            <option value="s2">Standort 2</option>
-                            <option value="s3">Standort 3</option>
-                            <option value="s4">Standort 4</option>
-                        </select>
-                    </label>
-                    <label for="gtag">Geburtstag:
-                        <input type="date" id="gtag" name="gtag">
-                    </label>
-                </form>
-
-
-
             </section>
         </main>
         <aside>
-            <div class="aside-box">
-                <div class="title">Corona-Update</div>
-                <div class="content">
+            <div class="aside-box ">
+                <div class="title ">Corona-Update</div>
+                <div class="content ">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="aside-box">
-                <div class="title">Neuigkeiten</div>
-                <div class="content">
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+            <div class="aside-box ">
+                <div class="title ">Neuigkeiten</div>
+                <div class="content ">
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>
@@ -126,24 +145,24 @@
     </div>
 
     <footer>
-        <div class="footer-top">
-            <div class="footer-top__inner">
-                <nav class="footer-nav">
+        <div class="footer-top ">
+            <div class="footer-top__inner ">
+                <nav class="footer-nav ">
                     <ul>
-                        <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">Impressum</a></li>
+                        <li><a href="# ">Datenschutz</a></li>
+                        <li><a href="# ">Impressum</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom__inner">
-                <div class="credit">Handgemacht mit <i class="ti-heart"></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
+        <div class="footer-bottom ">
+            <div class="footer-bottom__inner ">
+                <div class="credit ">Handgemacht mit <i class="ti-heart "></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
             </div>
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js "></script>
 </body>
 
 </html>
