@@ -52,84 +52,85 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Buch reservieren</h1>
+            <h1>Standort hinzufügen</h1>
         </section>
         <main>
-
-
-            <section class="information ">
-
-                <form>
-
-
-                    <div class="form__full">
-
-
-                        <label for="ejahr">ISBN:
-                            <input id="isbn" name="isbn" value="ISBN eingeben" type="text" maxlength="11">
+            <section class="form">
+                <form id="location-form">
+                    <div class="input-group">
+                        <h2>Kontaktdaten</h2>
+                        <label>
+                            Name:
+                            <input type="text" name="name" placeholder="Name" required>
                         </label>
-
-                        <label for="buch ">Buch:
-                            <input id="buch" name="buch" disabled value="Buchname" type="text">
+                        <label>
+                            Straße + Nr.:
+                            <input type="text" name="address" placeholder="Straße + Nr." required>
                         </label>
-                        <label for="autor">Autor:
-                            <input id="autor" name="autor" disabled value="Autorname" type="text">
+                        <label>
+                            PLZ:
+                            <input type="number" name="zip" placeholder="PLZ" maxlength="5" required>
                         </label>
-                        <label for="ejahr">Erscheinungsjahr:
-                            <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
+                        <label>
+                            Ort:
+                            <input type="text" name="city" placeholder="Ort" required>
                         </label>
-
-                        <label for="standort">Standort:
-                            <select id="standort" name="standort">
-                                <option value="Standort 1"> Standort 1</option>
-                                <option value="Standort 2"> Standort 2</option>
-                                <option value="Standort 3"> Standort 3</option>
-                                </select>
+                        <label>
+                            Bild (URL):
+                            <input type="url" name="image" placeholder="Bild (URL)" required>
                         </label>
-
-                        <label for="resvon">Reservieren von:
-                            <input id="resvon" name="resvon" value="1990-01-01"type="date">
-                        </label>
-
-                        <label for="resbis">Reservieren bis:
-                            <input id="resbis" name="resbis" value="1999-12-31"type="date">
-                        </label>
-
-                        <button class="button__delete">
-                            <div class="button__text">
-                                <a href="">Reservierung abbrechen</a>
-                            </div>
-                        </button>
-                        <button class="button__edit">
-                            <div class="button__text">
-                                <a href="">Reservierung bestätigen</a>
-                            </div>
-                        </button>
                     </div>
-
+                    <div class="input-group">
+                        <h2>Öffnungs- und Servicezeiten</h2>
+                        <label class="horizontal">
+                            <span>Montag</span>
+                            <input type="text" name="time-monday" placeholder="Montag">
+                        </label>
+                        <label class="horizontal">
+                            <span>Dienstag</span>
+                            <input type="text" name="time-tuesday" placeholder="Dienstag">
+                        </label>
+                        <label class="horizontal">
+                            <span>Mittwoch</span>
+                            <input type="text" name="time-wednesday" placeholder="Mittwoch">
+                        </label>
+                        <label class="horizontal">
+                            <span>Donnerstag</span>
+                            <input type="text" name="time-thursday" placeholder="Donnerstag">
+                        </label>
+                        <label class="horizontal">
+                            <span>Freitag</span>
+                            <input type="text" name="time-friday" placeholder="Freitag">
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <h2>Ausstattung</h2>
+                        <button class="button primary outline" style="margin-top:0;" id="add-feature"><i class="ti-plus"></i>Ausstattung hinzufügen</button>
+                    </div>
+                    <button type="submit" class="button primary filled">Standort hinzufügen</button>
                 </form>
             </section>
         </main>
         <aside>
-            <div class="aside-box ">
-                <div class="title ">Corona-Update</div>
-                <div class="content ">
+            <div class="aside-box">
+                <div class="title">Corona-Update</div>
+                <div class="content">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="aside-box ">
-                <div class="title ">Neuigkeiten</div>
-                <div class="content ">
-                    <div class="single-news ">
-                        <div class="title ">Lorem Ipsum</div>
+            <div class="aside-box">
+                <div class="title">Neuigkeiten</div>
+                <div class="content">
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news ">
-                        <div class="title ">Lorem Ipsum</div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news ">
-                        <div class="title ">Lorem Ipsum</div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>

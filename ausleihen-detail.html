@@ -23,13 +23,13 @@
         </div>
         <div class="header-bottom">
             <div class="header-bottom__inner">
-                <a href="/index.html" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="/dashboard.html">Dashboard</a></li>
-                        <li><a href="/buch_liste.html">Bücher</a></li>
-                        <li><a href="/autoren_liste.html">Autoren</a></li>
-                        <li><a href="/standorte.html">Standorte</a></li>
+                        <li<a href="index.html">Dashboard</a></li>
+                        <li><a href="buecher.html">Bücher</a></li>
+                        <li><a href="autoren.html">Autoren</a></li>
+                        <li><a href="standorte.html">Standorte</a></li>
                     </ul>
                 </nav>
                 <div class="profile-link">
@@ -39,11 +39,10 @@
                     </div>
                     <div class="profile-link__menu" id="user-menu">
                         <ul>
-                            <li><a href="/Profil.html">Mein Profil</a></li>
-                            <li><a href="/meine_reservierungen.html">Meine Reservierungen</a></li>
-                            <li><a href="/meine_ausleihen.html">Meine Ausleihen</a></li>
-                            <li><a href="/meine_strafen.html">Meine Strafen</a></li>
-                            <li><a href="/logout.html">Abmelden</a></li>
+                            <li><a href="profil.html">Mein Profil</a></li>
+                            <li><a href="reservierungen.html">Meine Reservierungen</a></li>
+                            <li><a href="ausleihen.html">Meine Ausleihen</a></li>
+                            <li><a href="logout.html">Abmelden</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,18 +52,14 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Reservierungsdetails</h1>
+            <h1>Ausleihdetails</h1>
         </section>
         <main>
-
-
-            <section class="information ">
-
+            <section class="form">
                 <form>
                     <div class="form__image">
-                        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
+                        <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png" alt=" ">
                     </div>
-
                     <div class="form__half">
                         <label for="buch ">Buch:
                         <input id="buch" name="buch" disabled value="Buchname" type="text">
@@ -74,71 +69,61 @@
                     </label>
                         <label for="ejahr">Erscheinungsjahr:
                         <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
-                    </label>
-
-
+                        </label>
                     </div>
-
                     <div class="form__full">
-
-
                         <label for="ejahr">ISBN:
                             <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
                         </label>
-                        <label for="resvon">Reserviert von:
+                        <label for="resvon">Ausgeliehen von:
                             <input id="resvon" name="resvon" disabled  value="1990-01-01"type="date">
                         </label>
-
-                        <label for="resbis">Reserviert bis:
+                        <label for="resbis">Ausgeliehen bis:
                             <input id="resbis" name="resbis" disabled  value="1999-12-31"type="date">
                         </label>
-
                         <label for="standort">Standort:
                             <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
                         </label>
-
                         <label for="regal">Regal:
                             <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
                         </label>
 
-                        <label for="regal">Reservierungs-ID:
+                        <label for="regal">Ausleih-ID:
                             <input id="resId" name="resId" disabled  value="1457-4874-4548-4488-1415-12"type="text">
                         </label>
-                        <button class="button__delete">
-                            <div class="button__text">
-                                <a href="">Reservierung löschen</a>
-                            </div>
-                        </button>
-                        <button class="button__edit">
-                            <div class="button__text">
-                                <a href="">Reservierung bearbeiten</a>
-                            </div>
-                        </button>
+                        <hr>
+                        <label for="regal"> Überfällig seit(Tagen):
+                            <input id="rückTage" name="rückTage" disabled  value="7"type="Zahl">
+                        </label>
+                        <label for="regal"> Überfälligkeitsgebühren (50ct pro Tag):
+                            <input id="rückTage" name="rückTage" disabled  value="3,50€"type="text">
+                        </label>
+                        <button class="button primary filled">Buch zurückgeben</button>
+                        <button class="button primary outline">Verlängern</button>
                     </div>
-
                 </form>
             </section>
         </main>
         <aside>
-            <div class="aside-box ">
-                <div class="title ">Corona-Update</div>
-                <div class="content ">
+            <div class="aside-box">
+                <div class="title">Corona-Update</div>
+                <div class="content">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="aside-box ">
-                <div class="title ">Neuigkeiten</div>
-                <div class="content ">
-                    <div class="single-news ">
+            <div class="aside-box">
+                <div class="title">Neuigkeiten</div>
+                <div class="content">
+                    <div class="single-news">
                         <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news ">
-                        <div class="title ">Lorem Ipsum</div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news ">
-                        <div class="title ">Lorem Ipsum</div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>

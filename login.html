@@ -6,8 +6,8 @@
     <title>Buuk</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/../..css/themify-icons.css">
-    <link rel="stylesheet" href="/../../css/style.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -32,12 +32,7 @@
                         <li><a href="/standorte.html">Standorte</a></li>
                     </ul>
                 </nav>
-                <div class="profile-link">
-                    <div class="profile-link__trigger" id="menu-trigger">
-                        <div class="image"><img src="http://www.placehold.it/100x100" alt="Profile Image"></div>
-                        <div class="name"><a href="/logout.html">Einloggen</a></div>
-                    </div>
-                </div>
+                <a href="login.html" class="login">Jetzt anmelden</a>
             </div>
         </div>
     </header>
@@ -47,25 +42,20 @@
             <h1>Login</h1>
         </section>
         <main>
-
-            <section class="information ">
+            <section class="form">
                 <form>
                     <div class="form__half">
                         <label for="vnam ">Unikennung:
-                    <input id="vname" name="vname" disabled value="mamus001" type="text">
+                    <input id="vname" name="vname" value="mamus001" type="text">
                 </label>
                         <label for="name">Passwort:
-                    <input id="name" name="name" disabled value="Mustermann" type="password">
+                    <input id="name" name="name" value="Mustermann" type="password">
                 </label>
 
                     </div>
                 </form>
             </section>
-            <button class="button">
-                <div class="button__text">
-                    <a href="index.html">Anmelden</a>
-                </div>
-            </button>
+            <a href="index.html" class="button primary filled">Anmelden</a>
 
         </main>
 

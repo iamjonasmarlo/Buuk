@@ -2,71 +2,26 @@
 
 ## Seiten
 
-
-#### HTML Fortschritt
-- Startseite (Index)
 - Dashboard
 - Bücher
-    - Bücherliste
     - Buchdetails
+    - Buch hinzufügen
 - Autoren
-    - Autorenliste
     - Autordetails
-- Standorte
-    - ~~Standortliste~~
-        - ~~Emil-Figge-Straße 44~~
-        - ~~Sonnenstraße~~
-        - ~~Max-Ophüls-Platz~~
-    - Standortdetails
-
+    - Autor hinzufügen
+- ~~Standorte~~
+    - ~~Emil-Figge-Straße 44 (Detail)~~
+    - ~~Sonnenstraße (Detail)~~
+    - ~~Max-Ophüls-Platz (Detail)~~
+    - ~~Standort hinzufügen~~
 - ~~Persönliche~~
     - ~~Mein Profil~~
     - ~~Reservierungen~~
-        - ~~Reservierungsliste~~
-        - ~~Reservierungsdetails~~    
-        - ~~Reservieren~~
+        - ~~Reservierungsdetails~~
     - ~~Ausleihen~~
-        - ~~Ausleihenliste~~
-        - ~~Ausleihendetails / Strafendetails~~
-    - ~~Strafen~~
-        - ~~Strafenliste~~
-        - ~~Ausleihendetails / Strafendetails~~
+        - ~~Ausleihendetails~~
     - ~~Login~~
     - ~~Logout~~
-
-
-#### Java Script Fortschritt
-- Startseite (Index)
-- Dashboard
-- Bücher
-    - Bücherliste
-    - Buchdetails
-- Autoren
-    - Autorenliste
-    - Autordetails
-- Standorte
-    - Standortliste
-        - Emil-Figge-Straße 44
-        - Sonnenstraße
-        - ~ax-Ophüls-Platz 
-    - Standortdetails
-
-- Persönliche
-    - Mein Profil
-    - Reservierungen
-        - Reservierungsliste
-        - Reservierungsdetails   
-        - Reservieren
-    - Ausleihen
-        - Ausleihenliste
-        - Ausleihendetails / Strafendetails
-    - Strafen
-        - Strafenliste
-        - ~usleihendetails / Strafendetails
-    - Login
-    - Logout
-
-
 
 ## Klassen
 
@@ -86,13 +41,18 @@
     - name (string)
     - Straße (string)
     - Stadt (string)
-    - Postleitzahl (int(5))
+    - Postleitzahl (int)
     - typ (string)
     - Fachrichtung(string)
 - Standort
     - id (int)
     - name (string)
     - adresse (string)
+    - plz (int)
+    - ort (string)
+    - telefon (int)
+    - fax (int)
+    - öffnungszeiten (array -> string/int)
     - bücher (array -> foreignkey)
 - Reservierungen
     - id (int)
@@ -106,14 +66,29 @@
     - kunde (foreignkey)
     - datumVon (date)
     - datumBis (date)
-- Strafe
-    - id (int)
-    - kunde (foreignkey)
-    - buch (foreignkey)
-    - höhe (int)
-    - überziehungsdauer (int)
-    - beglichen (boolean)
+    - status (int)
 
 ## Aufgaben & Bugs
 
-- Automatisierte Ausgabe der Standorte
+- Standorte
+    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Detailseite
+    - Anlegen eines Standortes
+- Reservierungen
+    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Detailseite
+    - Anlegen einer Reservierung
+    - Löschen einer Reservierung
+    - Editieren einer Reservierung
+- Ausleihen
+    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Detailseite
+    - Anlegen einer Reservierung
+- Bücher
+    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Detailseite
+    - Anlegen eines Buches
+- Autoren
+    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Detailseite
+    - Anlegen eines Autors
