@@ -29,7 +29,7 @@
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Bücher</a></li>
                         <li><a href="#">Autoren</a></li>
-                        <li class="active"><a href="#">Standorte</a></li>
+                        <li><a href="standorte.html">Standorte</a></li>
                     </ul>
                 </nav>
                 <div class="profile-link">
@@ -39,9 +39,9 @@
                     </div>
                     <div class="profile-link__menu" id="user-menu">
                         <ul>
-                            <li><a href="Mein Profil.html">Mein Profil</a></li>
+                            <li class="active"><a href="#">Mein Profil</a></li>
                             <li><a href="#">Meine Reservierungen</a></li>
-                            <li><a href="#">Meine Ausleihen</a></li>
+                            <li><a href="meine_ausleihen.html">Meine Ausleihen</a></li>
                             <li><a href="#">Meine Strafen</a></li>
                             <li><a href="#">Abmelden</a></li>
                         </ul>
@@ -53,61 +53,49 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Standorte</h1>
+            <h1>Mein Profil</h1>
         </section>
         <main>
-            <section class="locations-overview">
-                <div class="location">
-                    <div class="inner">
-                        <a href="#" class="location__image">
-                            <img src="http://www.placehold.it/800x400" alt="Standort Emil-Figge-Straße 44">
-                        </a>
-                        <div class="location__info">
-                            <div class="title">Emil-Figge-Straße 44</div>
-                            <address>
-                                Emil-Figge-Straße 44<br />
-                                54321 Dortmund
-                            </address>
-                        </div>
-                        <a href="#" class="location__link">
-                            Zum Standort <i class="ti-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="location">
-                    <div class="inner">
-                        <a href="#" class="location__image">
-                            <img src="http://www.placehold.it/800x400" alt="Standort Emil-Figge-Straße 44">
-                        </a>
-                        <div class="location__info">
-                            <div class="title">Emil-Figge-Straße 44</div>
-                            <address>
-                                Emil-Figge-Straße 44<br />
-                                54321 Dortmund
-                            </address>
-                        </div>
-                        <a href="#" class="location__link">
-                            Zum Standort <i class="ti-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="location">
-                    <div class="inner">
-                        <a href="#" class="location__image">
-                            <img src="http://www.placehold.it/800x400" alt="Standort Emil-Figge-Straße 44">
-                        </a>
-                        <div class="location__info">
-                            <div class="title">Emil-Figge-Straße 44</div>
-                            <address>
-                                Emil-Figge-Straße 44<br />
-                                54321 Dortmund
-                            </address>
-                        </div>
-                        <a href="#" class="location__link">
-                            Zum Standort <i class="ti-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+            <section class="information">
+                <img src="http://www.placehold.it/300x300" alt="">
+
+                <form id="block1">
+                    <label for="vname">Vorname:
+                        <input id="vname" name="vname">
+                    </label>
+                    <label for="name">Nachname:
+                        <input id="name" name="name">
+                    </label>
+                    <label for="gtag">Geburtstag:
+                        <input type="date" id="gtag" name="gtag">
+                    </label>
+                </form>
+
+
+                <form id="block2">
+                    <label for="studiengang">Studiengang:
+                        <select id="studiengang" name="studiengang">
+                            <option value="pi">Praktische Informatik</option>
+                            <option value="ti">Technische Informatik</option>
+                            <option value="mi">Medizinische Informatik</option>
+                            <option value="wi">Wirtschafts Informatik</option>
+                        </select>
+                    </label>
+                    <label for="name">Hauptstandort:
+                        <select id="studiengang" name="studiengang">
+                            <option value="s1">Standort 1</option>
+                            <option value="s2">Standort 2</option>
+                            <option value="s3">Standort 3</option>
+                            <option value="s4">Standort 4</option>
+                        </select>
+                    </label>
+                    <label for="gtag">Geburtstag:
+                        <input type="date" id="gtag" name="gtag">
+                    </label>
+                </form>
+
+
+
             </section>
         </main>
         <aside>
