@@ -16,7 +16,7 @@
     - ~~Standortliste~~
         - ~~Emil-Figge-Straße 44~~
         - ~~Sonnenstraße~~
-        - ~~Max-Ophüls-Platz ~~
+        - ~~Max-Ophüls-Platz~~
     - Standortdetails
 
 - Persönliche
