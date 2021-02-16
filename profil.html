@@ -39,7 +39,7 @@
                     </div>
                     <div class="profile-link__menu" id="user-menu">
                         <ul>
-                            <li><a href="/Profil.html">Mein Profil</a></li>
+                            <li><a href="/Ppofil.html">Mein Profil</a></li>
                             <li><a href="/meine_reservierungen.html">Meine Reservierungen</a></li>
                             <li><a href="/meine_ausleihen.html">Meine Ausleihen</a></li>
                             <li><a href="/meine_strafen.html">Meine Strafen</a></li>
@@ -53,50 +53,68 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Meine Strafen </h1>
+            <h1>Mein Profil</h1>
         </section>
         <main>
-            <section class="tabelle">
-                <table class="table">
-                    <tr>
-                        <th>Buch</th>
-                        <th>Datum von</th>
-                        <th>Datum bis</th>
-                        <th>Standort</th>
-                        <th>Status</th>
-                        <th></th>
-                    </tr>
 
-                    <tr id="ueberzogen">
-                        <td class="no__linkdesign "><a href="buch_details.html ">Buchname</a></td>
-                        <td>10.10.2020</td>
-                        <td>12.11.2020</td>
-                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
-                        <td>Überzogen</td>
-                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
-                    </tr>
-                    <tr id="bezahlt">
-                        <td class="no__linkdesign"><a href=" buch_details.html ">Buchname</a></td>
-                        <td>10.10.2020</td>
-                        <td>12.11.2020</td>
-                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
-                        <td>Überzogen (bezahlt)</td>
-                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
-                    </tr>
-                </table>
-                <hr>
-            </section>
 
-            <section class="legend ">
-                <div class="legend__element ">
-                    <img src="http://www.placehold.it/25/FF0000 ">
-                    <div class="legend__description ">Überzogen - Sofort zurückgeben</div>
-                </div>
+            <section class="information ">
 
-                <div class="legend__element ">
-                    <img src="http://www.placehold.it/25/FFA500 ">
-                    <div class="legend__description ">Überzogen - Wurde zurückgeben</div>
-                </div>
+                <form>
+                    <div class="form__image">
+                        <img src="http://www.placehold.it/800x800" alt=" ">
+                    </div>
+
+                    <div class="form__half">
+                        <label for="vnam ">Vorname:
+                        <input id="vname" name="vname" disabled value="Max" type="text">
+                    </label>
+                        <label for="name">Nachname:
+                        <input id="name" name="name" disabled value="Mustermann" type="text">
+                    </label>
+                        <label for="gtag">Geburtstag:
+                        <input id="gtag" name="gtag" disabled value="1990-01-01"type="date">
+                    </label>
+                    </div>
+
+                    <div class="form__full">
+                        <label for="studiengang">Fachrichtung:
+                            <select id="fachrichtung" name="fachrichtung" disabled value="Praktische Informatik">
+                            <option value="pi ">Praktische Informatik</option>
+                            <option value="ti ">Technische Informatik</option>
+                            <option value="mi ">Medizinische Informatik</option>
+                            <option value="wi ">Wirtschafts Informatik</option>
+                         </select>
+                        </label>
+
+                        <label for="name ">Hauptstandort:
+                            <select id="studiengang " name="studiengang " disabled value="Standort 1">
+                             <option value="s1 ">Standort 1</option>
+                             <option value="s2 ">Standort 2</option>
+                             <option value="s3 ">Standort 3</option>
+                             <option value="s4 ">Standort 4</option>
+                            </select>
+                        </label>
+
+
+                        <label for="studiengang">Straße:
+                            <input id="street" name="street" disabled value="Musterstraße" type="text">
+                         </label>
+
+                        <div id="city">
+                            <label id="city__label" for="studiengang">Stadt:
+                                <input id="city__input"name="city" disabled value="Musterstadt" type="text">
+                            </label>
+                        </div>
+
+                        <div id="postal">
+                            <label for="studiengang">Postleitzahl:
+                                <input id="postal__input" name="postal" disabled value="00000" type="number" maxlenght="5">
+                            </label>
+                        </div>
+                    </div>
+
+                </form>
             </section>
         </main>
         <aside>

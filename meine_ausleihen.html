@@ -23,13 +23,13 @@
         </div>
         <div class="header-bottom">
             <div class="header-bottom__inner">
-                <a href="#" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
+                <a href="/index.html" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Bücher</a></li>
-                        <li><a href="#">Autoren</a></li>
-                        <li><a href="standorte.html">Standorte</a></li>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                        <li><a href="/buch_liste.html">Bücher</a></li>
+                        <li><a href="/autoren_liste.html">Autoren</a></li>
+                        <li><a href="/standorte.html">Standorte</a></li>
                     </ul>
                 </nav>
                 <div class="profile-link">
@@ -39,11 +39,11 @@
                     </div>
                     <div class="profile-link__menu" id="user-menu">
                         <ul>
-                            <li><a href="Mein Profil.html">Mein Profil</a></li>
-                            <li><a href="#">Meine Reservierungen</a></li>
-                            <li class="active"><a href="meine_ausleihen.html">Meine Ausleihen</a></li>
-                            <li><a href="meine_strafen.html">Meine Strafen</a></li>
-                            <li><a href="#">Abmelden</a></li>
+                            <li><a href="/Profil.html">Mein Profil</a></li>
+                            <li><a href="/meine_reservierungen.html">Meine Reservierungen</a></li>
+                            <li><a href="/meine_ausleihen.html">Meine Ausleihen</a></li>
+                            <li><a href="/meine_strafen.html">Meine Strafen</a></li>
+                            <li><a href="/logout.html">Abmelden</a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,25 +57,10 @@
         </section>
         <main>
 
-            <section class="legend">
-                <div class="legend__element">
-                    <img src="http://www.placehold.it/25/228C22">
-                    <div class="legend__description">Aktuell ausgeliehen</div>
-                </div>
 
-                <div class="legend__element">
-                    <img src="http://www.placehold.it/25/FF0000">
-                    <div class="legend__description">Überzogen</div>
-                </div>
+            <section class="tabelle">
 
-                <div class="legend__element">
-                    <img src="http://www.placehold.it/25/FFA500">
-                    <div class="legend__description">Überzogen (Zurückgegeben)</div>
-                </div>
-            </section>
-
-            <section class="ausleihen">
-                <table>
+                <table class="table">
                     <tr>
                         <th>Buch</th>
                         <th>Datum von</th>
@@ -85,134 +70,154 @@
                         <th></th>
                     </tr>
                     <tr id="aktuell">
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Ausgeliehen</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr id="aktuell">
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Ausgeliehen</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr id="ueberzogen">
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign "><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Überzogen</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href=" ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
-                    <tr id="bezahlt">
-                        <td>Dies ist ein Buchname</td>
+                    <tr id="bezahlt ">
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Überzogen (bezahlt)</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href="ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign"><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"><a href=" ausleihe_details.html">Details</a></td>
                     </tr>
                     <tr>
-                        <td>Dies ist ein Buchname</td>
+                        <td class="no__linkdesign "><a href="buch_details.html">Buchname</a></td>
                         <td>10.10.2020</td>
                         <td>12.11.2020</td>
-                        <td>Emil-Figge-Straße</td>
+                        <td class="no__linkdesign"><a href="location_details.html">Emil-Figge-Straße 44</a></td>
                         <td>Zurückgegeben</td>
-                        <td id="details">Details</td>
+                        <td class="details"> <a href="ausleihe_details.html">Details</a>
+                        </td>
                     </tr>
 
                 </table>
+                <hr>
+            </section>
 
+
+
+            <section class=" legend ">
+                <div class="legend__element ">
+                    <img src="http://www.placehold.it/25/228C22 ">
+                    <div class="legend__description ">Aktuell ausgeliehen</div>
+                </div>
+
+                <div class="legend__element ">
+                    <img src="http://www.placehold.it/25/FF0000 ">
+                    <div class="legend__description ">Überzogen</div>
+                </div>
+
+                <div class="legend__element ">
+                    <img src="http://www.placehold.it/25/FFA500 ">
+                    <div class="legend__description ">Überzogen (Zurückgegeben)</div>
+                </div>
             </section>
         </main>
         <aside>
-            <div class="aside-box">
-                <div class="title">Corona-Update</div>
-                <div class="content">
+            <div class="aside-box ">
+                <div class="title ">Corona-Update</div>
+                <div class="content ">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="aside-box">
-                <div class="title">Neuigkeiten</div>
-                <div class="content">
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+            <div class="aside-box ">
+                <div class="title ">Neuigkeiten</div>
+                <div class="content ">
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>
@@ -221,24 +226,24 @@
     </div>
 
     <footer>
-        <div class="footer-top">
-            <div class="footer-top__inner">
-                <nav class="footer-nav">
+        <div class="footer-top ">
+            <div class="footer-top__inner ">
+                <nav class="footer-nav ">
                     <ul>
-                        <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">Impressum</a></li>
+                        <li><a href="# ">Datenschutz</a></li>
+                        <li><a href="# ">Impressum</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom__inner">
-                <div class="credit">Handgemacht mit <i class="ti-heart"></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
+        <div class="footer-bottom ">
+            <div class="footer-bottom__inner ">
+                <div class="credit ">Handgemacht mit <i class="ti-heart "></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
             </div>
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js "></script>
 </body>
 
 </html>

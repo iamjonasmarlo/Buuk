@@ -23,13 +23,13 @@
         </div>
         <div class="header-bottom">
             <div class="header-bottom__inner">
-                <a href="#" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
+                <a href="/index.html" class="logo"><img src="img/logo.png" alt="Buuk Logo"></a>
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Bücher</a></li>
-                        <li><a href="#">Autoren</a></li>
-                        <li><a href="standorte.html">Standorte</a></li>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                        <li><a href="/buch_liste.html">Bücher</a></li>
+                        <li><a href="/autoren_liste.html">Autoren</a></li>
+                        <li><a href="/standorte.html">Standorte</a></li>
                     </ul>
                 </nav>
                 <div class="profile-link">
@@ -39,11 +39,11 @@
                     </div>
                     <div class="profile-link__menu" id="user-menu">
                         <ul>
-                            <li class="active"><a href="#">Mein Profil</a></li>
-                            <li><a href="#">Meine Reservierungen</a></li>
-                            <li><a href="meine_ausleihen.html">Meine Ausleihen</a></li>
-                            <li><a href="meine_strafen.html">Meine Strafen</a></li>
-                            <li><a href="#">Abmelden</a></li>
+                            <li><a href="/Profil.html">Mein Profil</a></li>
+                            <li><a href="/meine_reservierungen.html">Meine Reservierungen</a></li>
+                            <li><a href="/meine_ausleihen.html">Meine Ausleihen</a></li>
+                            <li><a href="/meine_strafen.html">Meine Strafen</a></li>
+                            <li><a href="/logout.html">Abmelden</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Mein Profil</h1>
+            <h1>Reservierungsdetails</h1>
         </section>
         <main>
 
@@ -62,56 +62,51 @@
 
                 <form>
                     <div class="form__image">
-                        <img src="http://www.placehold.it/800x800" alt=" ">
+                        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
                     </div>
 
                     <div class="form__half">
-                        <label for="vnam ">Vorname:
-                        <input id="vname" name="vname" disabled value="Max" type="text">
+                        <label for="buch ">Buch:
+                        <input id="buch" name="buch" disabled value="Buchname" type="text">
                     </label>
-                        <label for="name">Nachname:
-                        <input id="name" name="name" disabled value="Mustermann" type="text">
+                        <label for="autor">Autor:
+                        <input id="autor" name="autor" disabled value="Autorname" type="text">
                     </label>
-                        <label for="gtag">Geburtstag:
-                        <input id="gtag" name="gtag" disabled value="1990-01-01"type="datetime-local">
+                        <label for="ejahr">Erscheinungsjahr:
+                        <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
                     </label>
                     </div>
 
                     <div class="form__full">
-                        <label for="studiengang">Fachrichtung:
-                            <select id="fachrichtung" name="fachrichtung" disabled value="Praktische Informatik">
-                            <option value="pi ">Praktische Informatik</option>
-                            <option value="ti ">Technische Informatik</option>
-                            <option value="mi ">Medizinische Informatik</option>
-                            <option value="wi ">Wirtschafts Informatik</option>
-                         </select>
+                        <label for="resvon">Reserviert von:
+                            <input id="resvon" name="resvon" disabled  value="1990-01-01"type="date">
                         </label>
 
-                        <label for="name ">Hauptstandort:
-                            <select id="studiengang " name="studiengang " disabled value="Standort 1">
-                             <option value="s1 ">Standort 1</option>
-                             <option value="s2 ">Standort 2</option>
-                             <option value="s3 ">Standort 3</option>
-                             <option value="s4 ">Standort 4</option>
-                            </select>
+                        <label for="resbis">Reserviert bis:
+                            <input id="resbis" name="resbis" disabled  value="1999-12-31"type="date">
                         </label>
 
+                        <label for="standort">Standort:
+                            <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
+                        </label>
 
-                        <label for="studiengang">Straße:
-                            <input id="street" name="street" disabled value="Musterstraße" type="text">
-                         </label>
+                        <label for="regal">Regal:
+                            <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
+                        </label>
 
-                        <div id="city">
-                            <label id="city__label" for="studiengang">Stadt:
-                                <input id="city__input"name="city" disabled value="Musterstadt" type="text">
-                            </label>
-                        </div>
-
-                        <div id="postal">
-                            <label for="studiengang">Postleitzahl:
-                                <input id="postal__input" name="postal" disabled value="00000" type="number" maxlenght="5">
-                            </label>
-                        </div>
+                        <label for="regal">Reservierungs-ID:
+                            <input id="resId" name="resId" disabled  value="1457-4874-4548-4488-1415-12"type="text">
+                        </label>
+                        <button class="button__delete">
+                            <div class="button__text">
+                                <a href="">Reservierung löschen</a>
+                            </div>
+                        </button>
+                        <button class="button__edit">
+                            <div class="button__text">
+                                <a href="">Reservierung bearbeiten</a>
+                            </div>
+                        </button>
                     </div>
 
                 </form>
@@ -145,24 +140,24 @@
     </div>
 
     <footer>
-        <div class="footer-top ">
-            <div class="footer-top__inner ">
-                <nav class="footer-nav ">
+        <div class="footer-top">
+            <div class="footer-top__inner">
+                <nav class="footer-nav">
                     <ul>
-                        <li><a href="# ">Datenschutz</a></li>
-                        <li><a href="# ">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Impressum</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="footer-bottom ">
-            <div class="footer-bottom__inner ">
-                <div class="credit ">Handgemacht mit <i class="ti-heart "></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__inner">
+                <div class="credit">Handgemacht mit <i class="ti-heart"></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
             </div>
         </div>
     </footer>
 
-    <script src="js/scripts.js "></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
