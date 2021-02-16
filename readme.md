@@ -19,7 +19,7 @@
         - ~~Max-Ophüls-Platz~~
     - Standortdetails
 
-- Persönliche
+- ~~Persönliche~~
     - ~~Mein Profil~~
     - ~~Reservierungen~~
         - ~~Reservierungsliste~~
