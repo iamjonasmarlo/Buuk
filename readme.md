@@ -33,6 +33,7 @@
     - jahr (int)
     - inhaltsangabe (string)
     - autor (array -> foreignkey)
+    - verfügbarkeitstatus (boolean) ???
 - Autor
     - id (int)
     - name (string)

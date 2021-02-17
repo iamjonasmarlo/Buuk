@@ -52,7 +52,8 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Ausleihdetails</h1>
+            <h1>Buch Detail </h1>
+
         </section>
         <main>
             <section class="form">
@@ -61,8 +62,8 @@
                         <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png" alt=" ">
                     </div>
                     <div class="form__half">
-                        <label for="buch ">Buch:
-                        <input id="buch" name="buch" disabled value="Buchname" type="text">
+                        <label for="titel">Titel:
+                        <input id="titel" name="titel" disabled value="Buchname" type="text">
                     </label>
                         <label for="autor">Autor:
                         <input id="autor" name="autor" disabled value="Autorname" type="text">
@@ -71,16 +72,13 @@
                         <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
                         </label>
                     </div>
+                    <div class="status__element"><span class="status__available"> </span>Verfügbar </div>
                     <div class="form__full">
+
                         <label for="ejahr">ISBN:
                             <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
                         </label>
-                        <label for="resvon">Ausgeliehen von:
-                            <input id="resvon" name="resvon" disabled  value="1990-01-01"type="date">
-                        </label>
-                        <label for="resbis">Ausgeliehen bis:
-                            <input id="resbis" name="resbis" disabled  value="1999-12-31"type="date">
-                        </label>
+
                         <label for="standort">Standort:
                             <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
                         </label>
@@ -88,18 +86,11 @@
                             <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
                         </label>
 
-                        <label for="regal">Ausleih-ID:
-                            <input id="resId" name="resId" disabled  value="1457-4874-4548-4488-1415-12"type="text">
+                        <label for="ta">Beschreibung:
+                            <textarea id="ta"  rows="10" disabled  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</textarea>
                         </label>
-                        <hr>
-                        <label for="regal"> Überfällig seit(Tagen):
-                            <input id="rückTage" name="rückTage" disabled  value="7"type="Zahl">
-                        </label>
-                        <label for="regal"> Überfälligkeitsgebühren (50ct pro Tag):
-                            <input id="rückTage" name="rückTage" disabled  value="3,50€"type="text">
-                        </label>
-                        <button class="button primary filled">Buch zurückgeben</button>
-                        <button class="button primary outline">Verlängern</button>
+                        <button class="button primary filled">Buch reservieren</button>
+
                     </div>
                 </form>
             </section>
