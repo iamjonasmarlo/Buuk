@@ -31,32 +31,33 @@ for (i = 0; i < accordion.length; i++) {
 }
 
 /* Add Feature */
-/*
+
 let featureTrigger = document.getElementById("add-feature");
-featureTrigger.addEventListener("click", function(e) {
-    e.preventDefault();
+if(featureTrigger) {
+    featureTrigger.addEventListener("click", function(e) {
+        e.preventDefault();
+    
+        let form = document.getElementById("location-form"),
+            label = document.createElement("label"),
+            span = document.createElement("span"),
+            input = document.createElement("input");
+    
+        label.setAttribute("class", "horizontal feature");
+        span.innerHTML = "Ausstattung";
+        input.setAttribute("type", "text");
+        input.setAttribute("placeholder", "Ausstattung");
+        input.setAttribute("name", "feature[]")
+    
+        label.appendChild(span);
+        label.appendChild(input);
+    
+        insertAfter(this, label);
+    });   
+}
 
-    let form = document.getElementById("location-form"),
-        label = document.createElement("label"),
-        span = document.createElement("span"),
-        input = document.createElement("input");
+/* Node */
 
-    label.setAttribute("class", "horizontal feature");
-    span.innerHTML = "Ausstattung";
-    input.setAttribute("type", "text");
-    input.setAttribute("placeholder", "Ausstattung");
-    input.setAttribute("name", "feature[]")
-
-    label.appendChild(span);
-    label.appendChild(input);
-
-    insertAfter(this, label);
-});
-*/
-
-///////////////////////////IN NODE/////////////////////////////////////////////////
-
-function Kunde {
+/*function Kunde {
     constructor(kundenID, vorname, nachname, geburtstag, fachrichtung, standort, straße, stadt, plz) {
         this.kundenID = kundenID;
         this.vorname = vorname;
@@ -88,28 +89,22 @@ kFachrichtung.value = k1.fachrichtung;
 kStandort.value = k1.standort;
 kStraße.value = k1.straße;
 kStadt.value = k1.stadt;
-kplz.value = k1.plz;
-
-
-///////////////////////////IN NODE/////////////////////////////////////////////////
+kplz.value = k1.plz;*/
 
 /*  Profile Edit */
 
-
-let buttonEdit = document.getElementById("edit-profile");
+/*let buttonEdit = document.getElementById("edit-profile");
 let buttonSave = document.getElementById("save");
-
 
 buttonEdit.addEventListener("click", function(e) {
     e.preventDefault();
     kStandort.disabled = false;
     buttonSave.style.display = "block";
-})
+});
 
 buttonSave.addEventListener("click", function(e) {
     e.preventDefault();
     kStandort.disabled = true;
     buttonSave.style.display = "none";
     k1.standort = kStandort.value;
-
-})
+});*/

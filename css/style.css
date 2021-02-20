@@ -907,6 +907,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: none;
 }
 
+/* Dashboard Intro */
+
+.dashboard-intro {
+    padding-bottom: 80px;
+}
 
 /* Footer */
 

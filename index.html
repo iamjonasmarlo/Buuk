@@ -50,7 +50,64 @@
         </div>
     </header>
 
-    Hier folgt das Dashboard!
+    <div id="content">
+        <section class="headline">
+            <h1>Dashboard</h1>
+        </section>
+        <main>
+            <section class="dashboard-intro">
+                <p>Herzlich Willkommen in der Online-Bibliothek der FH Dortmund.<br />Hier haben Sie die Möglichkeit Bücher zu reservieren oder direkt auszuleihen.</p>
+                <a href="buecher.html" class="button primary filled">Alle Bücher ansehen</a>
+            </section>
+            <section class="dashboard-borrowings">
+                <h2>Überfällige Ausleihen</h2>
+                <table class="table">
+                    <tr>
+                        <th>Buch</th>
+                        <th>Datum von</th>
+                        <th>Datum bis</th>
+                        <th>Standort</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr class="error">
+                        <td><a href="buecher-detail.html">Buchname</a></td>
+                        <td>10.10.2020</td>
+                        <td>12.11.2020</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>Überzogen</td>
+                        <td><a href="ausleihen-detail.html">Details</a></td>
+                    </tr>
+                </table>
+                <a href="ausleihen.html" class="button primary outline">Alle Ausleihen ansehen</a>
+            </section>
+        </main>
+        <aside>
+            <div class="aside-box">
+                <div class="title">Corona-Update</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+            </div>
+            <div class="aside-box">
+                <div class="title">Neuigkeiten</div>
+                <div class="content">
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                    <div class="single-news">
+                        <div class="title">Lorem Ipsum</div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
 
     <footer>
         <div class="footer-top">
