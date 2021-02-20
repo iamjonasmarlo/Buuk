@@ -62,70 +62,71 @@
                     </div>
                     <div class="form__half">
                         <label for="vnam">Vorname:
-                            <input id="vname" name="vname" value="Max" type="text">
+                            <input id="vname" name="vname" value="Max" type="text" disabled>
                         </label>
-                            <label for="name">Nachname:
-                            <input id="name" name="name" value="Mustermann" type="text">
+                        <label for="name">Nachname:
+                            <input id="name" name="name" value="Mustermann" type="text" disabled>
                         </label>
-                            <label for="gtag">Geburtstag:
-                            <input id="gtag" name="gtag" value="1990-01-01" type="date">
+                        <label for="gtag">Geburtstag:
+                            <input id="gtag" name="gtag" value="1990-01-01" type="date" disabled>
                         </label>
                     </div>
                     <div class="form__full">
-                        <label for="studiengang">Fachrichtung:
-                            <select id="fachrichtung" name="fachrichtung" value="Praktische Informatik">
+                        <label for="fachrichtung">Fachrichtung:
+                            <select id="fachrichtung" name="fachrichtung" value="Praktische Informatik" disabled>
                                 <option value="pi">Praktische Informatik</option>
                                 <option value="ti">Technische Informatik</option>
                                 <option value="mi">Medizinische Informatik</option>
                                 <option value="wi">Wirtschafts Informatik</option>
                             </select>
                         </label>
-                        <label for="name">Hauptstandort:
-                            <select id="studiengang " name="studiengang" value="Standort 1">
+                        <label for="hauptstandort">Hauptstandort:
+                            <select id="hauptstandort" name="hauptstandort" value="Standort 1" disabled>
                                 <option value="s1">Standort 1</option>
                                 <option value="s2">Standort 2</option>
                                 <option value="s3">Standort 3</option>
                                 <option value="s4">Standort 4</option>
                             </select>
                         </label>
-                        <label for="studiengang">Straße:
-                            <input id="street" name="street" value="Musterstraße" type="text">
+                        <label for="street__input">Straße:
+                            <input id="street__input" name="street" value="Musterstraße" type="text" disabled>
                         </label>
                         <div id="city">
-                            <label id="city__label" for="studiengang">Stadt:
-                                <input id="city__input"name="city" value="Musterstadt" type="text">
+                            <label id="city__label" for="city__input">Stadt:
+                                <input id="city__input"name="city" value="Musterstadt" type="text" disabled>
                             </label>
                         </div>
                         <div id="postal">
-                            <label for="studiengang">Postleitzahl:
-                                <input id="postal__input" name="postal" value="00000" type="number" maxlenght="5">
+                            <label for="postal__input">Postleitzahl:
+                                <input id="postal__input" name="postal" value="00000" type="number" maxlenght="5" disabled>
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="button primary filled">Profil bearbeiten</button>
+                    <button id="edit-profile" class="button primary filled">Profil bearbeiten</button>
+                    <button style="display: none" id="save" class="button primary filled ">Speichern</button>
                 </form>
             </section>
         </main>
         <aside>
-            <div class="aside-box">
-                <div class="title">Corona-Update</div>
-                <div class="content">
+            <div class="aside-box ">
+                <div class="title ">Corona-Update</div>
+                <div class="content ">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 </div>
             </div>
-            <div class="aside-box">
-                <div class="title">Neuigkeiten</div>
-                <div class="content">
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+            <div class="aside-box ">
+                <div class="title ">Neuigkeiten</div>
+                <div class="content ">
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
-                    <div class="single-news">
-                        <div class="title">Lorem Ipsum</div>
+                    <div class="single-news ">
+                        <div class="title ">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>
@@ -134,24 +135,24 @@
     </div>
 
     <footer>
-        <div class="footer-top">
-            <div class="footer-top__inner">
-                <nav class="footer-nav">
+        <div class="footer-top ">
+            <div class="footer-top__inner ">
+                <nav class="footer-nav ">
                     <ul>
-                        <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">Impressum</a></li>
+                        <li><a href="# ">Datenschutz</a></li>
+                        <li><a href="# ">Impressum</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom__inner">
-                <div class="credit">Handgemacht mit <i class="ti-heart"></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
+        <div class="footer-bottom ">
+            <div class="footer-bottom__inner ">
+                <div class="credit ">Handgemacht mit <i class="ti-heart "></i> von Simon Widanski, Moe Tinawi und Jonas Lörken</div>
             </div>
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js "></script>
 </body>
 
 </html>
