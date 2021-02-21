@@ -691,6 +691,114 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+/* Autor */
+
+#content main .autor-about {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 50px;
+}
+
+#content main .autor-about .autor-image {
+    flex: 0 0 30%;
+    padding-right: 13px;
+    padding-bottom: 10px;
+}
+
+#content main .autor-about .autor-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+#content main .autor-about .autor-discr {
+    padding-bottom: 90px;
+}
+
+#content main .autor-about .text-area-autor {
+    flex: 0 0 70%;
+}
+
+#content main .autor-about .autor-socials h2 {
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+
+/* Autor-Books */
+
+.autor-books {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.autor-books .book {
+    display: block;
+    flex: 0 0 25%;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.autor-books .book .book__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.autor-books .book .book__info {
+    background: #f55500;
+    padding: 20px;
+    color: #fff;
+}
+
+.autor-books .book .book__info .title h3 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.945);
+}
+
+.autor-books .book .book__info .title h3:hover {
+    font-size: 26px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.autor-books .book .book__link {
+    background: #dc4c00;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.autor-books .book .book__link i {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.autor-books .book .book__link:hover i {
+    margin-left: 10px;
+}
+
+
+/* Location Image */
+
+.location-image {
+    padding-bottom: 80px;
+}
+
+.location-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 /* Locations */
 
 .locations-overview {
@@ -907,11 +1015,13 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: none;
 }
 
+
 /* Dashboard Intro */
 
 .dashboard-intro {
     padding-bottom: 80px;
 }
+
 
 /* Footer */
 

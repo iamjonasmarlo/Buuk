@@ -3,8 +3,8 @@
 ## Seiten
 
 - Dashboard
-- Bücher
-    - Buchdetails
+- ~~Bücher~~
+    - ~~Buchdetails~~
     - Buch hinzufügen
 - Autoren
     - Autordetails
@@ -34,6 +34,7 @@
     - inhaltsangabe (string)
     - autor (array -> foreignkey)
     - verfügbarkeitstatus (boolean) ???
+    - anzahl (int ) ???
 - Autor
     - id (int)
     - name (string)
