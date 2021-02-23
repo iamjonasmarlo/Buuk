@@ -24,6 +24,44 @@
     - ~~Login~~
     - ~~Logout~~
 
+
+
+
+
+#### Java Script Fortschritt
+- Startseite (Index)
+- Dashboard
+- Bücher
+    - Bücherliste
+    - Buchdetails
+- Autoren
+    - Autorenliste
+    - Autordetails
+- Standorte
+    - Standortliste
+        - Emil-Figge-Straße 44
+        - Sonnenstraße
+        - ~ax-Ophüls-Platz 
+    - Standortdetails
+
+- Persönliche
+    - Mein Profil
+    - Reservierungen
+        - Reservierungsliste
+        - Reservierungsdetails   
+        - Reservieren
+    - Ausleihen
+        - Ausleihenliste
+        - Ausleihendetails / Strafendetails
+    - Strafen
+        - Strafenliste
+        - ~usleihendetails / Strafendetails
+    - Login
+    - Logout
+
+
+
+
 ## Klassen
 
 - Buch
