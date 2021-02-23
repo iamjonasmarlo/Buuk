@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Buuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <%- include("parts/header") %>
+
+        <div id="content">
+            <section class="headline">
+                <h1>Mein Profil</h1>
+            </section>
+            <main>
+                <section class="form">
+                    <form>
+                        <div class="form__image">
+                            <img src="http://www.placehold.it/800x800" alt="Profilbild">
+                        </div>
+                        <div class="form__half">
+                            <label for="vnam">Vorname:
+                            <input id="vname" name="vname" value="Max" type="text" disabled>
+                        </label>
+                            <label for="name">Nachname:
+                            <input id="name" name="name" value="Mustermann" type="text" disabled>
+                        </label>
+                            <label for="gtag">Geburtstag:
+                            <input id="gtag" name="gtag" value="1990-01-01" type="date" disabled>
+                        </label>
+                        </div>
+                        <div class="form__full">
+                            <label for="fachrichtung">Fachrichtung:
+                            <select id="fachrichtung" name="fachrichtung" value="Praktische Informatik" disabled>
+                                <option value="pi">Praktische Informatik</option>
+                                <option value="ti">Technische Informatik</option>
+                                <option value="mi">Medizinische Informatik</option>
+                                <option value="wi">Wirtschafts Informatik</option>
+                            </select>
+                        </label>
+                            <label for="hauptstandort">Hauptstandort:
+                            <select id="hauptstandort" name="hauptstandort" value="Standort 1" disabled>
+                                <option value="s1">Standort 1</option>
+                                <option value="s2">Standort 2</option>
+                                <option value="s3">Standort 3</option>
+                                <option value="s4">Standort 4</option>
+                            </select>
+                        </label>
+                            <label for="street__input">Straße:
+                            <input id="street__input" name="street" value="Musterstraße" type="text" disabled>
+                        </label>
+                            <div id="city">
+                                <label id="city__label" for="city__input">Stadt:
+                                <input id="city__input"name="city" value="Musterstadt" type="text" disabled>
+                            </label>
+                            </div>
+                            <div id="postal">
+                                <label for="postal__input">Postleitzahl:
+                                <input id="postal__input" name="postal" value="00000" type="number" max="99999" disabled>
+                            </label>
+                            </div>
+                        </div>
+                        <button id="edit-profile" class="button primary filled">Profil bearbeiten</button>
+                        <button style="display: none" id="save" class="button primary filled ">Speichern</button>
+                    </form>
+                </section>
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+        <%- include("parts/footer") %>
+
+            <script src="js/scripts.js "></script>
+</body>
+
+</html>

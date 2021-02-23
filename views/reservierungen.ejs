@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Buuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <%- include("parts/header") %>
+
+        <div id="content">
+            <section class="headline">
+                <h1>Meine Reservierungen </h1>
+            </section>
+            <main>
+                <section class="reservations">
+                    <table class="table">
+                        <tr>
+                            <th>Buch</th>
+                            <th>Autor</th>
+                            <th>Datum von</th>
+                            <th>Datum bis</th>
+                            <th>Standort</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td><a href="buecher-detail">Buchname</a></td>
+                            <td>Herr Musterautor</td>
+                            <td>10.10.2020</td>
+                            <td>12.11.2020</td>
+                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                            <td><a href="reservierungen-detail">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="buecher-detail">Buchname</a></td>
+                            <td>Herr Musterautor</td>
+                            <td>10.10.2020</td>
+                            <td>12.11.2020</td>
+                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                            <td><a href="reservierungen-detail">Details</a></td>
+                        </tr>
+                    </table>
+                </section>
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+        <%- include("parts/footer") %>
+
+            <script src="js/scripts.js"></script>
+</body>
+
+</html>

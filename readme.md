@@ -5,10 +5,10 @@
 - Dashboard
 - ~~Bücher~~
     - ~~Buchdetails~~
-    - Buch hinzufügen
+    - ~~Buch hinzufügen~~
 - Autoren
     - Autordetails
-    - Autor hinzufügen
+    - ~~Autor hinzufügen~~
 - ~~Standorte~~
     - ~~Emil-Figge-Straße 44 (Detail)~~
     - ~~Sonnenstraße (Detail)~~
@@ -18,7 +18,7 @@
     - ~~Mein Profil~~
     - ~~Reservierungen~~
         - ~~Reservierungsdetails~~
-        - Reservierungen hinzufügen
+        - ~~Reservierungen hinzufügen~~
     - ~~Ausleihen~~
         - ~~Ausleihendetails~~
     - ~~Login~~

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Buuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include("parts/header") %>
+
+        <div id="content">
+            <section class="headline">
+                <h1>Dashboard</h1>
+            </section>
+            <main>
+                <section class="dashboard-intro">
+                    <p>Herzlich Willkommen in der Online-Bibliothek der FH Dortmund.<br />Hier haben Sie die Möglichkeit Bücher zu reservieren oder direkt auszuleihen.</p>
+                    <a href="buecher.html" class="button primary filled">Alle Bücher ansehen</a>
+                </section>
+                <section class="dashboard-borrowings">
+                    <h2>Überfällige Ausleihen</h2>
+                    <table class="table">
+                        <tr>
+                            <th>Buch</th>
+                            <th>Datum von</th>
+                            <th>Datum bis</th>
+                            <th>Standort</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        <tr class="error">
+                            <td><a href="buecher-detail">Buchname</a></td>
+                            <td>10.10.2020</td>
+                            <td>12.11.2020</td>
+                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                            <td>Überzogen</td>
+                            <td><a href="ausleihen-detail">Details</a></td>
+                        </tr>
+                    </table>
+                    <a href="ausleihen" class="button primary outline">Alle Ausleihen ansehen</a>
+                </section>
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+        <%- include("parts/footer") %>
+
+            <script src="js/scripts.js"></script>
+</body>
+
+</html>

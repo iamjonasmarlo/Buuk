@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Buuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <%- include("parts/header") %>
+
+        <div id="content">
+            <section class="headline">
+                <h1>Buch Detail </h1>
+
+            </section>
+            <main>
+                <section class="form">
+                    <form>
+                        <div class="form__image">
+                            <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png" alt=" ">
+                        </div>
+                        <div class="form__half">
+                            <label for="titel">Titel:
+                        <input id="titel" name="titel" disabled value="Buchname" type="text">
+                    </label>
+                            <label for="autor">Autor:
+                        <input id="autor" name="autor" disabled value="Autorname" type="text">
+                    </label>
+                            <label for="ejahr">Erscheinungsjahr:
+                        <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
+                        </label>
+                        </div>
+                        <div class="status__element"><span class="status__available"> </span>Verfügbar </div>
+                        <div class="form__full">
+
+                            <label for="ejahr">ISBN:
+                            <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
+                        </label>
+
+                            <label for="standort">Standort:
+                            <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
+                        </label>
+                            <label for="regal">Regal:
+                            <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
+                        </label>
+
+                            <label for="ta">Beschreibung:
+                            <textarea id="ta"  rows="10" disabled  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</textarea>
+                        </label>
+                        </div>
+                    </form>
+                    <a href="reservieren"><button class="button primary filled">Buch reservieren</button></a>
+                </section>
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+        <%- include("parts/footer") %>
+
+            <script src="js/scripts.js"></script>
+</body>
+
+</html>

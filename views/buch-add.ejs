@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Buuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <%- include("parts/header") %>
+
+        <div id="content">
+            <section class="headline">
+                <h1>Buch hinzufügen</h1>
+            </section>
+            <main>
+                <section class="form">
+                    <form id="book-form">
+                        <div class="input-group">
+                            <h2>Buchinfos</h2>
+                            <label>
+                            Buchtitel:
+                            <input type="text" name="name" placeholder="Titel" required>
+                        </label>
+                            <label>
+                           Autor:
+                            <input type="text" name="address" placeholder="Autor" required>
+                        </label>
+                            <label>
+                           ISBN
+                            <input type="text" name="zip" placeholder="ISBN" required>
+                        </label>
+                            <label>Beschreibung:
+                            <textarea name="book-desc  "  rows="10" placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum." ></textarea>
+                        </label>
+                            <label>
+                            Bild (URL):
+                            <input type="url" name="image" placeholder="Bild (URL)" required>
+                        </label>
+                        </div>
+                        <div class="input-group">
+                            <h2>Standort</h2>
+                            <label>
+                            Bibliothek:
+                            <input type="text" name="place" placeholder="Bibliothek" required>
+                        </label>
+                            <label>
+                           Regal:
+                            <input type="text" name="regal" placeholder="Regal" required>
+                        </label>
+                        </div>
+                        <button type="submit" class="button primary filled">Buch hinzufügen</button>
+                    </form>
+                </section>
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+        <%- include("parts/footer") %>
+            <script src="js/scripts.js"></script>
+</body>
+
+</html>
