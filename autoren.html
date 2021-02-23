@@ -52,47 +52,95 @@
 
     <div id="content">
         <section class="headline">
-            <h1>Buch Detail </h1>
-
+            <h1>Autoren</h1>
         </section>
         <main>
-            <section class="form">
-                <form>
-                    <div class="form__image">
-                        <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png" alt=" ">
-                    </div>
-                    <div class="form__half">
-                        <label for="titel">Titel:
-                        <input id="titel" name="titel" disabled value="Buchname" type="text">
-                    </label>
-                        <label for="autor">Autor:
-                        <input id="autor" name="autor" disabled value="Autorname" type="text">
-                    </label>
-                        <label for="ejahr">Erscheinungsjahr:
-                        <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
-                        </label>
-                    </div>
-                    <div class="status__element"><span class="status__available"> </span>Verfügbar </div>
-                    <div class="form__full">
+            <section>
+                <table class="table">
+                    <tr>
+                        <th></th>
+                        <th>Buch</th>
+                        <th>Autor</th>
+                        <th>ISBN</th>
+                        <th>Erscheinungsjahr</th>
+                        <th>Standort</th>
+                        <th>Regal</th>
+                        <th></th>
 
-                        <label for="ejahr">ISBN:
-                            <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
-                        </label>
-
-                        <label for="standort">Standort:
-                            <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
-                        </label>
-                        <label for="regal">Regal:
-                            <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
-                        </label>
-
-                        <label for="ta">Beschreibung:
-                            <textarea id="ta"  rows="10" disabled  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</textarea>
-                        </label>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__notavailable"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__available"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__notavailable"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__available"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__available"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="status"> <span class="status__available"></span></td>
+                        <td>Buchname</td>
+                        <td> <a href="autor-detail.html"> Herr Musterautor </a></td>
+                        <td>9780136019701</td>
+                        <td>1992</td>
+                        <td><a href="standorte-detail.html">Emil-Figge-Straße 44</a></td>
+                        <td>01-b-14-13</td>
+                        <td><a href="buecher-detail.html">Details</a></td>
+                    </tr>
+                </table>
+                <a href="buch-add.html"><button class="button primary filled">Neuen Autor hinzufügen</button></a>
+                <div class="legend">
+                    <div class="legend__element">
+                        <span class="available"></span> Verfügbar
                     </div>
-                </form>
-                <a href="reservieren.html"><button class="button primary filled">Buch reservieren</button></a>
+                    <div class="legend__element">
+                        <span class="notavailable"></span> Nicht verfügbar
+                    </div>
+
+                </div>
             </section>
+
         </main>
         <aside>
             <div class="aside-box">
@@ -105,7 +153,7 @@
                 <div class="title">Neuigkeiten</div>
                 <div class="content">
                     <div class="single-news">
-                        <div class="title ">Lorem Ipsum</div>
+                        <div class="title">Lorem Ipsum</div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
                     <div class="single-news">

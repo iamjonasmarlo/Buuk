@@ -72,11 +72,6 @@ if (booklocTrigger) {
             span2 = document.createElement("span"),
             input2 = document.createElement("input");
 
-        let form3 = document.getElementById("book-form"),
-            label3 = document.createElement("label"),
-            span3 = document.createElement("span"),
-            input3 = document.createElement("input");
-
 
 
         label1.setAttribute("class", "horizontal feature");
@@ -91,11 +86,6 @@ if (booklocTrigger) {
         input2.setAttribute("placeholder", "Regal");
         input2.setAttribute("name", "feature[]")
 
-        label3.setAttribute("class", "horizontal feature");
-        span3.innerHTML = "Anzahl";
-        input3.setAttribute("type", "number");
-        input3.setAttribute("placeholder", "Anzahl");
-        input3.setAttribute("name", "feature[]")
 
         label1.appendChild(span1);
         label1.appendChild(input1);
@@ -103,12 +93,9 @@ if (booklocTrigger) {
         label2.appendChild(span2);
         label2.appendChild(input2);
 
-        label3.appendChild(span3);
-        label3.appendChild(input3);
-
         insertAfter(this, label1);
         insertAfter(label1, label2);
-        insertAfter(label2, label3);
+
 
     });
 }

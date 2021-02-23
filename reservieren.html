@@ -59,43 +59,44 @@
             <section class="form">
                 <form id="reserve-form">
                     <div class="input-group">
-                        <p>Titel oder ISBN eingeben</p>
+                        <h2>Buchinfos</h2>
                         <label>
                             Buchtitel:
-                            <input type="text" name="title" placeholder="Titel" required>
+                            <input type="text" name="title" placeholder="Titel" readonly>
                         </label>
                         <label>
                             ISBN:
-                            <input type="text" name="place" placeholder="ISBN" required>
+                            <input type="text" name="place" placeholder="ISBN" readonly>
                         </label>
-                    </div>
-                    <div class="input-group">
+
                         <label>
                             Autor:
-                            <input type="text" name="author" placeholder="Autor" required disabled>
+                            <input type="text" name="author" placeholder="Autor" required readonly>
                             </label>
                         <label>
                             Erscheinungsjahr:
-                            <input type="number" name="release" placeholder="Erscheinungsjahr" max="99999" required disabled>
+                            <input type="number" name="release" placeholder="Erscheinungsjahr" max="99999" readonly>
                         </label>
 
                         <label>
                             Standort:
-                            <select name="location" required disabled>
-                                <option>Standort 1</option>
-                                <option>Standort 2</option>
-                                <option>Standort 3</option>
-                            </select>
+                            <input type="text" name="place" readonly>
                         </label>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <h2>Datum der Reservierung</h2>
                         <label>
                             Datum von:
-                            <input type="date" name="beginning-date" required disabled>
+                            <input type="date" name="beginning-date" required>
                         </label>
                         <label>
                             Datum bis:
-                            <input type="date" name="ending-date" required disabled>
+                            <input type="date" name="ending-date" required>
                         </label>
                     </div>
+
+
 
                     <button type="submit" class="button primary filled">Jetzt reservieren</button>
                 </form>
