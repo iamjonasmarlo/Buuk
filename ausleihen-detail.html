@@ -55,55 +55,69 @@
             <h1>Ausleihdetails</h1>
         </section>
         <main>
-            <section class="form">
-                <form>
-                    <div class="form__image">
-                        <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png" alt=" ">
-                    </div>
-                    <div class="form__half">
-                        <label for="buch ">Buch:
-                        <input id="buch" name="buch" disabled value="Buchname" type="text">
-                    </label>
-                        <label for="autor">Autor:
-                        <input id="autor" name="autor" disabled value="Autorname" type="text">
-                    </label>
-                        <label for="ejahr">Erscheinungsjahr:
-                        <input id="ejah" name="ejahr" disabled value="2008"type="number" maxlength="4">
-                        </label>
-                    </div>
-                    <div class="form__full">
-                        <label for="ejahr">ISBN:
-                            <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
-                        </label>
-                        <label for="resvon">Ausgeliehen von:
-                            <input id="resvon" name="resvon" disabled  value="1990-01-01"type="date">
-                        </label>
-                        <label for="resbis">Ausgeliehen bis:
-                            <input id="resbis" name="resbis" disabled  value="1999-12-31"type="date">
-                        </label>
-                        <label for="standort">Standort:
-                            <input id="standort" name="standort" disabled  value="Emil-Figge-Straße"type="text">
-                        </label>
-                        <label for="regal">Regal:
-                            <input id="regal" name="regal" disabled  value="O1-B-14-3"type="text">
-                        </label>
+            <section class="details">
 
-                        <label for="regal">Ausleih-ID:
-                            <input id="resId" name="resId" disabled  value="1457-4874-4548-4488-1415-12"type="text">
-                        </label>
-                        <hr>
-                        <label for="regal"> Überfällig seit(Tagen):
-                            <input id="rückTage" name="rückTage" disabled  value="7"type="Zahl">
-                        </label>
-                        <label for="regal"> Überfälligkeitsgebühren (50ct pro Tag):
-                            <input id="rückTage" name="rückTage" disabled  value="3,50€"type="text">
-                        </label>
-                        <button class="button primary filled">Buch zurückgeben</button>
-                        <button class="button primary outline">Verlängern</button>
-                    </div>
-                </form>
+                <div class="details__image">
+                    <img src="/img/comingsoon.png" alt=" ">
+
+
+                </div>
+                <div class="details__half">
+                    <section class="detail__section">
+                        <h2>Buchtitel:</h2>
+                        <p>WebTech 1</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Autor:</h2>
+                        <p>Max Mustermann</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Erscheinungsjahr:</h2>
+                        <p>2019</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>ISBN:</h2>
+                        <p>123456789-9</p>
+                    </section>
+
+                </div>
+                <div class="details__full">
+                    <section class="detail__section">
+                        <h2>Ausgeliehen von:</h2>
+                        <p>123456789-9</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Ausgeliehen Bis:</h2>
+                        <p>123456789-9</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Standort</h2>
+                        <p>Emil-Figge-Straße 44</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Regal</h2>
+                        <p>O1-B-14-3</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Ausleih-ID</h2>
+                        <p>1478-4699-4547-3215-8475</p>
+                    </section>
+                    <hr>
+                    <section class="detail__section">
+                        <h2>Überfällig seit(Tagen)</h2>
+                        <p>5</p>
+                    </section>
+                    <section class="detail__section">
+                        <h2>Überfälligkeitsgebühren (0,50 € / Tag)</h2>
+                        <p>2,50 €</p>
+                    </section>
+                </div>
+
+                <button class="button primary filled">Buch zurückgeben</button>
+                <button class="button primary outline">Verlängern</button>
             </section>
         </main>
+
         <aside>
             <div class="aside-box">
                 <div class="title">Corona-Update</div>

@@ -18,6 +18,7 @@
     - ~~Mein Profil~~
     - ~~Reservierungen~~
         - ~~Reservierungsdetails~~
+        - Reservierungen hinzufügen
     - ~~Ausleihen~~
         - ~~Ausleihendetails~~
     - ~~Login~~
