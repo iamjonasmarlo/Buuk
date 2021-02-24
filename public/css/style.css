@@ -802,7 +802,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 #content main .autor-about .autor-discr {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
+}
+
+#content main .autor-about .autor-discr p b {
+    font-size: 24px;
 }
 
 #content main .autor-about .text-area-autor {
@@ -814,6 +818,32 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 5px;
 }
 
+#content main .autor-about .autor-socials .social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+}
+
+#content main .autor-about .autor-socials .social-list li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#content main .autor-about .autor-socials .social-list li a {
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+#content main .autor-about .autor-socials .social-list li a i {
+    margin-right: 5px;
+    color: #f55500;
+}
+
+#content main .autor-about .autor-socials .social-list li:last-child {
+    margin-right: 0;
+}
 
 /* Autor-Books */
 
@@ -824,10 +854,16 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 .autor-books .book {
     display: block;
-    flex: 0 0 25%;
-    width: 25%;
+    flex: 0 0 33.33333333%;
+    width: 33.33333333%;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+.autor-books .book .inner {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .autor-books .book .book__image img {
@@ -840,6 +876,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background: #f55500;
     padding: 20px;
     color: #fff;
+    flex-grow: 1;
 }
 
 .autor-books .book .book__info .title h3 {
@@ -847,12 +884,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     font-size: 25px;
     margin-bottom: 10px;
     color: rgba(255, 255, 255, 0.945);
+    transition: all 0.3s ease;
 }
 
 .autor-books .book .book__info .title h3:hover {
-    font-size: 26px;
     text-decoration: underline;
-    transition: all 0.3s ease;
 }
 
 .autor-books .book .book__link {

@@ -1,85 +1,67 @@
-<!DOCTYPE HTML>
-<html lang="de">
+<%- include("parts/header", {current: "standorte-add"}) %>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Buuk</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<div id="content">
+    <section class="headline">
+        <h1>Standort hinzufügen</h1>
+    </section>
+    <main>
+        <section class="form">
+            <form id="location-form">
+                <div class="input-group">
+                    <h2>Kontaktdaten</h2>
+                    <label>
+                        Name:
+                        <input type="text" name="name" placeholder="Name" required>
+                    </label>
+                    <label>
+                        Straße + Nr.:
+                        <input type="text" name="address" placeholder="Straße + Nr." required>
+                    </label>
+                    <label>
+                        PLZ:
+                        <input type="number" name="zip" placeholder="PLZ" max="99999" required>
+                    </label>
+                    <label>
+                        Ort:
+                        <input type="text" name="city" placeholder="Ort" required>
+                    </label>
+                    <label>
+                        Bild (URL):
+                        <input type="url" name="image" placeholder="Bild (URL)" required>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <h2>Öffnungs- und Servicezeiten</h2>
+                    <label class="horizontal">
+                        <span>Montag</span>
+                        <input type="text" name="time-monday" placeholder="Montag">
+                    </label>
+                    <label class="horizontal">
+                        <span>Dienstag</span>
+                        <input type="text" name="time-tuesday" placeholder="Dienstag">
+                    </label>
+                    <label class="horizontal">
+                        <span>Mittwoch</span>
+                        <input type="text" name="time-wednesday" placeholder="Mittwoch">
+                    </label>
+                    <label class="horizontal">
+                        <span>Donnerstag</span>
+                        <input type="text" name="time-thursday" placeholder="Donnerstag">
+                    </label>
+                    <label class="horizontal">
+                        <span>Freitag</span>
+                        <input type="text" name="time-friday" placeholder="Freitag">
+                    </label>
+                </div>
+                <div class="input-group">
+                    <h2>Ausstattung</h2>
+                    <button class="button primary outline" style="margin-top:0;" id="add-feature"><i class="ti-plus"></i>Ausstattung hinzufügen</button>
+                </div>
+                <button type="submit" class="button primary filled">Standort hinzufügen</button>
+            </form>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-<body>
-    <%- include("parts/header", {current: "standorte-add"}) %>
-
-        <div id="content">
-            <section class="headline">
-                <h1>Standort hinzufügen</h1>
-            </section>
-            <main>
-                <section class="form">
-                    <form id="location-form">
-                        <div class="input-group">
-                            <h2>Kontaktdaten</h2>
-                            <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Name" required>
-                        </label>
-                            <label>
-                            Straße + Nr.:
-                            <input type="text" name="address" placeholder="Straße + Nr." required>
-                        </label>
-                            <label>
-                            PLZ:
-                            <input type="number" name="zip" placeholder="PLZ" max="99999" required>
-                        </label>
-                            <label>
-                            Ort:
-                            <input type="text" name="city" placeholder="Ort" required>
-                        </label>
-                            <label>
-                            Bild (URL):
-                            <input type="url" name="image" placeholder="Bild (URL)" required>
-                        </label>
-                        </div>
-                        <div class="input-group">
-                            <h2>Öffnungs- und Servicezeiten</h2>
-                            <label class="horizontal">
-                            <span>Montag</span>
-                            <input type="text" name="time-monday" placeholder="Montag">
-                        </label>
-                            <label class="horizontal">
-                            <span>Dienstag</span>
-                            <input type="text" name="time-tuesday" placeholder="Dienstag">
-                        </label>
-                            <label class="horizontal">
-                            <span>Mittwoch</span>
-                            <input type="text" name="time-wednesday" placeholder="Mittwoch">
-                        </label>
-                            <label class="horizontal">
-                            <span>Donnerstag</span>
-                            <input type="text" name="time-thursday" placeholder="Donnerstag">
-                        </label>
-                            <label class="horizontal">
-                            <span>Freitag</span>
-                            <input type="text" name="time-friday" placeholder="Freitag">
-                        </label>
-                        </div>
-                        <div class="input-group">
-                            <h2>Ausstattung</h2>
-                            <button class="button primary outline" style="margin-top:0;" id="add-feature"><i class="ti-plus"></i>Ausstattung hinzufügen</button>
-                        </div>
-                        <button type="submit" class="button primary filled">Standort hinzufügen</button>
-                    </form>
-                </section>
-            </main>
-            <%- include("parts/aside") %>
-        </div>
-
-        <%- include("parts/footer") %>
-
-            <script src="js/scripts.js"></script>
-</body>
-
-</html>
+<%- include("parts/footer") %>

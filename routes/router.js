@@ -1,6 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
+const standort_controller = require("../controller/standort-controller.js");
+
+standort_controller.add_standort(0, "test", "test", 58285, "gevelsberg", "01234567890", "01234567890", "öffnungszeiten");
+console.log(standort_controller.get_standorte());
+
 /*STARTSEITE*/
 router.get("/", function(req, res, next) {
     res.status(200);
@@ -93,13 +98,13 @@ router.get("/standorte-add", function(req, res, next) {
     res.render("standorte-add");
 });
 
-router.get("/standorte-detail", function(req, res, next) {
+router.get("/standorte/detail", function(req, res, next) {
     res.status(200);
     res.render("standorte-detail");
 });
 router.get("/standorte", function(req, res, next) {
     res.status(200);
-    res.render("standorte");
+    res.render("standorte", {standorte: standort_controller.get_standorte()});
 });
 
 /*RESERVIERUNG*/

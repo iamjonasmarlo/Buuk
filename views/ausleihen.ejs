@@ -1,117 +1,99 @@
-<!DOCTYPE HTML>
-<html lang="de">
+<%- include("parts/header",{current: "ausleihen"}) %>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Buuk</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<div id="content">
+    <section class="headline">
+        <h1>Meine Ausleihen </h1>
+    </section>
+    <main>
+        <section class="borrowings">
+            <table class="table">
+                <tr>
+                    <th>Buch</th>
+                    <th>Datum von</th>
+                    <th>Datum bis</th>
+                    <th>Standort</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr class="success">
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Ausgeliehen</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr class="success">
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Ausgeliehen</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Zurückgegeben</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr class="error">
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Überzogen</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detailtml">Emil-Figge-Straße 44</a></td>
+                    <td>Zurückgegeben</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Zurückgegeben</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr class="warning">
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Überzogen (bezahlt)</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td><a href="buecher-detail">Buchname</a></td>
+                    <td>10.10.2020</td>
+                    <td>12.11.2020</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>Zurückgegeben</td>
+                    <td><a href="ausleihen-detail">Details</a></td>
+                </tr>
+            </table>
+            <div class="legend">
+                <div class="legend__element">
+                    <span class="success"></span> Aktuell ausgeliehen
+                </div>
+                <div class="legend__element">
+                    <span class="error"></span> Überzogen
+                </div>
+                <div class="legend__element">
+                    <span class="warning"></span> Überzogen (Zurückgegeben)
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-<body>
-    <%- include("parts/header",{current: "ausleihen"}) %>
-
-        <div id="content">
-            <section class="headline">
-                <h1>Meine Ausleihen </h1>
-            </section>
-            <main>
-                <section class="borrowings">
-                    <table class="table">
-                        <tr>
-                            <th>Buch</th>
-                            <th>Datum von</th>
-                            <th>Datum bis</th>
-                            <th>Standort</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                        <tr class="success">
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Ausgeliehen</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr class="success">
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Ausgeliehen</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Zurückgegeben</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr class="error">
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Überzogen</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detailtml">Emil-Figge-Straße 44</a></td>
-                            <td>Zurückgegeben</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Zurückgegeben</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr class="warning">
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Überzogen (bezahlt)</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="buecher-detail">Buchname</a></td>
-                            <td>10.10.2020</td>
-                            <td>12.11.2020</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>Zurückgegeben</td>
-                            <td><a href="ausleihen-detail">Details</a></td>
-                        </tr>
-                    </table>
-                    <div class="legend">
-                        <div class="legend__element">
-                            <span class="success"></span> Aktuell ausgeliehen
-                        </div>
-                        <div class="legend__element">
-                            <span class="error"></span> Überzogen
-                        </div>
-                        <div class="legend__element">
-                            <span class="warning"></span> Überzogen (Zurückgegeben)
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <%- include("parts/aside") %>
-        </div>
-
-        <%- include("parts/footer") %>
-
-            <script src="js/scripts.js "></script>
-</body>
-
-</html>
+<%- include("parts/footer") %>

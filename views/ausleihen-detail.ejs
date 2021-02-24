@@ -1,91 +1,68 @@
-<!DOCTYPE HTML>
-<html lang="de">
+<%- include("parts/header",{current: "ausleihen-detail"}) %>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Buuk</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <%- include("parts/header",{current: "ausleihen-detail"}) %>
-
-        <div id="content">
-            <section class="headline">
-                <h1>Ausleihdetails</h1>
-            </section>
-            <main>
-                <section class="details">
-
-                    <div class="details__image">
-                        <img src="/img/comingsoon.png" alt=" ">
-
-                    </div>
-                    <div class="details__half">
-                        <section class="detail__section">
-                            <h2>Buchtitel:</h2>
-                            <p>WebTech 1</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Autor:</h2>
-                            <p>Max Mustermann</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Erscheinungsjahr:</h2>
-                            <p>2019</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>ISBN:</h2>
-                            <p>123456789-9</p>
-                        </section>
-
-                    </div>
-                    <div class="details__full">
-                        <section class="detail__section">
-                            <h2>Ausgeliehen von:</h2>
-                            <p>123456789-9</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Ausgeliehen Bis:</h2>
-                            <p>123456789-9</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Standort</h2>
-                            <p>Emil-Figge-Straße 44</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Regal</h2>
-                            <p>O1-B-14-3</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Ausleih-ID</h2>
-                            <p>1478-4699-4547-3215-8475</p>
-                        </section>
-                        <hr>
-                        <section class="detail__section">
-                            <h2>Überfällig seit(Tagen)</h2>
-                            <p>5</p>
-                        </section>
-                        <section class="detail__section">
-                            <h2>Überfälligkeitsgebühren (0,50 € / Tag)</h2>
-                            <p>2,50 €</p>
-                        </section>
-                    </div>
-
-                    <button class="button primary filled">Buch zurückgeben</button>
-                    <button class="button primary outline">Verlängern</button>
+<div id="content">
+    <section class="headline">
+        <h1>Ausleihdetails</h1>
+    </section>
+    <main>
+        <section class="details">
+            <div class="details__image">
+                <img src="/img/comingsoon.png" alt=" ">
+            </div>
+            <div class="details__half">
+                <section class="detail__section">
+                    <h2>Buchtitel:</h2>
+                    <p>WebTech 1</p>
                 </section>
-            </main>
+                <section class="detail__section">
+                    <h2>Autor:</h2>
+                    <p>Max Mustermann</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Erscheinungsjahr:</h2>
+                    <p>2019</p>
+                </section>
+                <section class="detail__section">
+                    <h2>ISBN:</h2>
+                    <p>123456789-9</p>
+                </section>
+            </div>
+            <div class="details__full">
+                <section class="detail__section">
+                    <h2>Ausgeliehen von:</h2>
+                    <p>123456789-9</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Ausgeliehen Bis:</h2>
+                    <p>123456789-9</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Standort</h2>
+                    <p>Emil-Figge-Straße 44</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Regal</h2>
+                    <p>O1-B-14-3</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Ausleih-ID</h2>
+                    <p>1478-4699-4547-3215-8475</p>
+                </section>
+                <hr>
+                <section class="detail__section">
+                    <h2>Überfällig seit(Tagen)</h2>
+                    <p>5</p>
+                </section>
+                <section class="detail__section">
+                    <h2>Überfälligkeitsgebühren (0,50 € / Tag)</h2>
+                    <p>2,50 €</p>
+                </section>
+            </div>
+            <button class="button primary filled">Buch zurückgeben</button>
+            <button class="button primary outline">Verlängern</button>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-            <%- include("parts/aside") %>
-        </div>
-
-        <%- include("parts/footer") %>
-
-            <script src="js/scripts.js"></script>
-</body>
-
-</html>
+<%- include("parts/footer") %>

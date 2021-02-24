@@ -70,10 +70,9 @@
     - isbn (int)
     - fachrichtung (string)
     - jahr (int)
-    - inhaltsangabe (string)
+    - beschreibung (string)
     - autor (array -> foreignkey)
-    - verfügbarkeitstatus (boolean) ???
-    - anzahl (int ) ???
+    - status (boolean)
 - Autor
     - id (int)
     - name (string)

@@ -1,46 +1,25 @@
-<!DOCTYPE HTML>
-<html lang="de">
+<%- include("parts/header", {current: "login"}) %>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Buuk</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<div id="content">
+    <section class="headline">
+        <h1>Login</h1>
+    </section>
+    <main>
+        <section class="form">
+            <form>
+                <div class="form__half">
+                    <label for="vnam ">Unikennung:
+            <input id="vname" name="vname" value="mamus001" type="text">
+        </label>
+                    <label for="name">Passwort:
+            <input id="name" name="name" value="Mustermann" type="password">
+        </label>
 
-<body>
-    <%- include("parts/header", {current: "login"}) %>
+                </div>
+            </form>
+        </section>
+        <a href="index" class="button primary filled">Anmelden</a>
+    </main>
+</div>
 
-        <div id="content">
-            <section class="headline">
-                <h1>Login</h1>
-            </section>
-            <main>
-                <section class="form">
-                    <form>
-                        <div class="form__half">
-                            <label for="vnam ">Unikennung:
-                    <input id="vname" name="vname" value="mamus001" type="text">
-                </label>
-                            <label for="name">Passwort:
-                    <input id="name" name="name" value="Mustermann" type="password">
-                </label>
-
-                        </div>
-                    </form>
-                </section>
-                <a href="index" class="button primary filled">Anmelden</a>
-
-            </main>
-
-
-        </div>
-
-        <%- include("parts/footer") %>
-
-            <script src="js/scripts.js"></script>
-</body>
-
-</html>
+<%- include("parts/footer") %>

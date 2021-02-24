@@ -1,116 +1,95 @@
-<!DOCTYPE HTML>
-<html lang="de">
+<%- include("parts/header", {current: "buecher"}) %>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Buuk</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<div id="content">
+    <section class="headline">
+        <h1>Bücher</h1>
+    </section>
+    <main>
+        <section>
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Buch</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                    <th>Erscheinungsjahr</th>
+                    <th>Standort</th>
+                    <th>Regal</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__notavailable"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__available"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__notavailable"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__available"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__available"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+                <tr>
+                    <td class="status"> <span class="status__available"></span></td>
+                    <td>Buchname</td>
+                    <td> <a href="autor-detail"> Herr Musterautor </a></td>
+                    <td>9780136019701</td>
+                    <td>1992</td>
+                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
+                    <td>01-b-14-13</td>
+                    <td><a href="buecher-detail">Details</a></td>
+                </tr>
+            </table>
+            <a href="buch-add"><button class="button primary filled">Neues Buch hinzufügen</button></a>
+            <div class="legend">
+                <div class="legend__element">
+                    <span class="available"></span> Verfügbar
+                </div>
+                <div class="legend__element">
+                    <span class="notavailable"></span> Nicht verfügbar
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-<body>
-    <%- include("parts/header", {current: "buecher"}) %>
-
-        <div id="content">
-            <section class="headline">
-                <h1>Bücher</h1>
-            </section>
-            <main>
-                <section>
-                    <table class="table">
-                        <tr>
-                            <th></th>
-                            <th>Buch</th>
-                            <th>Autor</th>
-                            <th>ISBN</th>
-                            <th>Erscheinungsjahr</th>
-                            <th>Standort</th>
-                            <th>Regal</th>
-                            <th></th>
-
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__notavailable"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__available"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__notavailable"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__available"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__available"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="status"> <span class="status__available"></span></td>
-                            <td>Buchname</td>
-                            <td> <a href="autor-detail"> Herr Musterautor </a></td>
-                            <td>9780136019701</td>
-                            <td>1992</td>
-                            <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                            <td>01-b-14-13</td>
-                            <td><a href="buecher-detail">Details</a></td>
-                        </tr>
-                    </table>
-                    <a href="buch-add"><button class="button primary filled">Neues Buch hinzufügen</button></a>
-                    <div class="legend">
-                        <div class="legend__element">
-                            <span class="available"></span> Verfügbar
-                        </div>
-                        <div class="legend__element">
-                            <span class="notavailable"></span> Nicht verfügbar
-                        </div>
-
-                    </div>
-                </section>
-
-            </main>
-            <%- include("parts/aside") %>
-        </div>
-
-        <%- include("parts/footer") %>
-
-            <script src="js/scripts.js"></script>
-</body>
-
-</html>
+<%- include("parts/footer") %>
