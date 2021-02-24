@@ -6,28 +6,28 @@
     </section>
     <main>
         <section class="locations-overview">
-            <% for (standort of standorte) { %>
-            <div class="location">
-                <div class="inner">
-                    <a href="standorte/detail?id=<%= standort.id %>" class="location__image">
-                        <img src="http://www.placehold.it/800x400" alt="Standort <%= standort.name %>">
+            <% standorte.forEach(function(standort, index) { %>
+                <div class="location">
+                    <div class="inner">
+                        <a href="standorte/detail?id=<%= index %>" class="location__image">
+                            <img src="http://www.placehold.it/800x400" alt="Standort <%= standort.name %>">
+                        </a>
+                        <div class="location__info">
+                            <div class="title"><%= standort.name %></div>
+                            <address>
+                            <%= standort.adresse %><br />
+                            <%= standort.plz %> <%= standort.ort %>
+                        </address>
+                        </div>
+                        <a href="standorte/detail?id=<%= index %>" class="location__link">
+                        Zum Standort <i class="ti-arrow-right"></i>
                     </a>
-                    <div class="location__info">
-                        <div class="title"><%= standort.name %></div>
-                        <address>
-                        <%= standort.adresse %><br />
-                        <%= standort.plz %> <%= standort.ort %>
-                    </address>
                     </div>
-                    <a href="standorte/detail?id=<%= standort.id %>" class="location__link">
-                    Zum Standort <i class="ti-arrow-right"></i>
-                </a>
                 </div>
-            </div>
-            <% } %>
+            <% }); %>
         </section>
         <section class="add">
-            <a href="standorte-add" class="button primary filled">Neuen Standort hinzufügen</a>
+            <a href="standorte/neu" class="button primary filled">Neuen Standort hinzufügen</a>
         </section>
     </main>
     <%- include("parts/aside") %>

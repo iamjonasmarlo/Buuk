@@ -2,19 +2,19 @@
 
 <div id="content">
     <section class="headline">
-        <h1>Standort: Emil-Figge-Straße 44</h1>
+        <h1>Standort: <%= standort.name %></h1>
     </section>
     <main>
         <section class="location-image">
-            <img src="http://www.placehold.it/1200x400" alt="Standort Bild">
+            <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
         </section>
         <section class="location-detail">
             <div class="location-detail__contact">
                 <div class="title">Kontaktdaten</div>
                 <ul class="contact-list">
-                    <li><i class="ti-location-pin"></i>Emil-Figge-Str. 44<br />44227 Dortmund</li>
-                    <li><i class="ti-mobile"></i><a href="#">+49 (0231) 9112-4917</a></li>
-                    <li><i class="ti-printer"></i><a href="#">+49 (0231) 9112-4922</a></li>
+                    <li><i class="ti-location-pin"></i><%= standort.adresse %><br /><%= standort.plz %> <%= standort.ort %></li>
+                    <li><i class="ti-mobile"></i><a href="tel:<%= standort.telefon %>"><%= standort.telefon %></a></li>
+                    <li><i class="ti-printer"></i><a href="#"><%= standort.fax %></a></li>
                 </ul>
             </div>
             <div class="location-detail__accordion">
@@ -30,26 +30,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Montag</td>
-                                        <td>09:00 Uhr - 16:00 Uhr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dienstag</td>
-                                        <td>09:00 Uhr - 16:00 Uhr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mittwoch</td>
-                                        <td>09:00 Uhr - 16:00 Uhr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Donnerstag</td>
-                                        <td>09:00 Uhr - 16:00 Uhr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Freitag</td>
-                                        <td>09:00 Uhr - 16:00 Uhr</td>
-                                    </tr>
+                                    <% standort.oeffnungszeiten.forEach(function(oeffnungszeiten) { %>
+                                        <tr>
+                                            <td><%= oeffnungszeiten[0] %></td>
+                                            <td><%= oeffnungszeiten[1] %></td>
+                                        </tr>
+                                    <% }); %>
                                 </tbody>
                             </table>
                         </div>
@@ -60,14 +46,9 @@
                     <div class="acc-content">
                         <div class="inner">
                             <ul>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
-                                <li>Lorem Ipsum</li>
+                                <% standort.ausstattung.forEach(function(ausstattung) { %>
+                                    <li><%= ausstattung %></li>
+                                <% }); %>
                             </ul>
                         </div>
                     </div>

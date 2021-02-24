@@ -2,6 +2,7 @@
 
 const open = require("open");
 const express = require("express");
+const bodyParser = require('body-parser');
 const app = express();
 const router = require("./routes/router.js");
 
@@ -12,6 +13,7 @@ app.set("views", "views");
 
 /* Middleware */
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/", router);
 

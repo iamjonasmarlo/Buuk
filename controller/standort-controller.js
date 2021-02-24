@@ -6,8 +6,13 @@ function get_standorte() {
     return db.standorte;
 }
 
-function add_standort(id, name, adresse, plz, ort, telefon, fax, oeffnungszeiten) {
-    let standort = new db.standort(id, name, adresse, plz, ort, telefon, fax, oeffnungszeiten);
+function get_standorte_detail(id) {
+    let standort = db.standorte[id];
+    return standort;
+}
+
+function add_standort(name, adresse, plz, ort, telefon, fax, oeffnungszeiten, ausstattung) {
+    let standort = new db.standort(name, adresse, plz, ort, telefon, fax, oeffnungszeiten, ausstattung);
     db.standorte.push(standort);
 }
 
@@ -15,5 +20,6 @@ function add_standort(id, name, adresse, plz, ort, telefon, fax, oeffnungszeiten
 
 module.exports = {
     get_standorte,
+    get_standorte_detail,
     add_standort
 };

@@ -995,6 +995,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     flex: 0 0 33.33333%;
     width: 33.33333%;
     padding: 0 15px;
+    margin-bottom: 30px;
 }
 
 .locations-overview .location .location__image img {
@@ -1156,17 +1157,19 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     list-style: none;
 }
 
+.location-detail .location-detail__accordion .accordion .acc-content .inner ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
 .location-detail .location-detail__accordion .accordion .acc-content .inner ul li:before {
     content: "\e64c";
     font-family: "themify";
     color: #f55500;
-    position: relative;
+    position: absolute;
+    left: 0;
     top: 2px;
-    margin-right: 10px;
-}
-
-.location-detail .location-detail__accordion .accordion .acc-content .inner ul li {
-    margin-bottom: 5px;
 }
 
 .location-detail .location-detail__accordion .accordion .acc-content .inner ul li:last-child {

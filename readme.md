@@ -24,48 +24,9 @@
     - ~~Login~~
     - ~~Logout~~
 
-
-
-
-
-#### Java Script Fortschritt
-- Startseite (Index)
-- Dashboard
-- Bücher
-    - Bücherliste
-    - Buchdetails
-- Autoren
-    - Autorenliste
-    - Autordetails
-- Standorte
-    - Standortliste
-        - Emil-Figge-Straße 44
-        - Sonnenstraße
-        - ~ax-Ophüls-Platz 
-    - Standortdetails
-
-- Persönliche
-    - Mein Profil
-    - Reservierungen
-        - Reservierungsliste
-        - Reservierungsdetails   
-        - Reservieren
-    - Ausleihen
-        - Ausleihenliste
-        - Ausleihendetails / Strafendetails
-    - Strafen
-        - Strafenliste
-        - ~usleihendetails / Strafendetails
-    - Login
-    - Logout
-
-
-
-
 ## Klassen
 
 - Buch
-    - id (int)
     - name (string)
     - isbn (int)
     - fachrichtung (string)
@@ -74,10 +35,8 @@
     - autor (array -> foreignkey)
     - status (boolean)
 - Autor
-    - id (int)
     - name (string)
 - Kunde
-    - id (int)
     - name (string)
     - Straße (string)
     - Stadt (string)
@@ -85,23 +44,21 @@
     - typ (string)
     - Fachrichtung(string)
 - Standort
-    - id (int)
     - name (string)
     - adresse (string)
     - plz (int)
     - ort (string)
     - telefon (int)
     - fax (int)
-    - öffnungszeiten (array -> string/int)
+    - öffnungszeiten (array -> string)
+    - ausstattung (array -> string)
     - bücher (array -> foreignkey)
 - Reservierungen
-    - id (int)
     - buch (foreignkey)
     - kunde (foreignkey)
     - datumVon (date)
     - datumBis (date)
 - Ausleihen
-    - id (int)
     - buch (foreignkey)
     - kunde (foreignkey)
     - datumVon (date)
@@ -109,11 +66,13 @@
     - status (int)
 
 ## Aufgaben & Bugs
-
+- Dashboard
+    - Automatisierte Aausgabe
 - Standorte
-    - Automatisierte Aufgabe der Übersicht
-    - Automatisierte Ausgabe der Detailseite
-    - Anlegen eines Standortes
+    - ~~Automatisierte Aufgabe der Übersicht~~
+    - ~~Automatisierte Ausgabe der Detailseite~~
+    - ~~Anlegen eines Standortes~~
+    - Bücher auf der Detaisleite ausgeben
 - Reservierungen
     - Automatisierte Aufgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite

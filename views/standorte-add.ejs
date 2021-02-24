@@ -6,7 +6,7 @@
     </section>
     <main>
         <section class="form">
-            <form id="location-form">
+            <form action="/standorte" method="POST" id="location-form">
                 <div class="input-group">
                     <h2>Kontaktdaten</h2>
                     <label>
@@ -26,31 +26,35 @@
                         <input type="text" name="city" placeholder="Ort" required>
                     </label>
                     <label>
-                        Bild (URL):
-                        <input type="url" name="image" placeholder="Bild (URL)" required>
+                        Telefon:
+                        <input type="text" name="phone" placeholder="Telefon" required>
+                    </label>
+                    <label>
+                        Fax:
+                        <input type="text" name="fax" placeholder="Fax" required>
                     </label>
                 </div>
                 <div class="input-group">
                     <h2>Öffnungs- und Servicezeiten</h2>
                     <label class="horizontal">
                         <span>Montag</span>
-                        <input type="text" name="time-monday" placeholder="Montag">
+                        <input type="text" name="monday" placeholder="Montag" required>
                     </label>
                     <label class="horizontal">
                         <span>Dienstag</span>
-                        <input type="text" name="time-tuesday" placeholder="Dienstag">
+                        <input type="text" name="tuesday" placeholder="Dienstag" required>
                     </label>
                     <label class="horizontal">
                         <span>Mittwoch</span>
-                        <input type="text" name="time-wednesday" placeholder="Mittwoch">
+                        <input type="text" name="wednesday" placeholder="Mittwoch" required>
                     </label>
                     <label class="horizontal">
                         <span>Donnerstag</span>
-                        <input type="text" name="time-thursday" placeholder="Donnerstag">
+                        <input type="text" name="thursday" placeholder="Donnerstag" required>
                     </label>
                     <label class="horizontal">
                         <span>Freitag</span>
-                        <input type="text" name="time-friday" placeholder="Freitag">
+                        <input type="text" name="friday" placeholder="Freitag" required>
                     </label>
                 </div>
                 <div class="input-group">
