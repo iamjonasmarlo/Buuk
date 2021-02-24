@@ -10,13 +10,32 @@
     </div>
     <div class="header-bottom">
         <div class="header-bottom__inner">
-            <a href="index" class="logo"><img src="/img/logo.png" alt="Buuk Logo"></a>
+            <a href="/index" class="logo"><img src="/img/logo.png" alt="Buuk Logo"></a>
             <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="index">Dashboard</a></li>
-                    <li><a href="/buecher">Bücher</a></li>
-                    <li><a href="/autoren">Autoren</a></li>
-                    <li><a href="/standorte">Standorte</a></li>
+                    <% if (current == "index") { %>
+                        <li><a href="/index" class="active">Dashboard</a></li>
+                        <% } else { %>
+                            <li><a href="/index">Dashboard</a></li>
+                            <% } %>
+
+                                <% if (current == "buecher") { %>
+                                    <li><a href="/buecher" class="active">Bücher</a></li>
+                                    <% } else { %>
+                                        <li><a href="/buecher">Bücher</a></li>
+                                        <% } %>
+
+                                            <% if (current == "autoren") { %>
+                                                <li><a href="/autoren" class="active">Autoren</a></li>
+                                                <% } else { %>
+                                                    <li><a href="/autoren">Autoren</a></li>
+                                                    <% } %>
+
+                                                        <% if (current == "standorte") { %>
+                                                            <li><a href="/standorte" class="active">Standorte</a></li>
+                                                            <% } else { %>
+                                                                <li><a href="/standorte">Standorte</a></li>
+                                                                <% } %>
                 </ul>
             </nav>
             <div class="profile-link">

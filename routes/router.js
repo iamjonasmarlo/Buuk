@@ -7,6 +7,11 @@ router.get("/", function(req, res, next) {
     res.render("index");
 });
 
+router.get("/index", function(req, res, next) {
+    res.status(200);
+    res.render("index");
+});
+
 /*DASHBOARD*/
 router.get("/dashboard", function(req, res, next) {
     res.status(200);

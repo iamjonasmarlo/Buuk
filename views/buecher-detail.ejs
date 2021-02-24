@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <%- include("parts/header") %>
+    <%- include("parts/header", {current: "buecher-detail"}) %>
 
         <div id="content">
             <section class="headline">
@@ -54,7 +54,7 @@
                         </label>
                         </div>
                     </form>
-                    <a href="reservieren"><button class="button primary filled">Buch reservieren</button></a>
+                    <a href="reservierungen-add"><button class="button primary filled">Buch reservieren</button></a>
                 </section>
             </main>
             <%- include("parts/aside") %>
