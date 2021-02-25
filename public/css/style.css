@@ -781,6 +781,92 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 /*MOE TINAWI*/
 
 
+/*Buch Details*/
+
+#content main .buch-details .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 0px 0px;
+    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer" "QR QR-answer";
+}
+
+#content main .buch-details .grid-container .left-side {
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
+    color: #f55500;
+}
+
+#content main .buch-details .grid-container .right-side {
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
+}
+
+#content main .buch-details .grid-container .left-side p {
+    font-weight: bold;
+}
+
+#content main .buch-details .grid-container .right-side p {
+    padding-left: 7px;
+}
+
+#content main .buch-details .grid-container .right-side p:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#content main .buch-details .grid-container .left-side p:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.photo {
+    grid-area: photo;
+    border: 2px solid rgb(161, 161, 161);
+    margin-bottom: 15px;
+    margin-right: 15px;
+    height: auto;
+    width: 100%;
+}
+
+#content main .buch-details .grid-container .right-side .beschreibung {
+    grid-area: beschreibung;
+}
+
+.autor-name-answer {
+    grid-area: autor-name-answer;
+}
+
+.autor-name {
+    grid-area: autor-name;
+}
+
+.fachrichtung {
+    grid-area: fachrichtung;
+}
+
+.fachrichtung-answer {
+    grid-area: fachrichtung-answer;
+}
+
+.jahr {
+    grid-area: jahr;
+}
+
+.jahr-answer {
+    grid-area: jahr-answer;
+}
+
+.ISBN {
+    grid-area: ISBN;
+}
+
+.ISBN-answer {
+    grid-area: ISBN-answer;
+}
+
+
 /* Autor */
 
 #content main .autor-about {
@@ -844,6 +930,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 #content main .autor-about .autor-socials .social-list li:last-child {
     margin-right: 0;
 }
+
 
 /* Autor-Books */
 

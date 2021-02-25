@@ -1,47 +1,37 @@
 <%- include("parts/header", {current: "buecher-detail"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Buch Detail</h1>
-    </section>
-    <main>
-        <section class="form">
-            <form>
-                <div class="form__image">
-                    <img src="https://educationalcentre-ks.com/shop/image/cache/catalog/Image-Coming-Soon-Placeholder-800x800.png"
-                        alt=" ">
-                </div>
-                <div class="form__half">
-                    <label for="titel">Titel:
-                        <input id="titel" name="titel" disabled value="Buchname" type="text">
-                    </label>
-                    <label for="autor">Autor:
-                        <input id="autor" name="autor" disabled value="Autorname" type="text">
-                    </label>
-                    <label for="ejahr">Erscheinungsjahr:
-                        <input id="ejah" name="ejahr" disabled value="2008" type="number" maxlength="4">
-                    </label>
-                </div>
-                <div class="status__element"><span class="status__available"> </span>Verfügbar </div>
-                <div class="form__full">
-                    <label for="ejahr">ISBN:
-                        <input id="isbn" name="isbn" disabled value="979-1-23456-789-6" type="text" maxlength="11">
-                    </label>
-                    <label for="standort">Standort:
-                        <input id="standort" name="standort" disabled value="Emil-Figge-Straße" type="text">
-                    </label>
-                    <label for="regal">Regal:
-                        <input id="regal" name="regal" disabled value="O1-B-14-3" type="text">
-                    </label>
-                    <label for="ta">Beschreibung:
-                        <textarea id="ta" rows="10" disabled>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</textarea>
-                    </label>
-                </div>
-            </form>
-            <a href="reservierungen-add"><button class="button primary filled">Buch reservieren</button></a>
+    <div id="content">
+        <section class="headline">
+            <h1>MusterBook</h1>
         </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+        <main>
+            <section class="buch-details">
+                <div class="grid-container">
 
-<%- include("parts/footer") %>
+
+                    <div class="left-side">
+                        <img src="/img/comingsoon.png" alt=" " class="photo">
+                        <p class="autor-name">Autor</p>
+                        <p class="fachrichtung">Fachrichtung</p>
+                        <p class="jahr">Jahr</p>
+                        <p class="ISBN">ISBN</p>
+                    </div>
+                    <div class="right-side">
+                        <p class="beschreibung">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque iusto dolores eveniet totam sit molestiae adipisci rerum libero facere aut officiis inventore quo debitis error dolore quasi quis eligendi, ad minus, accusamus labore,
+                            consequatur quod! In aspernatur assumenda, reiciendis atque, iusto delectus repellendus quos corporis perspiciatis, iure facere dicta sit?</p>
+                        <p class="autor-name-answer"> Herr Musterman</p>
+                        <p class="fachrichtung-answer">Praktische Informatik</p>
+                        <p class="jahr-answer">1992</p>
+                        <p class="ISBN-answer">156518926</p>
+                    </div>
+                </div>
+                <a href="reservierungen-add"><button class="button primary filled">Buch reservieren</button></a>
+
+            </section>
+
+
+        </main>
+        <%- include("parts/aside") %>
+    </div>
+
+    <%- include("parts/footer") %>
