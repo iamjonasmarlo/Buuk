@@ -2,7 +2,9 @@
 
     <div id="content">
         <section class="headline">
-            <h1>MusterBook</h1>
+            <h1>
+                <%= buch.name %>
+            </h1>
         </section>
         <main>
             <section class="buch-details">
@@ -17,16 +19,24 @@
                         <p class="ISBN">ISBN</p>
                     </div>
                     <div class="right-side">
-                        <p class="beschreibung">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque iusto dolores eveniet totam sit molestiae adipisci rerum libero facere aut officiis inventore quo debitis error dolore quasi quis eligendi, ad minus, accusamus labore,
-                            consequatur quod! In aspernatur assumenda, reiciendis atque, iusto delectus repellendus quos corporis perspiciatis, iure facere dicta sit?</p>
-                        <p class="autor-name-answer"> Herr Musterman</p>
-                        <p class="fachrichtung-answer">Praktische Informatik</p>
-                        <p class="jahr-answer">1992</p>
-                        <p class="ISBN-answer">156518926</p>
+                        <p class="beschreibung">
+                            <%= buch.beschreibung %>
+                        </p>
+                        <p class="autor-name-answer">
+                            <%= buch.autor %>
+                        </p>
+                        <p class="fachrichtung-answer">
+                            <%= buch.fachrichtung %>
+                        </p>
+                        <p class="jahr-answer">
+                            <%= buch.jahr %>
+                        </p>
+                        <p class="ISBN-answer">
+                            <%= buch.isbn %>
+                        </p>
                     </div>
                 </div>
-                <a href="reservierungen-add"><button class="button primary filled">Buch reservieren</button></a>
-
+                <a href="reservierungen-add?id=<%= index %>"><button class="button primary filled">Buch reservieren</button></a>
             </section>
 
 

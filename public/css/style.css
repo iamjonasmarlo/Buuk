@@ -796,6 +796,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     gap: 0px 0px;
     grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
     color: #f55500;
+    height: 100%;
 }
 
 #content main .buch-details .grid-container .right-side {
@@ -803,14 +804,22 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr;
     gap: 0px 0px;
     grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
+    height: 100%;
 }
 
 #content main .buch-details .grid-container .left-side p {
+    margin-top: 10px;
     font-weight: bold;
+    height: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 #content main .buch-details .grid-container .right-side p {
+    margin-top: 10px;
     padding-left: 7px;
+    height: 100%;
+    padding-top: 5px;
 }
 
 #content main .buch-details .grid-container .right-side p:nth-child(even) {
@@ -826,12 +835,14 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     border: 2px solid rgb(161, 161, 161);
     margin-bottom: 15px;
     margin-right: 15px;
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
 #content main .buch-details .grid-container .right-side .beschreibung {
     grid-area: beschreibung;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .autor-name-answer {

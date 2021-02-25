@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const standort_controller = require("../controller/standort-controller.js");
+const buch_controller = require("../controller/buch-controller.js");
 
 /* Dashboard / Startseite */
 
@@ -70,38 +71,52 @@ router.get("/autoren", function(req, res, next) {
 
 /* Buecher */
 
-router.get("/buch-add", function(req, res, next) {
+router.get("/buecher/neu", function(req, res, next) {
     res.status(200);
     res.render("buch-add");
 });
 
-router.get("/buecher-detail", function(req, res, next) {
+router.get("/buecher/detail", function(req, res, next) {
+    let id = req.query.id;
     res.status(200);
-    res.render("buecher-detail");
+    res.render("buecher-detail", { buch: buch_controller.get_buecher_detail(id) });
 });
 
 router.get("/buecher", function(req, res, next) {
     res.status(200);
-    res.render("buecher");
+    res.render("buecher", { buecher: buch_controller.get_buecher() });
+});
+
+router.post("/buecher", function(req, res, next) {
+    standort_controller.add_buch(req.body.name, req.body.isbn, req.body.fachrichtung, req.body.jahr, req.body.beschreibung, req.body.autor, req.body.autor);
+    res.status(200);
+    res.render("buecher", { buecher: buch_controller.get_buecher() });
 });
 
 /* Standorte */
 
 router.get("/standorte", function(req, res, next) {
     res.status(200);
-    res.render("standorte", {standorte: standort_controller.get_standorte()});
+    res.render("standorte", { standorte: standort_controller.get_standorte() });
 });
 
+
 router.post("/standorte", function(req, res, next) {
-    standort_controller.add_standort(req.body.name, req.body.address, req.body.zip, req.body.city, req.body.phone, req.body.fax, [["Montag", req.body.monday], ["Dienstag", req.body.tuesday], ["Mittwoch", req.body.wednesday], ["Donnerstag", req.body.thursday], ["Freitag", req.body.friday]], req.body.feature);
+    standort_controller.add_standort(req.body.name, req.body.address, req.body.zip, req.body.city, req.body.phone, req.body.fax, [
+        ["Montag", req.body.monday],
+        ["Dienstag", req.body.tuesday],
+        ["Mittwoch", req.body.wednesday],
+        ["Donnerstag", req.body.thursday],
+        ["Freitag", req.body.friday]
+    ], req.body.feature);
     res.status(200);
-    res.render("standorte", {standorte: standort_controller.get_standorte()});
+    res.render("standorte", { standorte: standort_controller.get_standorte() });
 });
 
 router.get("/standorte/detail", function(req, res, next) {
     let id = req.query.id;
     res.status(200);
-    res.render("standorte-detail", {standort: standort_controller.get_standorte_detail(id)});
+    res.render("standorte-detail", { standort: standort_controller.get_standorte_detail(id) });
 });
 
 router.get("/standorte/neu", function(req, res, next) {
