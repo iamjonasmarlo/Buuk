@@ -72,9 +72,10 @@
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Standortes~~
-    - Bücher auf der Detaisleite ausgeben
+    - ~~Bücher auf der Detaisleite ausgeben~~
+    - Ausgabe der Autoren in der Bücherübersicht
 - Reservierungen
-    - Automatisierte Aufgabe der Übersicht
+    - Automatisierte Ausgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite
     - Anlegen einer Reservierung
     - Löschen einer Reservierung
@@ -82,11 +83,11 @@
 - Ausleihen
     - Automatisierte Aufgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite
-    - Anlegen einer Reservierung
 - Bücher
-    - Automatisierte Aufgabe der Übersicht
-    - Automatisierte Ausgabe der Detailseite
-    - Anlegen eines Buches
+    - ~~Automatisierte Aufgabe der Übersicht~~
+    - ~~Automatisierte Ausgabe der Detailseite~~
+    - ~~Anlegen eines Buches~~
+    - Ausgabe des Autors in der Übersicht
 - Autoren
     - Automatisierte Aufgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite

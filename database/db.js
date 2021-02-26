@@ -8,15 +8,11 @@ function buch(name, isbn, fachrichtung, jahr, beschreibung, autor, status) {
     this.beschreibung = beschreibung;
     this.autor = autor;
     this.status = status;
-    this.setStatus = function(neuerStatus) {
-        this.status = neuerStatus;
-    }
 }
 
-var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", true);
+var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", false);
 var buch2 = new buch("Mafi 2", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", true);
 var buch3 = new buch("MaFi 3", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", true);
-
 
 var buecher = [buch1, buch2, buch3];
 
@@ -59,13 +55,17 @@ var standort3 = new standort("Max-Ophüls-Platz", "Max-Ophüls-Platz 2", 44139, 
     ["Freitag", "08:00 Uhr - 18:00 Uhr"]
 ], ["ca. 24.500 Bände Buchbestand", "WLAN-Zugang (über VPN)", "10 Einzelarbeitsplätze", "3 Recherche-PCs", "3 Internet-PCs", "8 Kurzzeitschließfächer"]);
 
+standort1.addBuch(buch1);
+standort2.addBuch(buch2);
+standort3.addBuch(buch3);
+
 var standorte = [standort1, standort2, standort3];
 
 /* Export */
 
 module.exports = {
-    standort,
-    standorte,
     buch,
-    buecher
+    buecher,
+    standort,
+    standorte
 };

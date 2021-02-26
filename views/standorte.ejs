@@ -5,6 +5,9 @@
         <h1>Standorte</h1>
     </section>
     <main>
+        <% if(typeof action !== "undefined" && action == "added") { %>
+            <div class="response success" style="margin-bottom:30px;">Der Standort wurde erfolgreich hinzugefügt.</div>
+        <% } %>
         <section class="locations-overview">
             <% standorte.forEach(function(standort, index) { %>
                 <div class="location">

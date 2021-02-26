@@ -9,8 +9,6 @@
         <main>
             <section class="buch-details">
                 <div class="grid-container">
-
-
                     <div class="left-side">
                         <img src="/img/comingsoon.png" alt=" " class="photo">
                         <p class="autor-name">Autor</p>
@@ -36,10 +34,8 @@
                         </p>
                     </div>
                 </div>
-                <a href="reservierungen-add?id=<%= index %>"><button class="button primary filled">Buch reservieren</button></a>
+                <a href="/reservierungen/neu?id=<%= id %>"><button class="button primary filled">Buch reservieren</button></a>
             </section>
-
-
         </main>
         <%- include("parts/aside") %>
     </div>
