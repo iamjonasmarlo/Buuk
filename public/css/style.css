@@ -943,6 +943,74 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+/*Autoren*/
+
+#content main .autoren {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.autoren .autor {
+    display: block;
+    flex: 0 0 30%;
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*33.33333333% */
+
+.autoren .autor .inner {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.autoren .autor .autor__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.autoren .autor .autor__info {
+    background: #f55500;
+    padding: 20px;
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.autoren .autor .autor__info .title h3 {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.945);
+}
+
+.autoren .autor .autor__info .title h3:hover {
+    text-decoration: underline;
+}
+
+.autoren .autor .autor__link {
+    background: #dc4c00;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.autoren .autor .autor__link i {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.autoren .autor .autor__link:hover i {
+    margin-left: 10px;
+}
+
+
 /* Autor-Books */
 
 .autor-books {

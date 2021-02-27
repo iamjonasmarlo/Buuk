@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const autor_controller = require("../controller/autor-controller.js");
 const standort_controller = require("../controller/standort-controller.js");
 const buch_controller = require("../controller/buch-controller.js");
 
@@ -54,50 +54,61 @@ router.get("/ausleihen", function(req, res, next) {
 
 /* Autor */
 
+router.get("/autoren", function(req, res, next) {
+    res.status(200);
+    res.render("autoren", { autoren: autor_controller.get_autoren() });
+});
+
+router.post("/autoren", function(req, res, next) {
+    autor_controller.add_autor(req.body.name, req.body.fachrichtung, req.body.beschreibung);
+    res.status(200);
+    res.render("autoren", { autoren: autor_controller.get_autoren(), action: "added" });
+});
+
+router.get("/autor/detail", function(req, res, next) {
+    let id = req.query.id;
+    res.status(200);
+    res.render("autor-detail", { autor: autor_controller.get_autoren_detail(id), buecher: buch_controller.get_buecher() });
+});
+
 router.get("/autor/neu", function(req, res, next) {
     res.status(200);
     res.render("autoren-add");
 });
 
-router.get("/autor/detail", function(req, res, next) {
-    res.status(200);
-    res.render("autoren-detail");
-});
 
-router.get("/autoren", function(req, res, next) {
-    res.status(200);
-    res.render("autoren");
-});
+
+
 
 /* Buecher */
 
 router.get("/buecher/neu", function(req, res, next) {
     res.status(200);
-    res.render("buecher-add", {standorte:standort_controller.get_standorte()});
+    res.render("buecher-add", { standorte: standort_controller.get_standorte() });
 });
 
 router.get("/buecher/detail", function(req, res, next) {
     let id = req.query.id;
     res.status(200);
-    res.render("buecher-detail", {buch:buch_controller.get_buecher_detail(id),id:id });
+    res.render("buecher-detail", { buch: buch_controller.get_buecher_detail(id), id: id });
 });
 
 router.get("/buecher", function(req, res, next) {
     res.status(200);
-    res.render("buecher", {buecher:buch_controller.get_buecher(),standorte:standort_controller.get_standorte()});
+    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte() });
 });
 
 router.post("/buecher", function(req, res, next) {
     buch_controller.add_buch(req.body.name, req.body.author, req.body.isbn, req.body.cat, req.body.year, req.body.desc, req.body.location)
     res.status(200);
-    res.render("buecher", {buecher:buch_controller.get_buecher(),standorte:standort_controller.get_standorte(),action:"added"});
+    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte(), action: "added" });
 });
 
 /* Standorte */
 
 router.get("/standorte", function(req, res, next) {
     res.status(200);
-    res.render("standorte", {standorte:standort_controller.get_standorte() });
+    res.render("standorte", { standorte: standort_controller.get_standorte() });
 });
 
 
@@ -110,13 +121,13 @@ router.post("/standorte", function(req, res, next) {
         ["Freitag", req.body.friday]
     ], req.body.feature);
     res.status(200);
-    res.render("standorte", {standorte:standort_controller.get_standorte(),action:"added"});
+    res.render("standorte", { standorte: standort_controller.get_standorte(), action: "added" });
 });
 
 router.get("/standorte/detail", function(req, res, next) {
     let id = req.query.id;
     res.status(200);
-    res.render("standorte-detail", {standort:standort_controller.get_standorte_detail(id),buecher:buch_controller.get_buecher()});
+    res.render("standorte-detail", { standort: standort_controller.get_standorte_detail(id), buecher: buch_controller.get_buecher() });
 });
 
 router.get("/standorte/neu", function(req, res, next) {

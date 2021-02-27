@@ -1,0 +1,140 @@
+<%- include("parts/header",{current: "autoren-detail"}) %>
+
+
+    <body>
+
+        <div id="content">
+            <section class="headline">
+                <h1>
+                    <%= autor.name %>
+                </h1>
+            </section>
+            <main>
+                <section class="autor-about">
+                    <div class="autor-image">
+                        <img src="../public/img/comingsoon.png" alt="Das Autor Bild">
+                    </div>
+                    <div class="text-area-autor">
+                        <div class="autor-discr">
+                            <p>
+                                <%= autor.beschreibung %>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="autor-socials">
+                            <h2>Find the Author on social Media</h2>
+                            <ul class="social-list">
+                                <li><a href="#"><i class="ti-facebook"></i>Facebook</a></li>
+                                <li><a href="#"><i class="ti-instagram"></i>Instagram</a></li>
+                                <li><a href="#"><i class="ti-twitter"></i>Twitter</a></li>
+                                <li><a href="#"><i class="ti-world"></i>Website</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="autor-books">
+                    <div class="book">
+                        <div class="inner">
+                            <div class="book__image">
+                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                            </div>
+                            <div class="book__info">
+                                <a href="buecher-detail.html" class="title">
+                                    <h3>Java 8 for Dummies</h3>
+                                </a>
+                                <hr>
+                                <p class="fachrichtung-book">
+                                    Praktische Informatik
+                                </p>
+                            </div>
+                            <a href="buecher-detail.html" class="book__link">
+                            Zum Buch <i class="ti-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="inner">
+                            <div class="book__image">
+                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                            </div>
+                            <div class="book__info">
+                                <a href="buecher-detail.html" class="title">
+                                    <h3>Algorithmen und Datenstruktur</h3>
+                                </a>
+                                <hr>
+                                <p class="fachrichtung-book">
+                                    Praktische Informatik
+                                </p>
+                            </div>
+                            <a href="buecher-detail.html" class="book__link">
+                            Zum Buch <i class="ti-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="inner">
+                            <div class="book__image">
+                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                            </div>
+                            <div class="book__info">
+                                <a href="buecher-detail.html" class="title">
+                                    <h3>Web technik (HTML)</h3>
+                                </a>
+                                <hr>
+                                <p class="fachrichtung-book">
+                                    Praktische Informatik
+                                </p>
+                            </div>
+                            <a href="buecher-detail.html" class="book__link">
+                            Zum Buch <i class="ti-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="inner">
+                            <div class="book__image">
+                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                            </div>
+                            <div class="book__info">
+                                <a href="buecher-detail.html" class="title">
+                                    <h3>Web Technik (CSS)</h3>
+                                </a>
+                                <hr>
+                                <p class="fachrichtung-book">
+                                    Praktische Informatik
+                                </p>
+                            </div>
+                            <a href="buecher-detail.html" class="book__link">
+                            Zum Buch <i class="ti-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <div class="inner">
+                            <div class="book__image">
+                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                            </div>
+                            <div class="book__info">
+                                <a href="buecher-detail.html" class="title">
+                                    <h3> Java 8 for Dummies </h3>
+                                </a>
+                                <hr>
+                                <p class="fachrichtung-book">
+                                    Praktische Informatik
+                                </p>
+                            </div>
+                            <a href="buecher-detail.html" class="book__link">
+                            Zum Buch <i class="ti-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+            <%- include("parts/aside") %>
+        </div>
+
+
+        <%- include("parts/footer") %>
