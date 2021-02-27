@@ -11,8 +11,9 @@ function get_buecher_detail(id) {
     return buch;
 }
 
-function add_buch(name, author, isbn, cat, year, desc, location) {
-    let buch = new db.buch(name, isbn, cat, year, desc, author, true);
+function add_buch(name, authorId, isbn, cat, year, desc, location) {
+    let author = get_author(authorId),
+        buch = new db.buch(name, isbn, cat, year, desc, author, true);
     db.buecher.push(buch);
 
     add_buch_standort(buch, location);
@@ -24,6 +25,11 @@ function add_buch_standort(buch, location) {
             standort.addBuch(buch);
         }
     });
+}
+
+function get_author(id) {
+    let author = db.autoren[id];
+    return author;
 }
 
 /* Exports */

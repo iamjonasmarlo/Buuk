@@ -32,10 +32,10 @@
                                         <%= buch.name %>
                                     </td>
                                     <td>
-                                        <% autoren.forEach(function(autor, autor_index) { if (autor.name == buch.autor) {%>
+                                        <% autoren.forEach(function(autor, autor_index) { if (autor == buch.autor) {%>
 
                                             <a href="/autor/detail?id=<%=autor_index%>">
-                                                <%= buch.autor %>
+                                                <%= autor.name %>
                                             </a>
 
                                             <% }}); %>

@@ -102,7 +102,7 @@ router.get("/buecher", function(req, res, next) {
 router.post("/buecher", function(req, res, next) {
     buch_controller.add_buch(req.body.name, req.body.author, req.body.isbn, req.body.cat, req.body.year, req.body.desc, req.body.location)
     res.status(200);
-    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte(), action: "added" });
+    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte(), autoren: autor_controller.get_autoren(), action: "added" });
 });
 
 /* Standorte */
@@ -111,7 +111,6 @@ router.get("/standorte", function(req, res, next) {
     res.status(200);
     res.render("standorte", { standorte: standort_controller.get_standorte() });
 });
-
 
 router.post("/standorte", function(req, res, next) {
     standort_controller.add_standort(req.body.name, req.body.address, req.body.zip, req.body.city, req.body.phone, req.body.fax, [
