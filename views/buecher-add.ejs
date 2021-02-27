@@ -1,41 +1,46 @@
 <%- include("parts/header", {current: "buch-add"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Buch hinzufügen</h1>
-    </section>
-    <main>
-        <section class="form">
-            <form action="/buecher" method="POST" id="book-form">
-                <div class="input-group">
-                    <h2>Buchinfos</h2>
-                    <label>
+    <div id="content">
+        <section class="headline">
+            <h1>Buch hinzufügen</h1>
+        </section>
+        <main>
+            <section class="form">
+                <form action="/buecher" method="POST" id="book-form">
+                    <div class="input-group">
+                        <h2>Buchinfos</h2>
+                        <label>
                         Buchtitel:
                         <input type="text" name="name" placeholder="Titel" required>
                     </label>
-                    <label>
+                        <label>
                         Autor:
-                        <input type="text" name="author" placeholder="Autor" required>
+                        <select name="autor" required>
+                            <option disabled selected>Autor auswählen</option>
+                            <% autoren.forEach(function(autor, index) { %>
+                                <option value="<%= index %>"><%= autor.name %></option>
+                            <% }); %>
+                        </select>
                     </label>
-                    <label>
+                        <label>
                         ISBN
                         <input type="text" name="isbn" placeholder="ISBN" required>
                     </label>
-                    <label>
+                        <label>
                         Fachrichtung
                         <input type="text" name="cat" placeholder="Fachrichtung" required>
                     </label>
-                    <label>
+                        <label>
                         Jahr
                         <input type="number" name="year" placeholder="Jahr" required>
                     </label>
-                    <label>Beschreibung:
+                        <label>Beschreibung:
                         <textarea name="desc" rows="10" placeholder="Beschreibung"></textarea>
                     </label>
-                </div>
-                <div class="input-group">
-                    <h2>Standort</h2>
-                    <label>
+                    </div>
+                    <div class="input-group">
+                        <h2>Standort</h2>
+                        <label>
                         Standort:
                         <select name="location" required>
                             <option disabled selected>Standort auswählen</option>
@@ -44,12 +49,12 @@
                             <% }); %>
                         </select>
                     </label>
-                </div>
-                <button type="submit" class="button primary filled">Buch hinzufügen</button>
-            </form>
-        </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+                    </div>
+                    <button type="submit" class="button primary filled">Buch hinzufügen</button>
+                </form>
+            </section>
+        </main>
+        <%- include("parts/aside") %>
+    </div>
 
-<%- include("parts/footer") %>
+    <%- include("parts/footer") %>

@@ -971,6 +971,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     width: 100%;
     height: auto;
     display: block;
+    border: 1px solid gray;
 }
 
 .autoren .autor .autor__info {
@@ -979,6 +980,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     color: #fff;
     flex-grow: 1;
     text-align: center;
+}
+
+.autoren .autor .autor__info hr {
+    color: lightgray;
 }
 
 .autoren .autor .autor__info .title h3 {
@@ -1036,6 +1041,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     width: 100%;
     height: auto;
     display: block;
+    border: 1px solid gray;
 }
 
 .autor-books .book .book__info {

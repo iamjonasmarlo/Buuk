@@ -9,9 +9,9 @@ function buch(name, isbn, fachrichtung, jahr, beschreibung, autor, status) {
     this.autor = autor;
     this.status = status;
 }
-var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", false);
-var buch2 = new buch("Mafi 2", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", true);
-var buch3 = new buch("MaFi 3", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Dirk Wiesmann", true);
+var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Jordan Peterson", false);
+var buch2 = new buch("Mafi 2", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Alan Watts", true);
+var buch3 = new buch("MaFi 3", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", "Alan Watts", true);
 var buecher = [buch1, buch2, buch3];
 
 /* Autor */

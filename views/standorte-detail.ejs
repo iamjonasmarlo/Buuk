@@ -1,97 +1,133 @@
 <%- include("parts/header", {current: "standorte-detail"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Standort: <%= standort.name %></h1>
-    </section>
-    <main>
-        <section class="location-image">
-            <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
+    <div id="content">
+        <section class="headline">
+            <h1>Standort:
+                <%= standort.name %>
+            </h1>
         </section>
-        <section class="location-detail">
-            <div class="location-detail__contact">
-                <div class="title">Kontaktdaten</div>
-                <ul class="contact-list">
-                    <li><i class="ti-location-pin"></i><%= standort.adresse %><br /><%= standort.plz %> <%= standort.ort %></li>
-                    <li><i class="ti-mobile"></i><a href="tel:<%= standort.telefon %>"><%= standort.telefon %></a></li>
-                    <li><i class="ti-printer"></i><a href="#"><%= standort.fax %></a></li>
-                </ul>
-            </div>
-            <div class="location-detail__accordion">
-                <div class="accordion">
-                    <div class="acc-title">Öffnungs- und Servicezeiten</div>
-                    <div class="acc-content">
-                        <div class="inner">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Wochentag</th>
-                                        <th>Öffnungszeiten</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% standort.oeffnungszeiten.forEach(function(oeffnungszeiten) { %>
+        <main>
+            <section class="location-image">
+                <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
+            </section>
+            <section class="location-detail">
+                <div class="location-detail__contact">
+                    <div class="title">Kontaktdaten</div>
+                    <ul class="contact-list">
+                        <li><i class="ti-location-pin"></i>
+                            <%= standort.adresse %><br />
+                                <%= standort.plz %>
+                                    <%= standort.ort %>
+                        </li>
+                        <li><i class="ti-mobile"></i>
+                            <a href="tel:<%= standort.telefon %>">
+                                <%= standort.telefon %>
+                            </a>
+                        </li>
+                        <li><i class="ti-printer"></i>
+                            <a href="#">
+                                <%= standort.fax %>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-detail__accordion">
+                    <div class="accordion">
+                        <div class="acc-title">Öffnungs- und Servicezeiten</div>
+                        <div class="acc-content">
+                            <div class="inner">
+                                <table>
+                                    <thead>
                                         <tr>
-                                            <td><%= oeffnungszeiten[0] %></td>
-                                            <td><%= oeffnungszeiten[1] %></td>
+                                            <th>Wochentag</th>
+                                            <th>Öffnungszeiten</th>
                                         </tr>
-                                    <% }); %>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <% standort.oeffnungszeiten.forEach(function(oeffnungszeiten) { %>
+                                            <tr>
+                                                <td>
+                                                    <%= oeffnungszeiten[0] %>
+                                                </td>
+                                                <td>
+                                                    <%= oeffnungszeiten[1] %>
+                                                </td>
+                                            </tr>
+                                            <% }); %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="acc-title">Ausstattung</div>
+                        <div class="acc-content">
+                            <div class="inner">
+                                <ul>
+                                    <% standort.ausstattung.forEach(function(ausstattung) { %>
+                                        <li>
+                                            <%= ausstattung %>
+                                        </li>
+                                        <% }); %>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion">
-                    <div class="acc-title">Ausstattung</div>
-                    <div class="acc-content">
-                        <div class="inner">
-                            <ul>
-                                <% standort.ausstattung.forEach(function(ausstattung) { %>
-                                    <li><%= ausstattung %></li>
-                                <% }); %>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="location-books">
-            <h2>Bücher am Standort</h2>
-            <table class="table">
-                <tr>
-                    <th>Status</th>
-                    <th>Titel</th>
-                    <th>Autor</th>
-                    <th>ISBN</th>
-                    <th>Jahr</th>
-                    <th>Fachrichtung</th>
-                    <th></th>
-                </tr>
-                <% standort.buecher.forEach(function(buch) { %>
+            </section>
+            <section class="location-books">
+                <h2>Bücher am Standort</h2>
+                <table class="table">
                     <tr>
-                        <td class="status">
-                            <% if (buch.status) { %>
-                            <span class="status__available"></span>
-                            <% } else { %>
-                            <span class="status__notavailable"></span>
-                            <% } %>
-                        </td>
-                        <td><%= buch.name %></td>
-                        <td><a href="/autoren/detail"><%= buch.autor %></a></td>
-                        <td><%= buch.isbn %></td>
-                        <td><%= buch.jahr %></td>
-                        <td><%= buch.fachrichtung %></td>
-                        <% buecher.forEach(function(buch_sub, index) { %>
-                            <% if(buch_sub == buch) { %>
-                                <td><a href="/buecher/detail?id=<%= index %>">Details</a></td>
-                            <% } %>
-                        <% }); %>
+                        <th>Status</th>
+                        <th>Titel</th>
+                        <th>Autor</th>
+                        <th>ISBN</th>
+                        <th>Jahr</th>
+                        <th>Fachrichtung</th>
+                        <th></th>
                     </tr>
-                <% }); %>
-            </table>
-        </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+                    <% standort.buecher.forEach(function(buch) { %>
+                        <tr>
+                            <td class="status">
+                                <% if (buch.status) { %>
+                                    <span class="status__available"></span>
+                                    <% } else { %>
+                                        <span class="status__notavailable"></span>
+                                        <% } %>
+                            </td>
+                            <td>
+                                <%= buch.name %>
+                            </td>
+                            <td>
+                                <% autoren.forEach(function(autor, autor_index) { if (autor.name == buch.autor) {%>
 
-<%- include("parts/footer") %>
+                                    <a href="/autor/detail?id=<%=autor_index%>">
+                                        <%= buch.autor %>
+                                    </a>
+
+                                    <% }}); %>
+                            </td>
+                            <td>
+                                <%= buch.isbn %>
+                            </td>
+                            <td>
+                                <%= buch.jahr %>
+                            </td>
+                            <td>
+                                <%= buch.fachrichtung %>
+                            </td>
+                            <% buecher.forEach(function(buch_sub, index) { %>
+                                <% if(buch_sub == buch) { %>
+                                    <td><a href="/buecher/detail?id=<%= index %>">Details</a></td>
+                                    <% } %>
+                                        <% }); %>
+                        </tr>
+                        <% }); %>
+                </table>
+            </section>
+        </main>
+        <%- include("parts/aside") %>
+    </div>
+
+    <%- include("parts/footer") %>

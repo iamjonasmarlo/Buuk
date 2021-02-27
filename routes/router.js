@@ -84,7 +84,7 @@ router.get("/autor/neu", function(req, res, next) {
 
 router.get("/buecher/neu", function(req, res, next) {
     res.status(200);
-    res.render("buecher-add", { standorte: standort_controller.get_standorte() });
+    res.render("buecher-add", { standorte: standort_controller.get_standorte(), autoren: autor_controller.get_autoren() });
 });
 
 router.get("/buecher/detail", function(req, res, next) {
@@ -93,9 +93,10 @@ router.get("/buecher/detail", function(req, res, next) {
     res.render("buecher-detail", { buch: buch_controller.get_buecher_detail(id), id: id });
 });
 
+
 router.get("/buecher", function(req, res, next) {
     res.status(200);
-    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte() });
+    res.render("buecher", { buecher: buch_controller.get_buecher(), standorte: standort_controller.get_standorte(), autoren: autor_controller.get_autoren() });
 });
 
 router.post("/buecher", function(req, res, next) {
@@ -127,7 +128,7 @@ router.post("/standorte", function(req, res, next) {
 router.get("/standorte/detail", function(req, res, next) {
     let id = req.query.id;
     res.status(200);
-    res.render("standorte-detail", { standort: standort_controller.get_standorte_detail(id), buecher: buch_controller.get_buecher() });
+    res.render("standorte-detail", { standort: standort_controller.get_standorte_detail(id), buecher: buch_controller.get_buecher(), autoren: autor_controller.get_autoren() });
 });
 
 router.get("/standorte/neu", function(req, res, next) {

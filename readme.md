@@ -7,7 +7,7 @@
     - ~~Buchdetails~~
     - ~~Buch hinzufügen~~
 - Autoren
-    - Autordetails
+    - ~~Autordetails~~
     - ~~Autor hinzufügen~~
 - ~~Standorte~~
     - ~~Emil-Figge-Straße 44 (Detail)~~
@@ -36,6 +36,8 @@
     - status (boolean)
 - Autor
     - name (string)
+    - fachrichtung(String)
+    - Beschreibung(String)
 - Kunde
     - name (string)
     - Straße (string)
@@ -67,13 +69,13 @@
 
 ## Aufgaben & Bugs
 - Dashboard
-    - Automatisierte Aausgabe
+    - Automatisierte Ausgabe
 - Standorte
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Standortes~~
     - ~~Bücher auf der Detaisleite ausgeben~~
-    - Ausgabe der Autoren in der Bücherübersicht
+    - ~~Ausgabe der Autoren in der Bücherübersicht~~
 - Reservierungen
     - Automatisierte Ausgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite
@@ -87,8 +89,8 @@
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Buches~~
-    - Ausgabe des Autors in der Übersicht
+    - ~~Ausgabe des Autors in der Übersicht~~
 - Autoren
-    - Automatisierte Aufgabe der Übersicht
-    - Automatisierte Ausgabe der Detailseite
-    - Anlegen eines Autors
+    - ~~Automatisierte Aufgabe der Übersicht~~
+    - ~~Automatisierte Ausgabe der Detailseite~~
+    - ~~Anlegen eines Autors~~

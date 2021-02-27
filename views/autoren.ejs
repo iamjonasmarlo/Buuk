@@ -9,10 +9,10 @@
                     <div class="autor">
                         <div class="inner">
                             <div class="autor__image">
-                                <img src="http://www.placehold.it/400x525" alt="Standort Emil-Figge-Straße 44">
+                                <img src="/img/comingsoon.png" alt="Autorfoto">
                             </div>
                             <div class="autor__info">
-                                <a href="autor/detail" class="title">
+                                <a href="autor/detail?id=<%= index %>" class="title">
                                     <h3>
                                         <%= autor.name %>
                                     </h3>
@@ -22,12 +22,14 @@
                                     <%= autor.fachrichtung %>
                                 </p>
                             </div>
-                            <a href="autoren/detail?id=<%= index %>" class="autor__link">
+                            <a href="autor/detail?id=<%= index %>" class="autor__link">
                                 Zum Autor<i class="ti-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                     <% }); %>
+            </section>
+            <a href="/autor/neu"><button class="button primary filled">Neuen Autor hinzufügen</button></a>
         </main>
         <%- include("parts/aside") %>
     </div>
