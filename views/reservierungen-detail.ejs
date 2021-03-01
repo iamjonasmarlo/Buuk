@@ -8,50 +8,54 @@
         <section class="details">
             <div class="details__image">
                 <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
-                <figcaption> QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
+                <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
             </div>
             <div class="details__half">
                 <section class="detail__section">
                     <h2>Buchtitel:</h2>
-                    <p>WebTech 1</p>
+                    <p><%= reservierung.buch.name %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Autor:</h2>
-                    <p>Max Mustermann</p>
+                    <p><%= reservierung.buch.autor.name %></p>
                 </section>
                 <section class="detail__section">
                     <h2>ISBN:</h2>
-                    <p>123456789-9</p>
+                    <p><%= reservierung.buch.isbn %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Erscheinungsjahr:</h2>
-                    <p>2019</p>
+                    <p><%= reservierung.buch.jahr %></p>
                 </section>
             </div>
             <div class="details__full">
                 <section class="detail__section">
                     <h2>Datum von:</h2>
-                    <p>123456789-9</p>
+                    <p><%= reservierung.datumVon %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Datum Bis:</h2>
-                    <p>123456789-9</p>
+                    <p><%= reservierung.datumBis %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Standort</h2>
-                    <p>Emil-Figge-Straße 44</p>
-                </section>
-                <section class="detail__section">
-                    <h2>Regal</h2>
-                    <p>O1-B-14-3</p>
+                    <% standorte.forEach(function(standort) { %>
+                    <% standort.buecher.forEach(function(buch, index) { %>
+                    <% if(reservierung.buch == buch) { %>
+                    <p><%= standort.name %></p>
+                    <% } %>
+                    <% }); %>
+                    <% }); %>
                 </section>
                 <section class="detail__section">
                     <h2>Reservierungs-ID</h2>
                     <p>1478-4699-4547-3215-8475</p>
                 </section>
             </div>
-            <button class="button primary filled">Reservierung bearbeiten</button>
-            <button class="button error outline">Reservierung löschen</button>
+            <form action="/user/reservierungen" method="POST">
+                <input type="hidden" name="reservierung" value="<%= id %>">
+                <button class="button error outline">Reservierung löschen</button>
+            </form>
         </section>
     </main>
     <%- include("parts/aside") %>

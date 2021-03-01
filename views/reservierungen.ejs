@@ -5,6 +5,9 @@
         <h1>Meine Reservierungen</h1>
     </section>
     <main>
+        <% if(typeof action !== "undefined" && action == "removed") { %>
+        <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich gelöscht.</div>
+        <% } %>
         <section class="reservations">
             <table class="table">
                 <tr>
@@ -15,22 +18,38 @@
                     <th>Standort</th>
                     <th></th>
                 </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>Herr Musterautor</td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td><a href="reservierungen-detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>Herr Musterautor</td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td><a href="reservierungen-detail">Details</a></td>
-                </tr>
+                <% reservierungen.forEach(function(reservierung, index) { %>
+                    <tr>
+                        <td>
+                            <%= reservierung.buch.name %>
+                        </td>
+                        <td>
+                            <% autoren.forEach(function(autor, autor_index) { if (autor == reservierung.buch.autor) {%>
+                            <a href="/autor/detail?id=<%=autor_index%>">
+                                <%= autor.name %>
+                            </a>
+                            <% }}); %>
+                        </td>
+                        <td>
+                            <%= reservierung.datumVon %>
+                        </td>
+                        <td>
+                            <%= reservierung.datumBis %>
+                        </td>
+                        <% standorte.forEach(function(standort, standort_index) { %>
+                        <% standort.buecher.forEach(function(buch_sub) { %>
+                        <% if(buch_sub == reservierung.buch) { %>
+                        <td>
+                            <a href="/standorte/detail?id=<%= standort_index %>">
+                                <%= standort.name %>
+                            </a>
+                        </td>
+                        <% } %>
+                        <% }); %>
+                        <% }); %>
+                        <td><a href="/user/reservierungen/detail?id=<%= index %>">Details</a></td>
+                    </tr>
+                <% }); %>
             </table>
         </section>
     </main>

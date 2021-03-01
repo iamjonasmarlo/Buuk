@@ -77,11 +77,12 @@
     - ~~Bücher auf der Detaisleite ausgeben~~
     - ~~Ausgabe der Autoren in der Bücherübersicht~~
 - Reservierungen
-    - Automatisierte Ausgabe der Übersicht
-    - Automatisierte Ausgabe der Detailseite
-    - Anlegen einer Reservierung
-    - Löschen einer Reservierung
+    - ~~Automatisierte Ausgabe der Übersicht~~
+    - ~~Automatisierte Ausgabe der Detailseite~~
+    - ~~Anlegen einer Reservierung~~
+    - ~~Löschen einer Reservierung~~
     - Editieren einer Reservierung
+    - Genieriung des Tokens
 - Ausleihen
     - Automatisierte Aufgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite
@@ -90,6 +91,7 @@
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Buches~~
     - ~~Ausgabe des Autors in der Übersicht~~
+    - Ausgabe des Standortes auf der Detailseite
 - Autoren
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~

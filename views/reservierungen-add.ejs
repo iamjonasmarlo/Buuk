@@ -6,28 +6,34 @@
     </section>
     <main>
         <section class="form">
-            <form id="reserve-form">
+            <form action="/buecher/detail?id=<%= id %>" method="POST" id="reserve-form">
                 <div class="input-group">
                     <h2>Buchinfos</h2>
                     <label>
                         Buchtitel:
-                        <input type="text" name="title" placeholder="Titel" readonly>
+                        <input type="text" value="<%= buch.name %>" readonly>
                     </label>
                     <label>
                         ISBN:
-                        <input type="text" name="place" placeholder="ISBN" readonly>
+                        <input type="text" value="<%= buch.isbn %>" readonly>
                     </label>
                     <label>
                         Autor:
-                        <input type="text" name="author" placeholder="Autor" required readonly>
+                        <input type="text" value="<%= buch.autor.name %>" required readonly>
                     </label>
                     <label>
                         Erscheinungsjahr:
-                        <input type="number" name="release" placeholder="Erscheinungsjahr" max="99999" readonly>
+                        <input type="number" value="<%= buch.jahr %>" readonly>
                     </label>
                     <label>
                         Standort:
-                        <input type="text" name="place" readonly>
+                        <% standorte.forEach(function(standort, index) { %>
+                        <% standort.buecher.forEach(function(buch_sub) { %>
+                        <% if(buch_sub == buch) { %>
+                        <input type="text" value="<%= standort.name %>" readonly>
+                        <% } %>
+                        <% }); %>
+                        <% }); %>
                     </label>
                     </label>
                 </div>
@@ -35,13 +41,14 @@
                     <h2>Datum der Reservierung</h2>
                     <label>
                         Datum von:
-                        <input type="date" name="beginning-date" required>
+                        <input type="date" name="datumVon" required>
                     </label>
                     <label>
                         Datum bis:
-                        <input type="date" name="ending-date" required>
+                        <input type="date" name="datumBis" required>
                     </label>
                 </div>
+                <input type="hidden" value="<%= id %>" name="buch">
                 <button type="submit" class="button primary filled">Jetzt reservieren</button>
             </form>
         </section>

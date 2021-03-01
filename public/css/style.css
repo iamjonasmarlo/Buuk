@@ -687,6 +687,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     resize: none;
 }
 
+.form form input:read-only {
+    opacity: 0.5;
+    cursor: default;
+}
+
 .form form label {
     margin-bottom: 15px;
     display: block;

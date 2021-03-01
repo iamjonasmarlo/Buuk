@@ -7,6 +7,9 @@
             </h1>
         </section>
         <main>
+            <% if(typeof action !== "undefined" && action == "added") { %>
+            <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich hinzugefügt.</div>
+            <% } %>
             <section class="buch-details">
                 <div class="grid-container">
                     <div class="left-side">

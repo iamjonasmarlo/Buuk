@@ -71,14 +71,25 @@ standort3.addBuch(buch3);
 
 var standorte = [standort1, standort2, standort3];
 
+/* Reservierung */
+
+function reservierung(buch, datumVon, datumBis) {
+    this.buch = buch;
+    this.datumVon = datumVon;
+    this.datumBis = datumBis;
+}
+
+var reservierungen = [];
+
 /* Export */
 
 module.exports = {
-
     buch,
     buecher,
     autor,
     autoren,
     standort,
-    standorte
+    standorte,
+    reservierung,
+    reservierungen
 };
