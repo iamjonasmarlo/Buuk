@@ -17,8 +17,6 @@ function add_autor(name, fachrichtung, beschreibung) {
 
 }
 
-
-
 /* Exports */
 
 module.exports = {

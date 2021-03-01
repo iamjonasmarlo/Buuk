@@ -4,12 +4,13 @@ const autor_controller = require("../controller/autor-controller.js");
 const standort_controller = require("../controller/standort-controller.js");
 const buch_controller = require("../controller/buch-controller.js");
 const reservierung_controller = require("../controller/reservierung-controller.js");
+const ausleihe_controller = require("../controller/ausleihe-controller.js");
 
 /* Dashboard / Startseite */
 
 router.get("/", function(req, res, next) {
     res.status(200);
-    res.render("index");
+    res.render("index", {reservierungen: reservierung_controller.get_reservierungen(), autoren: autor_controller.get_autoren(), ausleihen: ausleihe_controller.get_ausleihen(), standorte: standort_controller.get_standorte()});
 });
 
 /* Login & Logout */
@@ -40,7 +41,7 @@ router.get("/datenschutz", function(req, res, next) {
 
 router.get("/autoren", function(req, res, next) {
     res.status(200);
-    res.render("autoren", { autoren: autor_controller.get_autoren() });
+    res.render("autoren", {autoren: autor_controller.get_autoren()});
 });
 
 router.post("/autoren", function(req, res, next) {
@@ -157,13 +158,14 @@ router.get("/user/reservierungen/detail", function(req, res, next) {
 /* Ausleihen */
 
 router.get("/user/ausleihen/detail", function(req, res, next) {
+    let id = req.query.id;
     res.status(200);
-    res.render("ausleihen-detail");
+    res.render("ausleihen-detail", {ausleihe: ausleihe_controller.get_ausleihe_details(id), standorte: standort_controller.get_standorte(), id: id});
 });
 
 router.get("/user/ausleihen", function(req, res, next) {
     res.status(200);
-    res.render("ausleihen");
+    res.render("ausleihen", {ausleihen: ausleihe_controller.get_ausleihen(), standorte: standort_controller.get_standorte()});
 });
 
 /* 404 */

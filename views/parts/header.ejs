@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/themify-icons.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 </head>
 
 <body>
@@ -16,34 +17,35 @@
     <div class="header-top">
         <div class="header-top__inner">
             <ul class="contact-list">
-                <li><a href="#"><i class="ti-mobile"></i>+49 (0) 231 91127991</a></li>
-                <li><a href="#"><i class="ti-email"></i>bib@fh-dortmund.de</a></li>
+                <li><a href="tel:+49 (0) 231 91127991"><i class="ti-mobile"></i>+49 (0) 231 91127991</a></li>
+                <li><a href="mailto:bib@fh-dortmund.de"><i class="ti-email"></i>bib@fh-dortmund.de</a></li>
             </ul>
-            <a href="#" class="fh-link"><i class="ti-link"></i>Website der FH Dortmund</a>
+            <a href="https://www.fh-dortmund.de/" target="_blank" class="fh-link"><i class="ti-link"></i>Website der FH Dortmund</a>
         </div>
     </div>
     <div class="header-bottom">
         <div class="header-bottom__inner">
             <a href="/" class="logo"><img src="/img/logo.png" alt="Buuk Logo"></a>
-            <nav class="main-nav">
+            <div class="nav-toggle" id="nav-toggle"><span></span></div>
+            <nav class="main-nav" id="main-nav">
                 <ul>
                     <% if (current == "index") { %>
-                    <li><a href="/" class="active">Dashboard</a></li>
+                    <li class="active"><a href="/">Dashboard</a></li>
                     <% } else { %>
                     <li><a href="/">Dashboard</a></li>
                     <% } %>
                     <% if (current == "buecher") { %>
-                    <li><a href="/buecher" class="active">Bücher</a></li>
+                    <li class="active"><a href="/buecher">Bücher</a></li>
                     <% } else { %>
                     <li><a href="/buecher">Bücher</a></li>
                     <% } %>
                     <% if (current == "autoren") { %>
-                    <li><a href="/autoren" class="active">Autoren</a></li>
+                    <li class="active"><a href="/autoren">Autoren</a></li>
                     <% } else { %>
                     <li><a href="/autoren">Autoren</a></li>
                     <% } %>
                     <% if (current == "standorte") { %>
-                    <li><a href="/standorte" class="active">Standorte</a></li>
+                    <li class="active"><a href="/standorte">Standorte</a></li>
                     <% } else { %>
                     <li><a href="/standorte">Standorte</a></li>
                     <% } %>
@@ -52,7 +54,7 @@
             <div class="profile-link">
                 <div class="profile-link__trigger" id="menu-trigger">
                     <div class="image"><img src="http://www.placehold.it/100x100" alt="Profile Image"></div>
-                    <div class="name">Max Mustermann<i class="ti-angle-down"></i></div>
+                    <div class="name"><span>Max Mustermann</span><i class="ti-angle-down"></i></div>
                 </div>
                 <div class="profile-link__menu" id="user-menu">
                     <ul>

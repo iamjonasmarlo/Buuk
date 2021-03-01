@@ -21,7 +21,7 @@ function buch(name, isbn, fachrichtung, jahr, beschreibung, autor, status) {
     this.autor = autor;
     this.status = status;
 }
-var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor1, false);
+var buch1 = new buch("MaFi 1", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor1, true);
 var buch2 = new buch("Mafi 2", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor2, true);
 var buch3 = new buch("MaFi 3", 484845741, "PI", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor3, true);
 var buecher = [buch1, buch2, buch3];
@@ -82,6 +82,22 @@ function reservierung(buch, datumVon, datumBis) {
 
 var reservierungen = [];
 
+/* Ausleihen */
+
+function ausleihe(buch, datumVon, datumBis, status) {
+    this.buch = buch;
+    this.datumVon = datumVon;
+    this.datumBis = datumBis;
+    this.status = status;
+    this.token = "ausleihe-" + Math.random().toString(36).substring(7);
+    buch.status = false;
+}
+
+var ausleihe1 = new ausleihe(buch1, new Date("2020-01-05T00:00:00"), new Date("2020-01-12T00:00:00"), false);
+var ausleihe2 = new ausleihe(buch2, new Date("2020-01-10T00:00:00"), new Date("2020-01-17T00:00:00"), true);
+
+var ausleihen = [ausleihe1, ausleihe2];
+
 /* Export */
 
 module.exports = {
@@ -92,5 +108,7 @@ module.exports = {
     standort,
     standorte,
     reservierung,
-    reservierungen
+    reservierungen,
+    ausleihe,
+    ausleihen
 };

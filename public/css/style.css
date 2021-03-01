@@ -224,6 +224,7 @@ header .header-top .header-top__inner .fh-link i {
 header .header-bottom {
     background: #f55500;
     padding: 20px 0;
+    position: relative;
 }
 
 header .header-bottom .header-bottom__inner {
@@ -244,6 +245,10 @@ header .header-bottom .header-bottom__inner .logo img {
     max-height: 45px;
     width: auto;
     display: block;
+}
+
+header .header-bottom .header-bottom__inner .nav-toggle {
+    display: none;
 }
 
 header .header-bottom .header-bottom__inner .main-nav ul {
@@ -434,6 +439,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 /*Table */
 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
 .table {
     border-collapse: collapse;
     width: 100%;
@@ -443,6 +453,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 .table th {
     border: 1px solid #ddd;
     padding: 8px;
+    white-space: nowrap;
 }
 
 .table tr:nth-child(even) {
@@ -1385,6 +1396,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: 80px;
 }
 
+/* Dashboard Reservations */
+
+.dashboard-reservations {
+    padding-bottom: 80px;
+}
 
 /* Footer */
 

@@ -7,29 +7,107 @@
     <main>
         <section class="dashboard-intro">
             <p>Herzlich Willkommen in der Online-Bibliothek der FH Dortmund.<br />Hier haben Sie die Möglichkeit Bücher zu reservieren oder direkt auszuleihen.</p>
-            <a href="buecher.html" class="button primary filled">Alle Bücher ansehen</a>
+            <a href="/buecher" class="button primary filled">Alle Bücher ansehen</a>
+        </section>
+        <section class="dashboard-reservations">
+            <h2>Reservierungen</h2>
+            <% if(reservierungen.length > 0) { %>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tr>
+                        <th>Buch</th>
+                        <th>Autor</th>
+                        <th>Datum von</th>
+                        <th>Datum bis</th>
+                        <th>Standort</th>
+                        <th></th>
+                    </tr>
+                    <% reservierungen.forEach(function(reservierung, index) { %>
+                        <tr>
+                            <td>
+                                <%= reservierung.buch.name %>
+                            </td>
+                            <td>
+                                <% autoren.forEach(function(autor, autor_index) { if (autor == reservierung.buch.autor) {%>
+                                <a href="/autor/detail?id=<%=autor_index%>">
+                                    <%= autor.name %>
+                                </a>
+                                <% }}); %>
+                            </td>
+                            <td>
+                                <%= reservierung.datumVon %>
+                            </td>
+                            <td>
+                                <%= reservierung.datumBis %>
+                            </td>
+                            <% standorte.forEach(function(standort, standort_index) { %>
+                            <% standort.buecher.forEach(function(buch_sub) { %>
+                            <% if(buch_sub == reservierung.buch) { %>
+                            <td>
+                                <a href="/standorte/detail?id=<%= standort_index %>">
+                                    <%= standort.name %>
+                                </a>
+                            </td>
+                            <% } %>
+                            <% }); %>
+                            <% }); %>
+                            <td><a href="/user/reservierungen/detail?id=<%= index %>">Details</a></td>
+                        </tr>
+                    <% }); %>
+                </table>
+            </div>
+            <a href="/user/reservierungen" class="button primary outline">Alle Reservierungen ansehen</a>
+            <% } else { %>
+                <p><strong>Derzeit sind keine Reservierungen vorhanden!</strong></p>
+            <% } %>
         </section>
         <section class="dashboard-borrowings">
             <h2>Überfällige Ausleihen</h2>
-            <table class="table">
-                <tr>
-                    <th>Buch</th>
-                    <th>Datum von</th>
-                    <th>Datum bis</th>
-                    <th>Standort</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-                <tr class="error">
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Überzogen</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-            </table>
-            <a href="ausleihen" class="button primary outline">Alle Ausleihen ansehen</a>
+            <% if(ausleihen.length > 0) { %>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tr>
+                        <th>Buch</th>
+                        <th>Datum von</th>
+                        <th>Datum bis</th>
+                        <th>Standort</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <% ausleihen.forEach(function(ausleihe, index) { %>
+                        <% if(ausleihe.status == false) { %>
+                        <tr class="error">
+                            <td>
+                                <%= ausleihe.buch.name %>
+                            </td>
+                            <td>
+                                <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
+                            </td>
+                            <td>
+                                <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
+                            </td>
+                            <% standorte.forEach(function(standort, standort_index) { %>
+                            <% standort.buecher.forEach(function(buch_sub) { %>
+                            <% if(buch_sub == ausleihe.buch) { %>
+                            <td>
+                                <a href="/standorte/detail?id=<%= standort_index %>">
+                                    <%= standort.name %>
+                                </a>
+                            </td>
+                            <% } %>
+                            <% }); %>
+                            <% }); %>
+                            <td>Überzogen</td>
+                            <td><a href="/user/ausleihen/detail?id=<%= index %>">Details</a></td>
+                        </tr>
+                        <% } %>
+                    <% }); %>
+                </table>
+            </div>
+            <a href="/user/ausleihen" class="button primary outline">Alle Ausleihen ansehen</a>
+            <% } else { %>
+                <p><strong>Derzeit sind keine Ausleihen vorhanden!</strong></p>
+            <% } %>
         </section>
     </main>
     <%- include("parts/aside") %>

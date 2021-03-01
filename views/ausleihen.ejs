@@ -1,4 +1,4 @@
-<%- include("parts/header",{current: "ausleihen"}) %>
+<%- include("parts/header", {current: "user"}) %>
 
 <div id="content">
     <section class="headline">
@@ -6,6 +6,7 @@
     </section>
     <main>
         <section class="borrowings">
+            <% if(ausleihen.length > 0) { %>
             <table class="table">
                 <tr>
                     <th>Buch</th>
@@ -15,80 +16,52 @@
                     <th>Status</th>
                     <th></th>
                 </tr>
-                <tr class="success">
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Ausgeliehen</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr class="success">
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Ausgeliehen</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Zurückgegeben</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr class="error">
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Überzogen</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detailtml">Emil-Figge-Straße 44</a></td>
-                    <td>Zurückgegeben</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Zurückgegeben</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr class="warning">
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Überzogen (bezahlt)</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
-                <tr>
-                    <td><a href="buecher-detail">Buchname</a></td>
-                    <td>10.10.2020</td>
-                    <td>12.11.2020</td>
-                    <td><a href="standorte-detail">Emil-Figge-Straße 44</a></td>
-                    <td>Zurückgegeben</td>
-                    <td><a href="ausleihen-detail">Details</a></td>
-                </tr>
+                <% ausleihen.forEach(function(ausleihe, index) { %>
+                    <% if(ausleihe.status == false) { %>
+                    <tr class="error">
+                    <% } else { %>
+                    <tr class="success">
+                    <% } %>
+                        <td>
+                            <%= ausleihe.buch.name %>
+                        </td>
+                        <td>
+                            <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
+                        </td>
+                        <td>
+                            <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
+                        </td>
+                        <% standorte.forEach(function(standort, standort_index) { %>
+                        <% standort.buecher.forEach(function(buch_sub) { %>
+                        <% if(buch_sub == ausleihe.buch) { %>
+                        <td>
+                            <a href="/standorte/detail?id=<%= standort_index %>">
+                                <%= standort.name %>
+                            </a>
+                        </td>
+                        <% } %>
+                        <% }); %>
+                        <% }); %>
+                        <td>
+                            <% if(ausleihe.status == false) { %>
+                            Überzogen
+                            <% } else { %>
+                            In Ordnung
+                            <% } %>
+                        </td>
+                        <td><a href="/user/ausleihen/detail?id=<%= index %>">Details</a></td>
+                    </tr>
+                <% }); %>
             </table>
+            <% } else { %>
+                <p><strong>Derzeit sind keine Ausleihen vorhanden!</strong></p>
+            <% } %>
             <div class="legend">
                 <div class="legend__element">
                     <span class="success"></span> Aktuell ausgeliehen
                 </div>
                 <div class="legend__element">
                     <span class="error"></span> Überzogen
-                </div>
-                <div class="legend__element">
-                    <span class="warning"></span> Überzogen (Zurückgegeben)
                 </div>
             </div>
         </section>

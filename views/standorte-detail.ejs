@@ -1,82 +1,83 @@
-<%- include("parts/header", {current: "standorte-detail"}) %>
+<%- include("parts/header", {current: "standorte"}) %>
 
-    <div id="content">
-        <section class="headline">
-            <h1>Standort:
-                <%= standort.name %>
-            </h1>
+<div id="content">
+    <section class="headline">
+        <h1>Standort:
+            <%= standort.name %>
+        </h1>
+    </section>
+    <main>
+        <section class="location-image">
+            <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
         </section>
-        <main>
-            <section class="location-image">
-                <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
-            </section>
-            <section class="location-detail">
-                <div class="location-detail__contact">
-                    <div class="title">Kontaktdaten</div>
-                    <ul class="contact-list">
-                        <li><i class="ti-location-pin"></i>
-                            <%= standort.adresse %><br />
-                                <%= standort.plz %>
-                                    <%= standort.ort %>
-                        </li>
-                        <li><i class="ti-mobile"></i>
-                            <a href="tel:<%= standort.telefon %>">
-                                <%= standort.telefon %>
-                            </a>
-                        </li>
-                        <li><i class="ti-printer"></i>
-                            <a href="#">
-                                <%= standort.fax %>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="location-detail__accordion">
-                    <div class="accordion">
-                        <div class="acc-title">Öffnungs- und Servicezeiten</div>
-                        <div class="acc-content">
-                            <div class="inner">
-                                <table>
-                                    <thead>
+        <section class="location-detail">
+            <div class="location-detail__contact">
+                <div class="title">Kontaktdaten</div>
+                <ul class="contact-list">
+                    <li><i class="ti-location-pin"></i>
+                        <%= standort.adresse %><br />
+                            <%= standort.plz %>
+                                <%= standort.ort %>
+                    </li>
+                    <li><i class="ti-mobile"></i>
+                        <a href="tel:<%= standort.telefon %>">
+                            <%= standort.telefon %>
+                        </a>
+                    </li>
+                    <li><i class="ti-printer"></i>
+                        <a href="#">
+                            <%= standort.fax %>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="location-detail__accordion">
+                <div class="accordion">
+                    <div class="acc-title">Öffnungs- und Servicezeiten</div>
+                    <div class="acc-content">
+                        <div class="inner">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Wochentag</th>
+                                        <th>Öffnungszeiten</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% standort.oeffnungszeiten.forEach(function(oeffnungszeiten) { %>
                                         <tr>
-                                            <th>Wochentag</th>
-                                            <th>Öffnungszeiten</th>
+                                            <td>
+                                                <%= oeffnungszeiten[0] %>
+                                            </td>
+                                            <td>
+                                                <%= oeffnungszeiten[1] %>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <% standort.oeffnungszeiten.forEach(function(oeffnungszeiten) { %>
-                                            <tr>
-                                                <td>
-                                                    <%= oeffnungszeiten[0] %>
-                                                </td>
-                                                <td>
-                                                    <%= oeffnungszeiten[1] %>
-                                                </td>
-                                            </tr>
-                                            <% }); %>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="acc-title">Ausstattung</div>
-                        <div class="acc-content">
-                            <div class="inner">
-                                <ul>
-                                    <% standort.ausstattung.forEach(function(ausstattung) { %>
-                                        <li>
-                                            <%= ausstattung %>
-                                        </li>
                                         <% }); %>
-                                </ul>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="location-books">
-                <h2>Bücher am Standort</h2>
+                <div class="accordion">
+                    <div class="acc-title">Ausstattung</div>
+                    <div class="acc-content">
+                        <div class="inner">
+                            <ul>
+                                <% standort.ausstattung.forEach(function(ausstattung) { %>
+                                    <li>
+                                        <%= ausstattung %>
+                                    </li>
+                                    <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location-books">
+            <h2>Bücher am Standort</h2>
+            <div class="table-wrapper">
                 <table class="table">
                     <tr>
                         <th>Status</th>
@@ -123,9 +124,10 @@
                         </tr>
                         <% }); %>
                 </table>
-            </section>
-        </main>
-        <%- include("parts/aside") %>
-    </div>
+            </div>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
     <%- include("parts/footer") %>

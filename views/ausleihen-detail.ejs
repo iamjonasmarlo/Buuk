@@ -1,4 +1,4 @@
-<%- include("parts/header",{current: "ausleihen-detail"}) %>
+<%- include("parts/header", {current: "user"}) %>
 
 <div id="content">
     <section class="headline">
@@ -7,59 +7,50 @@
     <main>
         <section class="details">
             <div class="details__image">
-                <img src="/img/comingsoon.png" alt=" ">
+                <img src="/img/comingsoon.png" alt="Buchcover">
             </div>
             <div class="details__half">
                 <section class="detail__section">
                     <h2>Buchtitel:</h2>
-                    <p>WebTech 1</p>
+                    <p><%= ausleihe.buch.name %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Autor:</h2>
-                    <p>Max Mustermann</p>
+                    <p><%= ausleihe.buch.autor.name %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Erscheinungsjahr:</h2>
-                    <p>2019</p>
+                    <p><%= ausleihe.buch.jahr %></p>
                 </section>
                 <section class="detail__section">
                     <h2>ISBN:</h2>
-                    <p>123456789-9</p>
+                    <p><%= ausleihe.buch.isbn %></p>
                 </section>
             </div>
             <div class="details__full">
                 <section class="detail__section">
                     <h2>Ausgeliehen von:</h2>
-                    <p>123456789-9</p>
+                    <p><%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %></p>
                 </section>
                 <section class="detail__section">
-                    <h2>Ausgeliehen Bis:</h2>
-                    <p>123456789-9</p>
+                    <h2>Ausgeliehen bis:</h2>
+                    <p><%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %></p>
                 </section>
                 <section class="detail__section">
                     <h2>Standort</h2>
-                    <p>Emil-Figge-Straße 44</p>
-                </section>
-                <section class="detail__section">
-                    <h2>Regal</h2>
-                    <p>O1-B-14-3</p>
+                    <% standorte.forEach(function(standort) { %>
+                    <% standort.buecher.forEach(function(buch) { %>
+                    <% if(buch == ausleihe.buch) { %>
+                    <p><%= standort.name %></p>
+                    <% } %>
+                    <% }); %>
+                    <% }); %>
                 </section>
                 <section class="detail__section">
                     <h2>Ausleih-ID</h2>
-                    <p>1478-4699-4547-3215-8475</p>
-                </section>
-                <hr>
-                <section class="detail__section">
-                    <h2>Überfällig seit(Tagen)</h2>
-                    <p>5</p>
-                </section>
-                <section class="detail__section">
-                    <h2>Überfälligkeitsgebühren (0,50 € / Tag)</h2>
-                    <p>2,50 €</p>
+                    <p><%= ausleihe.token %></p>
                 </section>
             </div>
-            <button class="button primary filled">Buch zurückgeben</button>
-            <button class="button primary outline">Verlängern</button>
         </section>
     </main>
     <%- include("parts/aside") %>

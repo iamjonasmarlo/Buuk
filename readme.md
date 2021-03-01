@@ -96,3 +96,11 @@
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Autors~~
+
+## Korrekturen
+
+- Ausleihe Details
+    - Alle h2 entfernen
+
+- Reservierung Details
+    - Alle h2 entfernen

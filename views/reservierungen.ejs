@@ -9,6 +9,7 @@
         <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich gelöscht.</div>
         <% } %>
         <section class="reservations">
+            <% if(reservierungen.length > 0) { %>
             <table class="table">
                 <tr>
                     <th>Buch</th>
@@ -51,6 +52,9 @@
                     </tr>
                 <% }); %>
             </table>
+            <% } else { %>
+                <p><strong>Derzeit sind keine Reservierungen vorhanden!</strong></p>
+            <% } %>
         </section>
     </main>
     <%- include("parts/aside") %>
