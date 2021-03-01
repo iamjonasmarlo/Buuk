@@ -57,17 +57,17 @@
     - bücher (array -> foreignkey)
 - Reservierungen
     - buch (foreignkey)
-    - kunde (foreignkey)
     - datumVon (date)
     - datumBis (date)
 - Ausleihen
     - buch (foreignkey)
-    - kunde (foreignkey)
     - datumVon (date)
     - datumBis (date)
     - status (int)
 
 ## Aufgaben & Bugs
+- Allgemein
+    - Menü aktiv schalten
 - Dashboard
     - Automatisierte Ausgabe
 - Standorte
