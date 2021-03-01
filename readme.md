@@ -59,6 +59,7 @@
     - buch (foreignkey)
     - datumVon (date)
     - datumBis (date)
+    - token (string)
 - Ausleihen
     - buch (foreignkey)
     - datumVon (date)
@@ -81,8 +82,7 @@
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen einer Reservierung~~
     - ~~Löschen einer Reservierung~~
-    - Editieren einer Reservierung
-    - Genieriung des Tokens
+    - ~~Genieriung des Tokens~~
 - Ausleihen
     - Automatisierte Aufgabe der Übersicht
     - Automatisierte Ausgabe der Detailseite
