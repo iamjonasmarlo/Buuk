@@ -4,7 +4,12 @@ const open = require("open");
 const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
+const models = require("./models/models.js");
 const router = require("./routes/router.js");
+
+/* Generate values (models) */
+
+models.generate_values();
 
 /* App config*/
 
