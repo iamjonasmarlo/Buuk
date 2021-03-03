@@ -799,98 +799,48 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 /*Buch Details*/
 
-#content main .buch-details .grid-container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    gap: 0px 0px;
-    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer" "QR QR-answer";
+#content main .photo-beschreibung {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 45px;
 }
 
-#content main .buch-details .grid-container .left-side {
-    display: grid;
-    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr;
-    gap: 0px 0px;
-    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
-    color: #f55500;
-    height: 100%;
+#content main .buch-details {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 50px;
 }
 
-#content main .buch-details .grid-container .right-side {
-    display: grid;
-    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr;
-    gap: 0px 0px;
-    grid-template-areas: "photo beschreibung" "autor-name autor-name-answer" "fachrichtung fachrichtung-answer" "jahr jahr-answer" "ISBN ISBN-answer";
-    height: 100%;
+#content main .photo-beschreibung .book-image {
+    flex: 0 0 3%;
+    padding-right: 13px;
 }
 
-#content main .buch-details .grid-container .left-side p {
+#content main .photo-beschreibung .book-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+#content main .photo-beschreibung .beschreibung {
+    flex: 0 0 70%;
+    border-bottom: solid 1px rgb(168, 168, 168);
+}
+
+#content main .buch-details .left-side {
+    flex: 0 0 30%;
     margin-top: 10px;
     font-weight: bold;
-    height: 100%;
-    padding-left: 5px;
-    padding-top: 5px;
+    color: #f55500;
 }
 
-#content main .buch-details .grid-container .right-side p {
+#content main .buch-details .right-side {
+    flex: 0 0 70%;
     margin-top: 10px;
-    padding-left: 7px;
-    height: 100%;
-    padding-top: 5px;
 }
 
-#content main .buch-details .grid-container .right-side p:nth-child(even) {
+#content main .buch-details .right-side p:nth-child(even) {
     background-color: #f2f2f2;
-}
-
-#content main .buch-details .grid-container .left-side p:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.photo {
-    grid-area: photo;
-    border: 2px solid rgb(161, 161, 161);
-    margin-bottom: 15px;
-    margin-right: 15px;
-    height: 100%;
-    width: 100%;
-}
-
-#content main .buch-details .grid-container .right-side .beschreibung {
-    grid-area: beschreibung;
-    margin-top: 0px;
-    padding-top: 0px;
-}
-
-.autor-name-answer {
-    grid-area: autor-name-answer;
-}
-
-.autor-name {
-    grid-area: autor-name;
-}
-
-.fachrichtung {
-    grid-area: fachrichtung;
-}
-
-.fachrichtung-answer {
-    grid-area: fachrichtung-answer;
-}
-
-.jahr {
-    grid-area: jahr;
-}
-
-.jahr-answer {
-    grid-area: jahr-answer;
-}
-
-.ISBN {
-    grid-area: ISBN;
-}
-
-.ISBN-answer {
-    grid-area: ISBN-answer;
 }
 
 
@@ -973,9 +923,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding: 10px;
     margin-bottom: 20px;
 }
-
-
-/*33.33333333% */
 
 .autoren .autor .inner {
     height: 100%;
@@ -1396,11 +1343,13 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: 80px;
 }
 
+
 /* Dashboard Reservations */
 
 .dashboard-reservations {
     padding-bottom: 80px;
 }
+
 
 /* Footer */
 
