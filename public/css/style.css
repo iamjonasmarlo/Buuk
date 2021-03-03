@@ -812,7 +812,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 #content main .photo-beschreibung .book-image {
-    flex: 0 0 3%;
+    flex: 0 0 30%;
     padding-right: 13px;
 }
 
