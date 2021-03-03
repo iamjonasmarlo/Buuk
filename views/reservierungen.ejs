@@ -1,63 +1,63 @@
 <%- include("parts/header", {current: "reservierungen"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Meine Reservierungen</h1>
-    </section>
-    <main>
-        <% if(typeof action !== "undefined" && action == "removed") { %>
-        <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich gelöscht.</div>
-        <% } %>
-        <section class="reservations">
-            <% if(reservierungen.length > 0) { %>
-            <table class="table">
-                <tr>
-                    <th>Buch</th>
-                    <th>Autor</th>
-                    <th>Datum von</th>
-                    <th>Datum bis</th>
-                    <th>Standort</th>
-                    <th></th>
-                </tr>
-                <% reservierungen.forEach(function(reservierung, index) { %>
-                    <tr>
-                        <td>
-                            <%= reservierung.buch.name %>
-                        </td>
-                        <td>
-                            <% autoren.forEach(function(autor, autor_index) { if (autor == reservierung.buch.autor) {%>
-                            <a href="/autor/detail?id=<%=autor_index%>">
-                                <%= autor.name %>
-                            </a>
-                            <% }}); %>
-                        </td>
-                        <td>
-                            <%= reservierung.datumVon %>
-                        </td>
-                        <td>
-                            <%= reservierung.datumBis %>
-                        </td>
-                        <% standorte.forEach(function(standort, standort_index) { %>
-                        <% standort.buecher.forEach(function(buch_sub) { %>
-                        <% if(buch_sub == reservierung.buch) { %>
-                        <td>
-                            <a href="/standorte/detail?id=<%= standort_index %>">
-                                <%= standort.name %>
-                            </a>
-                        </td>
-                        <% } %>
-                        <% }); %>
-                        <% }); %>
-                        <td><a href="/user/reservierungen/detail?id=<%= index %>">Details</a></td>
-                    </tr>
-                <% }); %>
-            </table>
-            <% } else { %>
-                <p><strong>Derzeit sind keine Reservierungen vorhanden!</strong></p>
-            <% } %>
+    <div id="content">
+        <section class="headline">
+            <h1>Meine Reservierungen</h1>
         </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+        <main>
+            <% if(typeof action !== "undefined" && action == "removed") { %>
+                <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich gelöscht.</div>
+                <% } %>
+                    <section class="reservations">
+                        <% if(reservierungen.length > 0) { %>
+                            <table class="table">
+                                <tr>
+                                    <th>Buch</th>
+                                    <th>Autor</th>
+                                    <th>Datum von</th>
+                                    <th>Datum bis</th>
+                                    <th class="so">Standort</th>
+                                    <th></th>
+                                </tr>
+                                <% reservierungen.forEach(function(reservierung, index) { %>
+                                    <tr>
+                                        <td>
+                                            <%= reservierung.buch.name %>
+                                        </td>
+                                        <td>
+                                            <% autoren.forEach(function(autor, autor_index) { if (autor == reservierung.buch.autor) {%>
+                                                <a href="/autor/detail?id=<%=autor_index%>">
+                                                    <%= autor.name %>
+                                                </a>
+                                                <% }}); %>
+                                        </td>
+                                        <td>
+                                            <%= reservierung.datumVon %>
+                                        </td>
+                                        <td>
+                                            <%= reservierung.datumBis %>
+                                        </td>
+                                        <% standorte.forEach(function(standort, standort_index) { %>
+                                            <% standort.buecher.forEach(function(buch_sub) { %>
+                                                <% if(buch_sub == reservierung.buch) { %>
+                                                    <td class="so">
+                                                        <a href="/standorte/detail?id=<%= standort_index %>">
+                                                            <%= standort.name %>
+                                                        </a>
+                                                    </td>
+                                                    <% } %>
+                                                        <% }); %>
+                                                            <% }); %>
+                                                                <td><a href="/user/reservierungen/detail?id=<%= index %>">Details</a></td>
+                                    </tr>
+                                    <% }); %>
+                            </table>
+                            <% } else { %>
+                                <p><strong>Derzeit sind keine Reservierungen vorhanden!</strong></p>
+                                <% } %>
+                    </section>
+        </main>
+        <%- include("parts/aside") %>
+    </div>
 
-<%- include("parts/footer") %>
+    <%- include("parts/footer") %>

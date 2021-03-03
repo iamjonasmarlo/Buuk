@@ -1,72 +1,72 @@
 <%- include("parts/header", {current: "user"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Meine Ausleihen </h1>
-    </section>
-    <main>
-        <section class="borrowings">
-            <% if(ausleihen.length > 0) { %>
-            <table class="table">
-                <tr>
-                    <th>Buch</th>
-                    <th>Datum von</th>
-                    <th>Datum bis</th>
-                    <th>Standort</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-                <% ausleihen.forEach(function(ausleihe, index) { %>
-                    <% if(ausleihe.status == false) { %>
-                    <tr class="error">
-                    <% } else { %>
-                    <tr class="success">
-                    <% } %>
-                        <td>
-                            <%= ausleihe.buch.name %>
-                        </td>
-                        <td>
-                            <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
-                        </td>
-                        <td>
-                            <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
-                        </td>
-                        <% standorte.forEach(function(standort, standort_index) { %>
-                        <% standort.buecher.forEach(function(buch_sub) { %>
-                        <% if(buch_sub == ausleihe.buch) { %>
-                        <td>
-                            <a href="/standorte/detail?id=<%= standort_index %>">
-                                <%= standort.name %>
-                            </a>
-                        </td>
-                        <% } %>
-                        <% }); %>
-                        <% }); %>
-                        <td>
-                            <% if(ausleihe.status == false) { %>
-                            Überzogen
-                            <% } else { %>
-                            In Ordnung
-                            <% } %>
-                        </td>
-                        <td><a href="/user/ausleihen/detail?id=<%= index %>">Details</a></td>
-                    </tr>
-                <% }); %>
-            </table>
-            <% } else { %>
-                <p><strong>Derzeit sind keine Ausleihen vorhanden!</strong></p>
-            <% } %>
-            <div class="legend">
-                <div class="legend__element">
-                    <span class="success"></span> Aktuell ausgeliehen
-                </div>
-                <div class="legend__element">
-                    <span class="error"></span> Überzogen
-                </div>
-            </div>
+    <div id="content">
+        <section class="headline">
+            <h1>Meine Ausleihen </h1>
         </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+        <main>
+            <section class="borrowings">
+                <% if(ausleihen.length > 0) { %>
+                    <table class="table">
+                        <tr>
+                            <th>Buch</th>
+                            <th>Datum von</th>
+                            <th>Datum bis</th>
+                            <th class="so">Standort</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        <% ausleihen.forEach(function(ausleihe, index) { %>
+                            <% if(ausleihe.status == false) { %>
+                                <tr class="error">
+                                    <% } else { %>
+                                        <tr class="success">
+                                            <% } %>
+                                                <td id="ausleihe">
+                                                    <%= ausleihe.buch.name %>
+                                                </td>
+                                                <td id="davon">
+                                                    <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
+                                                </td>
+                                                <td id="dabis">
+                                                    <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
+                                                </td>
+                                                <% standorte.forEach(function(standort, standort_index) { %>
+                                                    <% standort.buecher.forEach(function(buch_sub) { %>
+                                                        <% if(buch_sub == ausleihe.buch) { %>
+                                                            <td class="so">
+                                                                <a href="/standorte/detail?id=<%= standort_index %>">
+                                                                    <%= standort.name %>
+                                                                </a>
+                                                            </td>
+                                                            <% } %>
+                                                                <% }); %>
+                                                                    <% }); %>
+                                                                        <td id="status">
+                                                                            <% if(ausleihe.status == false) { %>
+                                                                                Überzogen
+                                                                                <% } else { %>
+                                                                                    In Ordnung
+                                                                                    <% } %>
+                                                                        </td>
+                                                                        <td><a href="/user/ausleihen/detail?id=<%= index %>">Details</a></td>
+                                        </tr>
+                                        <% }); %>
+                    </table>
+                    <% } else { %>
+                        <p><strong>Derzeit sind keine Ausleihen vorhanden!</strong></p>
+                        <% } %>
+                            <div class="legend">
+                                <div class="legend__element">
+                                    <span class="success"></span> Aktuell ausgeliehen
+                                </div>
+                                <div class="legend__element">
+                                    <span class="error"></span> Überzogen
+                                </div>
+                            </div>
+            </section>
+        </main>
+        <%- include("parts/aside") %>
+    </div>
 
-<%- include("parts/footer") %>
+    <%- include("parts/footer") %>
