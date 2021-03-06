@@ -799,48 +799,43 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 /*Buch Details*/
 
-#content main .photo-beschreibung {
+#content main .buch-main {
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
-#content main .buch-details {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 50px;
-}
-
-#content main .photo-beschreibung .book-image {
+#content main .buch-main .book-image {
     flex: 0 0 30%;
     padding-right: 13px;
 }
 
-#content main .photo-beschreibung .book-image img {
+#content main .buch-main .book-image img {
     width: 100%;
     height: auto;
     border: 1px solid rgb(168, 168, 168);
 }
 
-#content main .photo-beschreibung .beschreibung {
+#content main .buch-main .buch-beschreibung {
     flex: 0 0 70%;
     border-bottom: solid 1px rgb(168, 168, 168);
 }
 
-#content main .buch-details .left-side {
-    flex: 0 0 30%;
+#content main .buch-main .buch-details {
     margin-top: 10px;
+}
+
+#content main .buch-main .buch-details div {
+    margin-bottom: 10px;
+}
+
+#content main .buch-main .buch-details .buch-detail__left {
     font-weight: bold;
     color: #f55500;
 }
 
-#content main .buch-details .right-side {
-    flex: 0 0 70%;
-    margin-top: 10px;
-}
-
-#content main .buch-details .right-side p:nth-child(even) {
-    background-color: #f2f2f2;
+#content main .buch-main .buch-details .buch-detail__right {
+    margin: 2px;
 }
 
 

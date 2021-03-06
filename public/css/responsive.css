@@ -153,6 +153,23 @@
             flex: 0 0 100%;
             width: 100%;
         }
+        #content main .buch-main {
+            flex-flow: column wrap;
+        }
+        .buch-main .book-image {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+        .buch-main .buch-beschreibung p {
+            margin-bottom: 5px;
+        }
+        #content main .autor-about {
+            flex-flow: column wrap;
+        }
+        .autor-about .autor-image {
+            flex: 0 0 100%;
+            width: 100%;
+        }
     }
 }
 

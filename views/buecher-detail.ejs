@@ -10,40 +10,44 @@
             <% if(typeof action !== "undefined" && action == "added") { %>
                 <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich hinzugefügt.</div>
                 <% } %>
-                    <section class="photo-beschreibung">
+                    <section class="buch-main">
 
                         <div class="book-image">
                             <img src="/img/comingsoon.png" alt="book image">
                         </div>
-                        <div class="beschreibung">
+                        <div class="buch-beschreibung">
                             <p>
                                 <%= buch.beschreibung %>
                             </p>
                         </div>
 
-                    </section>
-                    <section class="buch-details">
-                        <div class="left-side">
-                            <p class="autor-name">Autor:</p>
-                            <p class="fachrichtung">Fachrichtung:</p>
-                            <p class="jahr">Jahr:</p>
-                            <p class="ISBN">ISBN:</p>
-                        </div>
-                        <div class="right-side">
 
-                            <p class="autor-name-answer">
-                                <%= buch.autor.name %>
-                            </p>
-                            <p class="fachrichtung-answer">
-                                <%= buch.fachrichtung %>
-                            </p>
-                            <p class="jahr-answer">
-                                <%= buch.jahr %>
-                            </p>
-                            <p class="ISBN-answer">
-                                <%= buch.isbn %>
-                            </p>
-                        </div>
+                        <section class="buch-details">
+                            <div>
+                                <span class="buch-detail__left">Autor:</span>
+                                <span class="buch-detail__right">
+                                    <%= buch.autor.name %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="buch-detail__left">Fachrichtung:</span>
+                                <span class="buch-detail__right">
+                                    <%= buch.fachrichtung %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="buch-detail__left">Jahr:</span>
+                                <span class="buch-detail__right">
+                                    <%= buch.jahr %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="buch-detail__left">ISBN:</span>
+                                <span class="buch-detail__right">
+                                    <%= buch.isbn %>
+                                </span>
+                            </div>
+                        </section>
                     </section>
                     <a href="/reservierungen/neu?id=<%= id %>"><button class="button primary filled">Buch reservieren</button></a>
 
