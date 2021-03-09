@@ -1,0 +1,216 @@
+/* Font (Import) */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../font/Karla-Regular.woff2') format('woff2'),
+        url('../font/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../font/Karla-Bold.woff2') format('woff2'),
+        url('../font/Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../font/Oswald-SemiBold.woff2') format('woff2'),
+        url('../font/Oswald-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset Style */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #f55500;
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+/* Global */
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+/* Font */
+
+h1 {
+    color: #f55500;
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Main */
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* Figure */
+
+figure {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+figure img {
+    width: 100%;
+    border: solid 1px #ccc;
+}
+
+figure figcaption {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Section */
+
+section {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: dashed 1px #f55500;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+section section {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+section section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Index */
+
+.index ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: item;
+    font-size: 0;
+    margin-bottom: 0;
+}
+
+.index ol li {
+    font-size: 1rem;
+}
+
+.index ol li ol {
+    padding-left: 30px;
+}
+
+.index ol li a {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.index ol li:before {
+    content: counters(item, ".") ".";
+    counter-increment: item;
+    display: inline-block;
+    width: 20px;
+}
+
+.index ol li ol li:before {
+    width: 30px;
+}
+
+.index ol li ol li ol li:before {
+    width: 45px;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px #ccc;
+}
+
+table tr th {
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    border: solid 1px #ccc;
+}
+
+tbody tr td {
+    padding: 10px;
+    border: solid 1px #ccc;
+    vertical-align: top;
+}
+
+tbody tr td ul {
+    margin-bottom: 0;
+}
+
+/* Copyright */
+
+.copyright {
+    margin-top: 50px;
+    color: #ccc;
+    font-size: 14px;
+}

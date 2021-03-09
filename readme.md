@@ -85,14 +85,14 @@
     - ~~Löschen einer Reservierung~~
     - ~~Genieriung des Tokens~~
 - Ausleihen
-    - Automatisierte Aufgabe der Übersicht
-    - Automatisierte Ausgabe der Detailseite
+    - ~~Automatisierte Aufgabe der Übersicht~~
+    - ~~Automatisierte Ausgabe der Detailseite~~
 - Bücher
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Buches~~
     - ~~Ausgabe des Autors in der Übersicht~~
-    - Ausgabe des Standortes auf der Detailseite
+    - ~~Ausgabe des Standortes auf der Detailseite~~
 - Autoren
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
@@ -106,6 +106,7 @@
 - Profil bearbeiten entfernen -> Input-Felder entfernen
 - Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs
 - Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!
+- Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen
 
 ## Zusatzaufwand:
 

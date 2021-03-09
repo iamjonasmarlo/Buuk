@@ -1,5 +1,33 @@
-/*JONAS LÖRKEN*/
+/* JONAS LÖRKEN */
 
+/* Font (Import) */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-Regular.woff2') format('woff2'),
+        url('../fonts/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-Bold.woff2') format('woff2'),
+        url('../fonts/Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('../fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* Reset Style */
 
@@ -34,14 +62,12 @@ h6 {
     margin: 0;
 }
 
-
 /* Global */
 
 body {
     font-family: 'Karla', sans-serif;
     font-size: 18px;
 }
-
 
 /* Font */
 
@@ -60,7 +86,6 @@ h2 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 }
-
 
 /* Button */
 
@@ -116,8 +141,7 @@ h2 {
     color: #fff;
 }
 
-
-/*SIMON WIDANSKI*/
+/* SIMON WIDANSKI */
 
 .button__impressum,
 .button__datenschutz {
@@ -148,9 +172,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-
-/*JONAS LÖRKEN*/
-
+/* JONAS LÖRKEN */
 
 /* Response */
 
@@ -163,7 +185,6 @@ h2 {
     border-left: solid 10px #376e37;
     color: #fff;
 }
-
 
 /* Header */
 
@@ -389,7 +410,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background: #dc4c00;
 }
 
-
 /* Content */
 
 #content {
@@ -400,7 +420,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     width: 100%;
     margin: 0 auto;
 }
-
 
 /* Main */
 
@@ -414,8 +433,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     display: inline-block;
 }
 
-
-/*SIMON WIDANSKI*/
+/* SIMON WIDANSKI */
 
 #content_pflichtpage {
     max-width: 1400px;
@@ -436,8 +454,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     display: inline-block;
 }
 
-
-/*Table */
+/* Table */
 
 .table-wrapper {
     width: 100%;
@@ -516,7 +533,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
-/*MOE TINAWI*/
+/* MOE TINAWI */
 
 .table td.status span.status__available {
     height: 15px;
@@ -538,9 +555,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background-color: red;
 }
 
-
-/*SIMON WIDANSKI*/
-
+/* SIMON WIDANSKI */
 
 /* Legend */
 
@@ -571,8 +586,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-right: 8px;
 }
 
-
-/*MOE TINAWI / SIMON WIDANSKI*/
+/* MOE TINAWI / SIMON WIDANSKI */
 
 .legend .legend__element span.success,
 .legend .legend__element span.available {
@@ -591,9 +605,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     border-radius: 50%;
 }
 
-
-/*JONAS LÖRKEN*/
-
+/* JONAS LÖRKEN */
 
 /* Aside */
 
@@ -664,7 +676,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 5px;
 }
 
-
 /* Headline */
 
 .headline {
@@ -673,9 +684,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding: 0 15px;
 }
 
-
-/*SIMON WIDANSKI*/
-
+/* SIMON WIDANSKI */
 
 /* Form */
 
@@ -793,11 +802,9 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 20px;
 }
 
+/* MOE TINAWI */
 
-/*MOE TINAWI*/
-
-
-/*Buch Details*/
+/* Buch Details */
 
 #content main .buch-main {
     display: flex;
@@ -917,8 +924,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-right: 0;
 }
 
-
-/*Autoren*/
+/* Autoren */
 
 #content main .autoren {
     display: flex;
@@ -987,7 +993,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-left: 10px;
 }
 
-
 /* Autor-Books */
 
 .autor-books {
@@ -1055,8 +1060,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-left: 10px;
 }
 
-
-/*RESERVIERUNG*/
+/* Reservierungen */
 
 .details {
     display: flex;
@@ -1116,22 +1120,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 2px;
 }
 
-
-/*JONAS LÖRKEN*/
-
-
-/* Location Image */
-
-.location-image {
-    padding-bottom: 80px;
-}
-
-.location-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
+/* JONAS LÖRKEN */
 
 /* Locations */
 
@@ -1191,7 +1180,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-left: 10px;
 }
 
-
 /* Location Image */
 
 .location-image {
@@ -1204,7 +1192,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     height: auto;
     display: block;
 }
-
 
 /* Location Detail */
 
@@ -1353,20 +1340,17 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: 0;
 }
 
-
 /* Dashboard Intro */
 
 .dashboard-intro {
     padding-bottom: 80px;
 }
 
-
 /* Dashboard Reservations */
 
 .dashboard-reservations {
     padding-bottom: 80px;
 }
-
 
 /* Footer */
 
