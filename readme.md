@@ -66,7 +66,7 @@
     - datumBis (date)
     - status (int)
 
-## Aufgaben & Bugs
+## Aufgaben
 - Allgemein
     - Menü aktiv schalten
 - Dashboard
@@ -97,10 +97,29 @@
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Autors~~
 
-## Korrekturen
+## Bugs & Korrekturen
 
 - Ausleihe Details
     - Alle h2 entfernen
 
 - Reservierung Details
     - Alle h2 entfernen
+
+- Buchstatus momentan noch statisch
+    - Wenn ausgeliehen status ausgeliehen
+    - Wenn nicht ausgeliehen verfügbar
+
+- Seite Buchdetails fehlerhaft
+    - Status des Buches fehlt
+    - Standort fehlt
+
+- Seite Autoren
+    - Links sind zu Socialmedia sind nicht hinterlegt
+    - Sollte vielleicht beim Anlegen des Autos eingegeben werden können
+
+- Reservierungen
+    - Datum von kann später als Datum bis sein
+    - Wenn ein Buch für eine Zeit reserviert ist, kann es nicht nochmal in der gleichen Zeit ausgeliehen werden
+    - Wenn eine reservierung abgegeben wurde sollte man zu /user/reservierungen/detail weitergeleitet werden
+    - Daten der Reservierungen dürfen maximal 4 Wochen auseinander liegen (30 Tage)
+                     

@@ -10,13 +10,12 @@
         }
         
         p {
-            margin: 0;
+            margin: 5px;
         }
         
         a {
-            color: white;
+            color: blue;
             font-weight: normal;
-            text-decoration: none;
         }
         
         h1,
@@ -25,54 +24,51 @@
         h4,
         h5,
         h6 {
-            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         /* Global */
         
         body {
+            margin: 50px;
             font-family: 'Karla', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
         }
         /* Font */
         
         h1 {
             color: #f55500;
             font-size: 40px;
-            margin-bottom: 50px;
             font-family: "Oswald", sans-serif;
             text-transform: uppercase;
         }
-        /* Header */
         
-        header .header-bottom {
-            background: #f55500;
-            padding: 20px 0;
-        }
-        
-        header .header-bottom .header-bottom__inner {
-            max-width: 1400px;
+        table {
             width: 100%;
-            margin: 0 auto;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            padding: 0 15px;
+            border-collapse: collapse;
         }
         
-        header .header-bottom .header-bottom__inner .logo {
-            margin-right: 100px;
+        table thead tr th {
+            text-align: left;
+            padding: 5px;
+            font-weight: bold;
         }
         
-        header .header-bottom .header-bottom__inner .logo img {
-            display: felx;
-            max-height: 45px;
-            width: auto;
-            display: block;
-            float: left;
-            vertical-align: middle;
+        table tbody tr td:first-child {
+            font-weight: bold;
         }
         
-        header .header-bottom .header-bottom__inner h1 {
-            color: white;
-            vertical-align: middle;
+        tbody tr td {
+            border-bottom: dashed 1px #f55500;
+            padding: 5px;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+            padding-bottom: none;
+        }
+        
+        hr {
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
