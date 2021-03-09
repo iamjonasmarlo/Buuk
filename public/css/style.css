@@ -1095,6 +1095,13 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding: 5px;
 }
 
+.details .details__half .detail__section .detail-title,
+.details .details__full .detail__section .detail-title {
+    color: #f55500;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
 
 /*JONAS LÖRKEN*/
 

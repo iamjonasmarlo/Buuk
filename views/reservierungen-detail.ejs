@@ -1,64 +1,80 @@
 <%- include("parts/header", {current: "reservierungen"}) %>
 
-<div id="content">
-    <section class="headline">
-        <h1>Reservierungsdetails</h1>
-    </section>
-    <main>
-        <section class="details">
-            <div class="details__image">
-                <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
-                <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
-            </div>
-            <div class="details__half">
-                <section class="detail__section">
-                    <h2>Buchtitel:</h2>
-                    <p><%= reservierung.buch.name %></p>
-                </section>
-                <section class="detail__section">
-                    <h2>Autor:</h2>
-                    <p><%= reservierung.buch.autor.name %></p>
-                </section>
-                <section class="detail__section">
-                    <h2>ISBN:</h2>
-                    <p><%= reservierung.buch.isbn %></p>
-                </section>
-                <section class="detail__section">
-                    <h2>Erscheinungsjahr:</h2>
-                    <p><%= reservierung.buch.jahr %></p>
-                </section>
-            </div>
-            <div class="details__full">
-                <section class="detail__section">
-                    <h2>Datum von:</h2>
-                    <p><%= reservierung.datumVon %></p>
-                </section>
-                <section class="detail__section">
-                    <h2>Datum Bis:</h2>
-                    <p><%= reservierung.datumBis %></p>
-                </section>
-                <section class="detail__section">
-                    <h2>Standort</h2>
-                    <% standorte.forEach(function(standort) { %>
-                    <% standort.buecher.forEach(function(buch, index) { %>
-                    <% if(reservierung.buch == buch) { %>
-                    <p><%= standort.name %></p>
-                    <% } %>
-                    <% }); %>
-                    <% }); %>
-                </section>
-                <section class="detail__section">
-                    <h2>Reservierungs-ID</h2>
-                    <p><%= reservierung.token %></p>
-                </section>
-            </div>
-            <form action="/user/reservierungen" method="POST">
-                <input type="hidden" name="reservierung" value="<%= id %>">
-                <button class="button error outline">Reservierung löschen</button>
-            </form>
+    <div id="content">
+        <section class="headline">
+            <h1>Reservierungsdetails</h1>
         </section>
-    </main>
-    <%- include("parts/aside") %>
-</div>
+        <main>
+            <section class="details">
+                <div class="details__image">
+                    <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
+                    <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
+                </div>
+                <div class="details__half">
+                    <section class="detail__section">
+                        <div class="detail-title">Buchtitel:</div>
+                        <p>
+                            <%= reservierung.buch.name %>
+                        </p>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">Autor:</div>
+                        <p>
+                            <%= reservierung.buch.autor.name %>
+                        </p>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">ISBN:</div>
+                        <p>
+                            <%= reservierung.buch.isbn %>
+                        </p>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">Erscheinungsjahr:</div>
+                        <p>
+                            <%= reservierung.buch.jahr %>
+                        </p>
+                    </section>
+                </div>
+                <div class="details__full">
+                    <section class="detail__section">
+                        <div class="detail-title">Datum von:</div>
+                        <p>
+                            <%= reservierung.datumVon %>
+                        </p>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">Datum Bis:</div>
+                        <p>
+                            <%= reservierung.datumBis %>
+                        </p>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">Standort</div>
+                        <% standorte.forEach(function(standort) { %>
+                            <% standort.buecher.forEach(function(buch, index) { %>
+                                <% if(reservierung.buch == buch) { %>
+                                    <p>
+                                        <%= standort.name %>
+                                    </p>
+                                    <% } %>
+                                        <% }); %>
+                                            <% }); %>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail-title">Reservierungs-ID</div>
+                        <p>
+                            <%= reservierung.token %>
+                        </p>
+                    </section>
+                </div>
+                <form action="/user/reservierungen" method="POST">
+                    <input type="hidden" name="reservierung" value="<%= id %>">
+                    <button class="button error outline">Reservierung löschen</button>
+                </form>
+            </section>
+        </main>
+        <%- include("parts/aside") %>
+    </div>
 
-<%- include("parts/footer") %>
+    <%- include("parts/footer") %>

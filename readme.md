@@ -100,10 +100,10 @@
 ## Bugs & Korrekturen
 
 - Ausleihe Details
-    - Alle h2 entfernen
+    - ~~Alle h2 entfernen~~
 
 - Reservierung Details
-    - Alle h2 entfernen
+    - ~~Alle h2 entfernen~~
 
 - Buchstatus momentan noch statisch
     - Wenn ausgeliehen status ausgeliehen
