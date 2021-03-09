@@ -122,4 +122,6 @@
     - Wenn ein Buch für eine Zeit reserviert ist, kann es nicht nochmal in der gleichen Zeit ausgeliehen werden
     - Wenn eine reservierung abgegeben wurde sollte man zu /user/reservierungen/detail weitergeleitet werden
     - Daten der Reservierungen dürfen maximal 4 Wochen auseinander liegen (30 Tage)
-                     
+
+- Logout
+    - Spearater Header mit Login statt dem Name                    
