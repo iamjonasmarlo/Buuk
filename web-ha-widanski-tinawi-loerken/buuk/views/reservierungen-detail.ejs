@@ -7,49 +7,51 @@
         <main>
             <section class="details">
                 <div class="details__image">
-                    <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt=" ">
-                    <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
+                    <figure>
+                        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt="QR-Code Ausleihe">
+                        <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
+                    </figure>
                 </div>
                 <div class="details__half">
-                    <section class="detail__section">
+                    <div class="detail__section">
                         <div class="detail-title">Buchtitel:</div>
                         <p>
                             <%= reservierung.buch.name %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Autor:</div>
                         <p>
                             <%= reservierung.buch.autor.name %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">ISBN:</div>
                         <p>
                             <%= reservierung.buch.isbn %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Erscheinungsjahr:</div>
                         <p>
                             <%= reservierung.buch.jahr %>
                         </p>
-                    </section>
+                    </div>
                 </div>
                 <div class="details__full">
-                    <section class="detail__section">
+                    <div class="detail__section">
                         <div class="detail-title">Datum von:</div>
                         <p>
                             <%= reservierung.datumVon %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Datum Bis:</div>
                         <p>
                             <%= reservierung.datumBis %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Standort</div>
                         <% standorte.forEach(function(standort) { %>
                             <% standort.buecher.forEach(function(buch, index) { %>
@@ -60,13 +62,13 @@
                                     <% } %>
                                         <% }); %>
                                             <% }); %>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Reservierungs-ID</div>
                         <p>
                             <%= reservierung.token %>
                         </p>
-                    </section>
+                    </div>
                 </div>
                 <form action="/user/reservierungen" method="POST">
                     <input type="hidden" name="reservierung" value="<%= id %>">

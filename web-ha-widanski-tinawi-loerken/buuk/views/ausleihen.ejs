@@ -23,13 +23,13 @@
                                     <% } else { %>
                                         <tr class="success">
                                             <% } %>
-                                                <td id="ausleihe">
+                                                <td>
                                                     <%= ausleihe.buch.name %>
                                                 </td>
-                                                <td id="davon">
+                                                <td>
                                                     <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
                                                 </td>
-                                                <td id="dabis">
+                                                <td>
                                                     <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
                                                 </td>
                                                 <% standorte.forEach(function(standort, standort_index) { %>
@@ -43,9 +43,9 @@
                                                             <% } %>
                                                                 <% }); %>
                                                                     <% }); %>
-                                                                        <td id="status">
+                                                                        <td>
                                                                             <% if(ausleihe.status == false) { %>
-                                                                                Überzogen
+                                                                                In Ordnung
                                                                                 <% } else { %>
                                                                                     In Ordnung
                                                                                     <% } %>

@@ -7,48 +7,50 @@
         <main>
             <section class="details">
                 <div class="details__image">
-                    <img src="/img/comingsoon.png" alt="Buchcover">
+                    <figure>
+                        <img src="/img/comingsoon.png" alt="Buchcover">
+                    </figure>
                 </div>
                 <div class="details__half">
-                    <section class="detail__section">
+                    <div class="detail__section">
                         <div class="detail-title">Buchtitel:</div>
                         <p>
                             <%= ausleihe.buch.name %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Autor:</div>
                         <p>
                             <%= ausleihe.buch.autor.name %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Erscheinungsjahr:</div>
                         <p>
                             <%= ausleihe.buch.jahr %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">ISBN:</div>
                         <p>
                             <%= ausleihe.buch.isbn %>
                         </p>
-                    </section>
+                    </div>
                 </div>
                 <div class="details__full">
-                    <section class="detail__section">
+                    <div class="detail__section">
                         <div class="detail-title">Ausgeliehen von:</div>
                         <p>
                             <%= ((ausleihe.datumVon.getDate() > 9) ? ausleihe.datumVon.getDate() : ('0' + ausleihe.datumVon.getDate())) + '.' + ((ausleihe.datumVon.getMonth() > 8) ? (ausleihe.datumVon.getMonth() + 1) : ('0' + (ausleihe.datumVon.getMonth() + 1))) + '.' + ausleihe.datumVon.getFullYear() %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Ausgeliehen bis:</div>
                         <p>
                             <%= ((ausleihe.datumBis.getDate() > 9) ? ausleihe.datumBis.getDate() : ('0' + ausleihe.datumBis.getDate())) + '.' + ((ausleihe.datumBis.getMonth() > 8) ? (ausleihe.datumBis.getMonth() + 1) : ('0' + (ausleihe.datumBis.getMonth() + 1))) + '.' + ausleihe.datumBis.getFullYear() %>
                         </p>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Standort</div>
                         <% standorte.forEach(function(standort) { %>
                             <% standort.buecher.forEach(function(buch) { %>
@@ -59,13 +61,13 @@
                                     <% } %>
                                         <% }); %>
                                             <% }); %>
-                    </section>
-                    <section class="detail__section">
+                    </div>
+                    <div class="detail__section">
                         <div class="detail-title">Ausleih-ID</div>
                         <p>
                             <%= ausleihe.token %>
                         </p>
-                    </section>
+                    </div>
                 </div>
             </section>
         </main>

@@ -103,11 +103,11 @@
 - Buch-Detail Seite: Section in Section ist nicht gut. Überschrift für jede Secttion hinzufügen!
 - Alle Seiten W3C validieren (https://validator.w3.org/#validate_by_input)
 - CSS W3C validieren (https://jigsaw.w3.org/css-validator/#validate_by_input)
-- Profil bearbeiten entfernen -> Input-Felder entfernen
-- Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs
+- ~~Profil bearbeiten entfernen -> Input-Felder entfernen~~
+- ~~Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs~~
 - Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!
 - Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen
-- Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten
+- ~~Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten~~
 
 ## Zusatzaufwand:
 
