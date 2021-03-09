@@ -838,6 +838,20 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin: 2px;
 }
 
+#content main .buch-main .buch-details .buch-detail__right a {
+    color: #f55500;
+    text-decoration: underline;
+}
+
+#content main .buch-main .buch-details .buch-detail__right .ready {
+    color: green;
+    font-weight: bold;
+}
+
+#content main .buch-main .buch-details .buch-detail__right .not-ready {
+    color: red;
+    font-weight: bold;
+}
 
 /* Autor */
 
@@ -1182,6 +1196,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 .location-image {
     padding-bottom: 80px;
+    margin: 0;
 }
 
 .location-image img {
@@ -1335,7 +1350,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 .location-detail .location-detail__accordion .accordion .acc-content .inner table tbody tr:last-child td {
     border-bottom: none;
-    padding-bottom: none;
+    padding-bottom: 0;
 }
 
 

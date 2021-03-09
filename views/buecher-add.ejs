@@ -16,7 +16,7 @@
                         <label>
                         Autor:
                         <select name="author" required>
-                            <option disabled selected>Autor auswählen</option>
+                            <option value="" disabled selected>Autor auswählen</option>
                             <% autoren.forEach(function(autor, index) { %>
                                 <option value="<%= index %>"><%= autor.name %></option>
                             <% }); %>
@@ -43,7 +43,7 @@
                         <label>
                         Standort:
                         <select name="location" required>
-                            <option disabled selected>Standort auswählen</option>
+                            <option value="" disabled selected>Standort auswählen</option>
                             <% standorte.forEach(function(standort, index) { %>
                                 <option value="<%= index %>"><%= standort.name %></option>
                             <% }); %>

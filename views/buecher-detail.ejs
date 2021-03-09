@@ -23,6 +23,7 @@
 
 
                         <section class="buch-details">
+                            <h2>Informationen</h2>
                             <div>
                                 <span class="buch-detail__left">Autor:</span>
                                 <span class="buch-detail__right">
@@ -47,9 +48,31 @@
                                     <%= buch.isbn %>
                                 </span>
                             </div>
+                            <% standorte.forEach(function(standort, standort_index) { %>
+                            <% standort.buecher.forEach(function(buch_sub, index) { %>
+                            <% if(buch_sub == buch) { %>
+                            <div>
+                                <span class="buch-detail__left">Standort:</span>
+                                <span class="buch-detail__right">
+                                    <a href="/standorte/detail?id=<%= standort_index %>"><%= standort.name %></a>
+                                </span>
+                            </div>
+                            <% } %>
+                            <% }); %>
+                            <% }); %>
+                            <div>
+                                <span class="buch-detail__left">Status:</span>
+                                <span class="buch-detail__right">
+                                    <% if (buch.status) { %>
+                                        <span class="ready">Verfügbar</span>
+                                    <% } else { %>
+                                        <span class="not-ready">Aktuell nicht verfügbar</span>
+                                     <% } %>
+                                </span>
+                            </div>
                         </section>
                     </section>
-                    <a href="/reservierungen/neu?id=<%= id %>"><button class="button primary filled">Buch reservieren</button></a>
+                    <a href="/reservierungen/neu?id=<%= id %>" class="button primary filled">Buch reservieren</a>
 
         </main>
         <%- include("parts/aside") %>

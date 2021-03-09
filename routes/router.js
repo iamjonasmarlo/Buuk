@@ -67,14 +67,14 @@ router.get("/buecher/neu", function(req, res, next) {
 router.get("/buecher/detail", function(req, res, next) {
     let id = req.query.id;
     res.status(200);
-    res.render("buecher-detail", { buch: controller.get_buecher_detail(id), id: id });
+    res.render("buecher-detail", { buch: controller.get_buecher_detail(id), id: id, standorte: controller.get_standorte() });
 });
 
 router.post("/buecher/detail", function(req, res, next) {
     let id = req.query.id;
     controller.add_reservierung(req.body.buch, req.body.datumVon, req.body.datumBis);
     res.status(200);
-    res.render("buecher-detail", { buch: controller.get_buecher_detail(id), id: id, action: "added"});
+    res.render("buecher-detail", { buch: controller.get_buecher_detail(id), id: id, standorte: controller.get_standorte(), action: "added"});
 });
 
 router.get("/buecher", function(req, res, next) {

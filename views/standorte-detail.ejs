@@ -7,9 +7,9 @@
         </h1>
     </section>
     <main>
-        <section class="location-image">
+        <figure class="location-image">
             <img src="http://www.placehold.it/1200x400" alt="Standort <%= standort.name %>">
-        </section>
+        </figure>
         <section class="location-detail">
             <div class="location-detail__contact">
                 <div class="title">Kontaktdaten</div>
@@ -20,14 +20,10 @@
                                 <%= standort.ort %>
                     </li>
                     <li><i class="ti-mobile"></i>
-                        <a href="tel:<%= standort.telefon %>">
-                            <%= standort.telefon %>
-                        </a>
+                        <%= standort.telefon %>
                     </li>
                     <li><i class="ti-printer"></i>
-                        <a href="#">
-                            <%= standort.fax %>
-                        </a>
+                        <%= standort.fax %>
                     </li>
                 </ul>
             </div>

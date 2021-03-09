@@ -2,7 +2,7 @@
 
 ## Seiten
 
-- Dashboard
+- ~~Dashboard~~
 - ~~Bücher~~
     - ~~Buchdetails~~
     - ~~Buch hinzufügen~~
@@ -67,10 +67,11 @@
     - status (int)
 
 ## Aufgaben
+
 - Allgemein
-    - Menü aktiv schalten
+    - ~~Menü aktiv schalten~~
 - Dashboard
-    - Automatisierte Ausgabe
+    - ~~Automatisierte Ausgabe~~
 - Standorte
     - ~~Automatisierte Aufgabe der Übersicht~~
     - ~~Automatisierte Ausgabe der Detailseite~~
@@ -97,31 +98,19 @@
     - ~~Automatisierte Ausgabe der Detailseite~~
     - ~~Anlegen eines Autors~~
 
-## Bugs & Korrekturen
+## Wichtig: Ausstehende Aufgaben
 
-- Ausleihe Details
-    - ~~Alle h2 entfernen~~
+- Buch-Detail Seite: Section in Section ist nicht gut. Überschrift für jede Secttion hinzufügen!
+- Alle Seiten W3C validieren (https://validator.w3.org/#validate_by_input)
+- CSS W3C validieren (https://jigsaw.w3.org/css-validator/#validate_by_input)
+- Profil bearbeiten entfernen -> Input-Felder entfernen
+- Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs
+- Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!
 
-- Reservierung Details
-    - ~~Alle h2 entfernen~~
-
-- Buchstatus momentan noch statisch
-    - Wenn ausgeliehen status ausgeliehen
-    - Wenn nicht ausgeliehen verfügbar
-
-- Seite Buchdetails fehlerhaft
-    - Status des Buches fehlt
-    - Standort fehlt
-
-- Seite Autoren
-    - Links sind zu Socialmedia sind nicht hinterlegt
-    - Sollte vielleicht beim Anlegen des Autos eingegeben werden können
+## Zusatzaufwand:
 
 - Reservierungen
     - Datum von kann später als Datum bis sein
     - Wenn ein Buch für eine Zeit reserviert ist, kann es nicht nochmal in der gleichen Zeit ausgeliehen werden
     - Wenn eine reservierung abgegeben wurde sollte man zu /user/reservierungen/detail weitergeleitet werden
     - Daten der Reservierungen dürfen maximal 4 Wochen auseinander liegen (30 Tage)
-
-- Logout
-    - Spearater Header mit Login statt dem Name                    
