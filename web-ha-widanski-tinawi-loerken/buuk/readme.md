@@ -107,6 +107,7 @@
 - Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs
 - Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!
 - Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen
+- Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten
 
 ## Zusatzaufwand:
 
