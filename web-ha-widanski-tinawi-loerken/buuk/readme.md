@@ -134,21 +134,13 @@
 - ~~Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!~~
 - ~~Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen~~
 - ~~Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten~~
-- Mehr Instanzen von jedem anlegen
-
-
-## Wichtig: Muss geklärt werden
-- Header in EJS lassen? Titel der Seite ist immer BUUK
-- Evtl mehr Breakpoints?
-- Tabellen Overflow Scroll oder ausblenden?
-- 
+- Standort Bug (Ausstattung leer)
 
 
 
 ## Zusatzaufwand:
 - Pattern in Inputs einfügen
-- Reservierungen
-- Datum von kann später als Datum bis sein
+- !!!Datum von kann später als Datum bis sein!!!
 - Wenn ein Buch für eine Zeit reserviert ist, kann es nicht nochmal in der gleichen Zeit ausgeliehen werden
 - Wenn eine reservierung abgegeben wurde sollte man zu /user/reservierungen/detail weitergeleitet werden
 - Daten der Reservierungen dürfen maximal 4 Wochen auseinander liegen (30 Tage)

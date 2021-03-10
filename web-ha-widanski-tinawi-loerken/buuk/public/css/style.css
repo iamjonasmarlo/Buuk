@@ -862,7 +862,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 #content main .autor-about .autor-discr {
     height: 220px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #content main .autor-about .autor-discr p b {
