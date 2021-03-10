@@ -1,81 +1,81 @@
 <%- include("parts/header", {current: "buecher"}) %>
 
-    <div id="content">
-        <section class="headline">
-            <h1>
-                <%= buch.name %>
-            </h1>
-        </section>
-        <main>
-            <% if(typeof action !== "undefined" && action == "added") { %>
-                <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich hinzugefügt.</div>
+<div id="content">
+    <section class="headline">
+        <h1>
+            <%= buch.name %>
+        </h1>
+    </section>
+    <main>
+        <% if(typeof action !== "undefined" && action == "added") { %>
+        <div class="response success" style="margin-bottom:30px;">Ihre Reservierung wurde erfolgreich hinzugefügt.</div>
+        <% } %>
+        <div class="buch-main">
+
+            <div class="book-image">
+                <img src="/img/comingsoon.png" alt="book image">
+            </div>
+            <div class="buch-beschreibung">
+                <p>
+                    <%= buch.beschreibung %>
+                </p>
+            </div>
+
+
+            <section class="buch-details">
+                <h2>Informationen</h2>
+                <div>
+                    <span class="buch-detail__left">Autor:</span>
+                    <span class="buch-detail__right">
+                        <%= buch.autor.name %>
+                    </span>
+                </div>
+                <div>
+                    <span class="buch-detail__left">Fachrichtung:</span>
+                    <span class="buch-detail__right">
+                        <%= buch.fachrichtung %>
+                    </span>
+                </div>
+                <div>
+                    <span class="buch-detail__left">Jahr:</span>
+                    <span class="buch-detail__right">
+                        <%= buch.jahr %>
+                    </span>
+                </div>
+                <div>
+                    <span class="buch-detail__left">ISBN:</span>
+                    <span class="buch-detail__right">
+                        <%= buch.isbn %>
+                    </span>
+                </div>
+                <% standorte.forEach(function(standort, standort_index) { %>
+                <% standort.buecher.forEach(function(buch_sub, index) { %>
+                <% if(buch_sub == buch) { %>
+                <div>
+                    <span class="buch-detail__left">Standort:</span>
+                    <span class="buch-detail__right">
+                        <a href="/standorte/detail?id=<%= standort_index %>"><%= standort.name %></a>
+                    </span>
+                </div>
                 <% } %>
-                    <section class="buch-main">
+                <% }); %>
+                <% }); %>
+                <div>
+                    <span class="buch-detail__left">Status:</span>
+                    <span class="buch-detail__right">
+                        <% if (buch.status) { %>
+                        <span class="ready">Verfügbar</span>
+                        <% } else { %>
+                        <span class="not-ready">Aktuell nicht verfügbar</span>
+                        <% } %>
+                    </span>
+                </div>
+            </section>
+        </div>
+        <a href="/reservierungen/neu?id=<%= id %>" class="button primary filled">Buch reservieren</a>
 
-                        <div class="book-image">
-                            <img src="/img/comingsoon.png" alt="book image">
-                        </div>
-                        <div class="buch-beschreibung">
-                            <p>
-                                <%= buch.beschreibung %>
-                            </p>
-                        </div>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-
-                        <section class="buch-details">
-                            <h2>Informationen</h2>
-                            <div>
-                                <span class="buch-detail__left">Autor:</span>
-                                <span class="buch-detail__right">
-                                    <%= buch.autor.name %>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="buch-detail__left">Fachrichtung:</span>
-                                <span class="buch-detail__right">
-                                    <%= buch.fachrichtung %>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="buch-detail__left">Jahr:</span>
-                                <span class="buch-detail__right">
-                                    <%= buch.jahr %>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="buch-detail__left">ISBN:</span>
-                                <span class="buch-detail__right">
-                                    <%= buch.isbn %>
-                                </span>
-                            </div>
-                            <% standorte.forEach(function(standort, standort_index) { %>
-                            <% standort.buecher.forEach(function(buch_sub, index) { %>
-                            <% if(buch_sub == buch) { %>
-                            <div>
-                                <span class="buch-detail__left">Standort:</span>
-                                <span class="buch-detail__right">
-                                    <a href="/standorte/detail?id=<%= standort_index %>"><%= standort.name %></a>
-                                </span>
-                            </div>
-                            <% } %>
-                            <% }); %>
-                            <% }); %>
-                            <div>
-                                <span class="buch-detail__left">Status:</span>
-                                <span class="buch-detail__right">
-                                    <% if (buch.status) { %>
-                                        <span class="ready">Verfügbar</span>
-                                    <% } else { %>
-                                        <span class="not-ready">Aktuell nicht verfügbar</span>
-                                     <% } %>
-                                </span>
-                            </div>
-                        </section>
-                    </section>
-                    <a href="/reservierungen/neu?id=<%= id %>" class="button primary filled">Buch reservieren</a>
-
-        </main>
-        <%- include("parts/aside") %>
-    </div>
-
-    <%- include("parts/footer") %>
+<%- include("parts/footer") %>
