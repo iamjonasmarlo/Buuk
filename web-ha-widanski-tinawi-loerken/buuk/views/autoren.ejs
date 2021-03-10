@@ -7,28 +7,28 @@
     <main>
         <section class="autoren">
             <% autoren.forEach(function(autor, index) { %>
-                <div class="autor">
-                    <div class="inner">
-                        <div class="autor__image">
-                            <img src="/img/comingsoon.png" alt="Autorfoto">
-                        </div>
-                        <div class="autor__info">
-                            <a href="autor/detail?id=<%= index %>" class="title">
-                                <h3>
-                                    <%= autor.name %>
-                                </h3>
-                            </a>
-                            <hr>
-                            <p class="fachrichtung-book">
-                                <%= autor.fachrichtung %>
-                            </p>
-                        </div>
-                        <a href="autor/detail?id=<%= index %>" class="autor__link">
-                            Zum Autor<i class="ti-arrow-right"></i>
-                        </a>
+            <div class="autor">
+                <div class="inner">
+                    <div class="autor__image">
+                        <img src="/img/comingsoon.png" alt="Autorfoto">
                     </div>
+                    <div class="autor__info">
+                        <a href="autor/detail?id=<%= index %>" class="title">
+                            <h3>
+                                <%= autor.name %>
+                            </h3>
+                        </a>
+                        <hr>
+                        <p class="fachrichtung-book">
+                            <%= autor.fachrichtung %>
+                        </p>
+                    </div>
+                    <a href="autor/detail?id=<%= index %>" class="autor__link">
+                        Zum Autor<i class="ti-arrow-right"></i>
+                    </a>
                 </div>
-                <% }); %>
+            </div>
+            <% }); %>
         </section>
         <a href="/autor/neu" class="button primary filled">Neuen Autor hinzufügen</a>
     </main>
@@ -36,4 +36,4 @@
 </div>
 <script src="js/scripts.js"></script>
 
-    <%- include("parts/footer") %>
+<%- include("parts/footer") %>

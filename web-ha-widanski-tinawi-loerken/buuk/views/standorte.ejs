@@ -6,27 +6,27 @@
     </section>
     <main>
         <% if(typeof action !== "undefined" && action == "added") { %>
-            <div class="response success" style="margin-bottom:30px;">Der Standort wurde erfolgreich hinzugefügt.</div>
+        <div class="response success" style="margin-bottom:30px;">Der Standort wurde erfolgreich hinzugefügt.</div>
         <% } %>
         <section class="locations-overview">
             <% standorte.forEach(function(standort, index) { %>
-                <div class="location">
-                    <div class="inner">
-                        <a href="standorte/detail?id=<%= index %>" class="location__image">
-                            <img src="/img/location-overview.png" alt="Standort <%= standort.name %>">
-                        </a>
-                        <div class="location__info">
-                            <div class="title"><%= standort.name %></div>
-                            <address>
+            <div class="location">
+                <div class="inner">
+                    <a href="standorte/detail?id=<%= index %>" class="location__image">
+                        <img src="/img/location-overview.png" alt="Standort <%= standort.name %>">
+                    </a>
+                    <div class="location__info">
+                        <div class="title"><%= standort.name %></div>
+                        <address>
                             <%= standort.adresse %><br />
                             <%= standort.plz %> <%= standort.ort %>
                         </address>
-                        </div>
-                        <a href="standorte/detail?id=<%= index %>" class="location__link">
+                    </div>
+                    <a href="standorte/detail?id=<%= index %>" class="location__link">
                         Zum Standort <i class="ti-arrow-right"></i>
                     </a>
-                    </div>
                 </div>
+            </div>
             <% }); %>
         </section>
         <section class="add">

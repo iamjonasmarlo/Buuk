@@ -1,32 +1,33 @@
 <%- include("parts/header",{current: "autoren"}) %>
 
-    <div id="content">
-        <section class="headline">
-            <h1>Autor hinzufügen</h1>
-        </section>
-        <main>
-            <section class="form">
-                <form action="/autoren" method="POST" id="autor-form">
-                    <div class="input-group">
-                        <h2>Autoreninformationen</h2>
-                        <label>
+<div id="content">
+    <section class="headline">
+        <h1>Autor hinzufügen</h1>
+    </section>
+    <main>
+        <section class="form">
+            <form action="/autoren" method="POST" id="autor-form">
+                <div class="input-group">
+                    <h2>Autoreninformationen</h2>
+                    <label>
                         Name
                         <input type="text" name="name" placeholder="Name" required minlength="3" maxlength="30">
-                        </label>
-                        <label>
+                    </label>
+                    <label>
                         Fachrichtung
                         <input type="text" name="fachrichtung" placeholder="Fachrichtung" required>
-                         </label>
-                        <label>Beschreibung:
-                        <textarea name="beschreibung"  rows="10" placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum." ></textarea>
+                    </label>
+                    <label>Beschreibung:
+                        <textarea name="beschreibung" rows="10"
+                            placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."></textarea>
                     </label>
 
-                    </div>
-                    <button type="submit" class="button primary filled">Autor hinzufügen</button>
-                </form>
-            </section>
-        </main>
-        <%- include("parts/aside") %>
-    </div>
+                </div>
+                <button type="submit" class="button primary filled">Autor hinzufügen</button>
+            </form>
+        </section>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-    <%- include("parts/footer") %>
+<%- include("parts/footer") %>

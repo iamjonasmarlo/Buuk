@@ -11,45 +11,46 @@
 
 <body>
 
-<header>
-    <div class="header-top">
-        <div class="header-top__inner">
-            <ul class="contact-list">
-                <li><a href="tel:+4923191127991"><i class="ti-mobile"></i>+49 (0) 231 91127991</a></li>
-                <li><a href="mailto:bib@fh-dortmund.de"><i class="ti-email"></i>bib@fh-dortmund.de</a></li>
-            </ul>
-            <a href="https://www.fh-dortmund.de/" target="_blank" class="fh-link"><i class="ti-link"></i>Website der FH Dortmund</a>
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="header-bottom__inner">
-            <a href="/" class="logo"><img src="/img/logo.png" alt="Buuk Logo"></a>
-            <div class="nav-toggle" id="nav-toggle"><span></span></div>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <% if (current == "index") { %>
-                    <li class="active"><a href="/">Dashboard</a></li>
-                    <% } else { %>
-                    <li><a href="/">Dashboard</a></li>
-                    <% } %>
-                    <% if (current == "buecher") { %>
-                    <li class="active"><a href="/buecher">Bücher</a></li>
-                    <% } else { %>
-                    <li><a href="/buecher">Bücher</a></li>
-                    <% } %>
-                    <% if (current == "autoren") { %>
-                    <li class="active"><a href="/autoren">Autoren</a></li>
-                    <% } else { %>
-                    <li><a href="/autoren">Autoren</a></li>
-                    <% } %>
-                    <% if (current == "standorte") { %>
-                    <li class="active"><a href="/standorte">Standorte</a></li>
-                    <% } else { %>
-                    <li><a href="/standorte">Standorte</a></li>
-                    <% } %>
+    <header>
+        <div class="header-top">
+            <div class="header-top__inner">
+                <ul class="contact-list">
+                    <li><a href="tel:+4923191127991"><i class="ti-mobile"></i>+49 (0) 231 91127991</a></li>
+                    <li><a href="mailto:bib@fh-dortmund.de"><i class="ti-email"></i>bib@fh-dortmund.de</a></li>
                 </ul>
-            </nav>
-            <a href="/login" class="login">Jetzt anmelden</a>
+                <a href="https://www.fh-dortmund.de/" target="_blank" class="fh-link"><i class="ti-link"></i>Website der
+                    FH Dortmund</a>
+            </div>
         </div>
-    </div>
-</header>
+        <div class="header-bottom">
+            <div class="header-bottom__inner">
+                <a href="/" class="logo"><img src="/img/logo.png" alt="Buuk Logo"></a>
+                <div class="nav-toggle" id="nav-toggle"><span></span></div>
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <% if (current == "index") { %>
+                        <li class="active"><a href="/">Dashboard</a></li>
+                        <% } else { %>
+                        <li><a href="/">Dashboard</a></li>
+                        <% } %>
+                        <% if (current == "buecher") { %>
+                        <li class="active"><a href="/buecher">Bücher</a></li>
+                        <% } else { %>
+                        <li><a href="/buecher">Bücher</a></li>
+                        <% } %>
+                        <% if (current == "autoren") { %>
+                        <li class="active"><a href="/autoren">Autoren</a></li>
+                        <% } else { %>
+                        <li><a href="/autoren">Autoren</a></li>
+                        <% } %>
+                        <% if (current == "standorte") { %>
+                        <li class="active"><a href="/standorte">Standorte</a></li>
+                        <% } else { %>
+                        <li><a href="/standorte">Standorte</a></li>
+                        <% } %>
+                    </ul>
+                </nav>
+                <a href="/login" class="login">Jetzt anmelden</a>
+            </div>
+        </div>
+    </header>

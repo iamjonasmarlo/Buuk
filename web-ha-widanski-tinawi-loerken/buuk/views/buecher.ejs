@@ -1,78 +1,82 @@
 <%- include("parts/header", {current: "buecher"}) %>
 
-    <div id="content">
-        <section class="headline">
-            <h1>Bücher</h1>
+<div id="content">
+    <section class="headline">
+        <h1>Bücher</h1>
+    </section>
+    <main>
+        <% if(typeof action !== "undefined" && action == "added") { %>
+        <div class="response success" style="margin-bottom:30px;">Das Buch wurde erfolgreich angelegt.</div>
+        <% } %>
+        <section>
+            <h2>Übersicht</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Buch</th>
+                        <th>Autor</th>
+                        <th class="bp900">ISBN</th>
+                        <th>Jahr</th>
+                        <th class="so">Standort</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% buecher.forEach(function(buch, buch_index) { %>
+                    <tr>
+                        <td class="status">
+                            <% if (buch.status) { %>
+                            <span class="status__available"></span>
+                            <% } else { %>
+                            <span class="status__notavailable"></span>
+                            <% } %>
+                        </td>
+                        <td class="buch-name">
+                            <%= buch.name %>
+                        </td>
+                        <td>
+                            <% autoren.forEach(function(autor, autor_index) { if (autor == buch.autor) {%>
+                            <a href="/autor/detail?id=<%=autor_index%>">
+                                <%= autor.name %>
+                            </a>
+                            <% }}); %>
+                        </td>
+                        <td class="bp900">
+                            <%= buch.isbn %>
+                        </td>
+                        <td>
+                            <%= buch.jahr %>
+                        </td>
+                        <% standorte.forEach(function(standort, standort_index) { %>
+                        <% standort.buecher.forEach(function(buch_sub, index) { %>
+                        <% if(buch_sub == buch) { %>
+                        <td class="so">
+                            <a href="/standorte/detail?id=<%= standort_index %>">
+                                <%= standort.name %>
+                            </a>
+                        </td>
+                        <% } %>
+                        <% }); %>
+                        <% }); %>
+                        <td><a href="/buecher/detail?id=<%= buch_index %>">Details</a></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <a href="/buecher/neu" class="button primary filled">Neues Buch hinzufügen</a>
+            <div class="legend">
+                <div class="legend__element">
+                    <span class="available"></span> Verfügbar
+                </div>
+                <div class="legend__element">
+                    <span class="notavailable"></span> Nicht verfügbar
+                </div>
+            </div>
+
         </section>
-        <main>
-            <% if(typeof action !== "undefined" && action == "added") { %>
-                <div class="response success" style="margin-bottom:30px;">Das Buch wurde erfolgreich angelegt.</div>
-                <% } %>
-                    <section>
-                        <h2>Übersicht</h2>
-                        <table class="table">
-                            <tr>
-                                <th>Status</th>
-                                <th>Buch</th>
-                                <th>Autor</th>
-                                <th class="bp900">ISBN</th>
-                                <th>Jahr</th>
-                                <th class="so">Standort</th>
-                                <th></th>
-                            </tr>
-                            <% buecher.forEach(function(buch, buch_index) { %>
-                                <tr>
-                                    <td class="status">
-                                        <% if (buch.status) { %>
-                                            <span class="status__available"></span>
-                                            <% } else { %>
-                                                <span class="status__notavailable"></span>
-                                                <% } %>
-                                    </td>
-                                    <td class="buch-name">
-                                        <%= buch.name %>
-                                    </td>
-                                    <td>
-                                        <% autoren.forEach(function(autor, autor_index) { if (autor == buch.autor) {%>
-                                            <a href="/autor/detail?id=<%=autor_index%>">
-                                                <%= autor.name %>
-                                            </a>
-                                            <% }}); %>
-                                    </td>
-                                    <td class="bp900">
-                                        <%= buch.isbn %>
-                                    </td>
-                                    <td>
-                                        <%= buch.jahr %>
-                                    </td>
-                                    <% standorte.forEach(function(standort, standort_index) { %>
-                                        <% standort.buecher.forEach(function(buch_sub, index) { %>
-                                            <% if(buch_sub == buch) { %>
-                                                <td class="so">
-                                                    <a href="/standorte/detail?id=<%= standort_index %>">
-                                                        <%= standort.name %>
-                                                    </a>
-                                                </td>
-                                                <% } %>
-                                                    <% }); %>
-                                                        <% }); %>
-                                                            <td><a href="/buecher/detail?id=<%= buch_index %>">Details</a></td>
-                                </tr>
-                                <% }); %>
-                        </table>
-                        <a href="/buecher/neu" class="button primary filled">Neues Buch hinzufügen</a>
-                        <div class="legend">
-                            <div class="legend__element">
-                                <span class="available"></span> Verfügbar
-                            </div>
-                            <div class="legend__element">
-                                <span class="notavailable"></span> Nicht verfügbar
-                            </div>
-                        </div>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-                    </section>
-        </main>
-        <%- include("parts/aside") %>
-    </div>
-
-    <%- include("parts/footer") %>
+<%- include("parts/footer") %>

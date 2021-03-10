@@ -1,73 +1,73 @@
 <%- include("parts/header", {current: "user"}) %>
 
-    <div id="content">
-        <section class="headline">
-            <h1>Mein Profil</h1>
+<div id="content">
+    <section class="headline">
+        <h1>Mein Profil</h1>
+    </section>
+    <main>
+        <section class="details">
+            <div class="details__image">
+                <figure>
+                    <img src="/img/placeholder_800x800.png" alt="Profilbild">
+                    <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
+                </figure>
+            </div>
+            <div class="details__half">
+                <div class="detail__section">
+                    <div class="detail-title">Vorname:</div>
+                    <p>
+                        Max
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">Nachname:</div>
+                    <p>
+                        Mustermann
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">Geburtstag:</div>
+                    <p>
+                        01.01.1990
+                    </p>
+                </div>
+
+            </div>
+            <div class="details__full">
+                <div class="detail__section">
+                    <div class="detail-title">Fachrichtung:</div>
+                    <p>
+                        Praktische Informatik
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">Hauptstandort:</div>
+                    <p>
+                        Emil-Figge-Straße
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">Straße:</div>
+                    <p>
+                        Musterstraße 55
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">Stadt:</div>
+                    <p>
+                        Musterstadt
+                    </p>
+                </div>
+                <div class="detail__section">
+                    <div class="detail-title">PLZ</div>
+                    <p>
+                        99999
+                    </p>
+                </div>
+            </div>
         </section>
-        <main>
-            <section class="details">
-                <div class="details__image">
-                    <figure>
-                        <img src="/img/placeholder_800x800.png" alt="Profilbild">
-                        <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
-                    </figure>
-                </div>
-                <div class="details__half">
-                    <div class="detail__section">
-                        <div class="detail-title">Vorname:</div>
-                        <p>
-                            Max
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">Nachname:</div>
-                        <p>
-                            Mustermann
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">Geburtstag:</div>
-                        <p>
-                            01.01.1990
-                        </p>
-                    </div>
+    </main>
+    <%- include("parts/aside") %>
+</div>
 
-                </div>
-                <div class="details__full">
-                    <div class="detail__section">
-                        <div class="detail-title">Fachrichtung:</div>
-                        <p>
-                            Praktische Informatik
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">Hauptstandort:</div>
-                        <p>
-                            Emil-Figge-Straße
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">Straße:</div>
-                        <p>
-                            Musterstraße 55
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">Stadt:</div>
-                        <p>
-                            Musterstadt
-                        </p>
-                    </div>
-                    <div class="detail__section">
-                        <div class="detail-title">PLZ</div>
-                        <p>
-                            99999
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <%- include("parts/aside") %>
-    </div>
-
-    <%- include("parts/footer") %>
+<%- include("parts/footer") %>
