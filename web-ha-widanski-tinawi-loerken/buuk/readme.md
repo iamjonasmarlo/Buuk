@@ -98,17 +98,45 @@
 - ~~Automatisierte Ausgabe der Detailseite~~
 - ~~Anlegen eines Autors~~
 
+
+## Wichtig: Valide
+
+- ~~404~~
+- ~~ausleihen-detail~~
+- ~~ausleihen~~ 
+- ~~autor-detail~~
+- ~~autoren-add~~
+- ~~autoren~~
+- ~~buecher-add~~
+- ~~buecher-details~~
+- ~~buecher~~
+- !!datenschutz!!
+- !!impressum!!
+- ~~index~~
+- ~~login~~
+- ~~logout~~
+- ~~profil~~
+- ~~reservierungen-add~~
+- ~~reservierungen-detail~~
+- ~~Reservierungen~~
+- ~~standorte-add~~
+- ~~standorte-detail~~
+- ~~Standorte~~
+
+
 ## Wichtig: Ausstehende Aufgaben
 
 - ~~Buch-Detail Seite: Section in Section ist nicht gut. Überschrift für jede Secttion hinzufügen!~~
-- Alle Seiten W3C validieren (https://validator.w3.org/#validate_by_input)
-- CSS W3C validieren (https://jigsaw.w3.org/css-validator/#validate_by_input)
+- ~~Alle Seiten W3C validieren (https://validator.w3.org/#validate_by_input)~~
+- ~~CSS W3C validieren (https://jigsaw.w3.org/css-validator/#validate_by_input)~~
 - ~~Profil bearbeiten entfernen -> Input-Felder entfernen~~
 - ~~Ausleihen -> Jede Menge W3C-Fehler, u.a. doppelte IDs~~
 - ~~Ausleihdetails -> Jede Menge W3C-Fehler, da jede Zeile eine Section ist. Unbedingt ändern!~~
-- Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen
+- ~~Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen~~
 - ~~Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten~~
 - Mehr Instanzen von jedem anlegen
+- Datenschutz und Impressum wirft Fehler aus. Button darf nicht in a sein. Wie anders gestalten?
+
 
 ## Wichtig: BUGS
 
@@ -118,6 +146,20 @@
 
 - Reservierungen
   - Hinzugefügte Daten im Quellcode und auf der Seite können nicht gleichzeitig angezeigt werden
+
+- Standorte
+  - Im Responsive sind die Felder nicht gleich groß  
+
+
+- Footer ist nicht ganz unten fixiert
+
+## Wichtig: Muss geklärt werden
+- Header in EJS lassen? Titel der Seite ist immer BUUK
+- Evtl mehr Breakpoints?
+- Tabellen Overflow Scroll oder ausblenden?
+- Pattern in Inputs einfügen
+
+
 
 ## Zusatzaufwand:
 
