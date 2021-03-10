@@ -110,8 +110,8 @@
 - ~~buecher-add~~
 - ~~buecher-details~~
 - ~~buecher~~
-- !!datenschutz!!
-- !!impressum!!
+- ~~datenschutz~~
+- ~~impressum~~
 - ~~index~~
 - ~~login~~
 - ~~logout~~
@@ -135,23 +135,7 @@
 - ~~Alle Bilder lokal ablegen (in den meisten Fällen schon gemacht) -> Prüfen~~
 - ~~Impressum / Datenschutz muss ohne JavaScript laufen -> Eigene Seiten~~
 - Mehr Instanzen von jedem anlegen
-- Datenschutz und Impressum wirft Fehler aus. Button darf nicht in a sein. Wie anders gestalten?
 
-
-## Wichtig: BUGS
-
-- Mein Profil
-
-  - Bild wird kleiner aber nicht schrittweise sondern fließend
-
-- Reservierungen
-  - Hinzugefügte Daten im Quellcode und auf der Seite können nicht gleichzeitig angezeigt werden
-
-- Standorte
-  - Im Responsive sind die Felder nicht gleich groß  
-
-
-- Footer ist nicht ganz unten fixiert
 
 ## Wichtig: Muss geklärt werden
 - Header in EJS lassen? Titel der Seite ist immer BUUK

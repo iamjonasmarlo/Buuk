@@ -1,37 +1,20 @@
-<%- include("parts/header", {current: "impressum"}) %>
+<%- include("parts/header", {current: "user"}) %>
 
-<div id="content_pflichtpage">
-    <button class="button__impressum__active">Impressum</button><a href="/datenschutz"><button
-            class="button__datenschutz">Datenschutz</button></a>
-    <section class="Impressum">
-        <section class="headline">
-            <h1>Impressum</h1>
-        </section>
-        <main>
+<div id="content">
+    <section class="headline">
+        <h1>Impressum</h1>
+    </section>
+    <main>
+        <section class="text">
             <p>Anbieter:<br />Max Mustermann<br />Musterstraße 1<br />80999 München</p>
-            </br>
+
             <p>Kontakt:<br />Telefon: 089/1234567-8<br />Telefax: 089/1234567-9<br />E-Mail:
                 mail@mustermann.de<br />Website: www.mustermann.de</p>
-            </br>
+
             <p>Bei redaktionellen Inhalten:</p>
             <p>Verantwortlich nach § 55 Abs.2 RStV<br />Moritz Schreiberling<br />Musterstraße 2<br />80999 München</p>
-        </main>
-    </section>
-    <section class="Datasecurity" style="display: none">
-        <section class="headline">
-            <h1>Datenschutz</h1>
         </section>
-        <main>
-            <p><strong>Impressum</strong></p>
-            <p>Anbieter:<br />Max Mustermann<br />Musterstraße 1<br />80999 München</p>
-            </br>
-            <p>Kontakt:<br />Telefon: 089/1234567-8<br />Telefax: 089/1234567-9<br />E-Mail:
-                mail@mustermann.de<br />Website: www.mustermann.de</p>
-            </br>
-            <p>Bei redaktionellen Inhalten:</p>
-            <p>Verantwortlich nach § 55 Abs.2 RStV<br />Moritz Schreiberling<br />Musterstraße 2<br />80999 München</p>
-        </main>
-    </section>
+    </main>
 </div>
 
 <%- include("parts/footer") %>

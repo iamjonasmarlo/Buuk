@@ -65,7 +65,7 @@ function get_reservierungen() {
 
 function add_reservierung(index, datumVon, datumBis) {
     let buch = buecher_model.buecher[index],
-        reservierung = new reservierungen_model.reservierung(buch, datumVon, datumBis);
+        reservierung = new reservierungen_model.reservierung(buch, new Date(datumVon), new Date(datumBis));
         reservierungen_model.reservierungen.push(reservierung);
 }
 

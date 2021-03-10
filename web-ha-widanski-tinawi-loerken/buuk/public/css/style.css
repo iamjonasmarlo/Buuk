@@ -144,39 +144,6 @@ h2 {
 }
 
 
-/* SIMON WIDANSKI */
-
-.button__impressum,
-.button__datenschutz {
-    width: 50%;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    background: #f55500;
-    color: #fff;
-    padding: 20px;
-}
-
-.button__impressum__active,
-.button__datenschutz__active {
-    width: 50%;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    background: #fff;
-    color: #f55500;
-}
-
-.button__impressum:hover,
-.button__datenschutz:hover {
-    background: #fff;
-    color: #f55500;
-    transition: all 0.3s ease;
-}
-
-
 /* JONAS LÖRKEN */
 
 
@@ -442,26 +409,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     display: inline-block;
 }
 
+/* Text */ 
 
-/* SIMON WIDANSKI */
+#content main .text p{
+    margin-bottom: 20px;
 
-#content_pflichtpage {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid #f55500;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-bottom: 50px;
-}
-
-#content_pflichtpage main {
-    width: 100%;
-    padding: 0 15px;
-}
-
-#content_pflichtpage main {
-    display: inline-block;
 }
 
 
@@ -1109,7 +1061,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 .details .details__image {
-    flex: 0 0 31%;
+    flex: 0 0 350px;
     padding-right: 13px;
     padding-bottom: 10px;
 }
@@ -1126,7 +1078,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 .details .details__half {
-    flex: 0 0 69%;
+    flex: 1;
 }
 
 .details .details__full {
@@ -1193,6 +1145,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 .locations-overview .location .location__info .title {
+    min-height: 52px;
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 30px;
