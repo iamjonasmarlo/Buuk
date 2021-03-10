@@ -22,7 +22,7 @@
                                 </tr>
                                 <% reservierungen.forEach(function(reservierung, index) { %>
                                     <tr>
-                                        <td>
+                                        <td class="buch-name">
                                             <%= reservierung.buch.name %>
                                         </td>
                                         <td>
@@ -33,10 +33,10 @@
                                                 <% }}); %>
                                         </td>
                                         <td>
-                                            <%= reservierung.datumVon %>
+                                            <%= ((reservierung.datumVon.getDate() > 9) ? reservierung.datumVon.getDate() : ('0' + reservierung.datumVon.getDate())) + '.' + ((reservierung.datumVon.getMonth() > 8) ? (reservierung.datumVon.getMonth() + 1) : ('0' + (reservierung.datumVon.getMonth() + 1))) + '.' + reservierung.datumVon.getFullYear() %>
                                         </td>
                                         <td>
-                                            <%= reservierung.datumBis %>
+                                            <%= ((reservierung.datumBis.getDate() > 9) ? reservierung.datumBis.getDate() : ('0' + reservierung.datumBis.getDate())) + '.' + ((reservierung.datumBis.getMonth() > 8) ? (reservierung.datumBis.getMonth() + 1) : ('0' + (reservierung.datumBis.getMonth() + 1))) + '.' + reservierung.datumBis.getFullYear() %>
                                         </td>
                                         <% standorte.forEach(function(standort, standort_index) { %>
                                             <% standort.buecher.forEach(function(buch_sub) { %>

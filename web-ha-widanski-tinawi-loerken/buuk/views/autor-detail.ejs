@@ -31,28 +31,32 @@
             </section>
             <section class="autor-books">
                 <h2>Bücher</h2>
-                <% buecher.forEach(function(buch) { if(buch.autor == autor.name) {%>
+                <% buecher.forEach(function(buch) { if(buch.autor == autor) {%>
                     <div class="book">
                         <div class="inner">
                             <div class="book__image">
                                 <img src="/img/comingsoon.png" alt="Standort Emil-Figge-Straße 44">
                             </div>
                             <div class="book__info">
-                                <a href="buecher-detail.html" class="title">
-                                    <h3>
-                                        <%= buch.name %>
-                                    </h3>
-                                </a>
-                                <hr>
-                                <p class="fachrichtung-book">
-                                    Praktische Informatik
-                                </p>
+                                <% buecher.forEach(function(buch_sub, index) { %>
+                                    <% if(buch_sub == buch) { %>
+                                        <a href="/buecher/detail?id=<%= index %>" class="title">
+                                            <div class="buch-title">
+                                                <%= buch.name %>
+                                            </div>
+                                        </a>
+                                        <hr>
+                                        <p class="fachrichtung-book">
+                                            <%= buch.fachrichtung %>
+                                        </p>
+                                        <% } %>
+                                            <% }); %>
                             </div>
                             <% buecher.forEach(function(buch_sub, index) { %>
                                 <% if(buch_sub == buch) { %>
                                     <a href="/buecher/detail?id=<%= index %>" class="book__link">
-                            Zum Buch <i class="ti-arrow-right "></i>
-                            </a>
+                        Zum Buch <i class="ti-arrow-right "></i>
+                    </a>
                                     <% } %>
                                         <% }); %>
                         </div>

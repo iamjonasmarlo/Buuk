@@ -1,6 +1,6 @@
 /* Responsive (1100px) */
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1150px) {
     header .header-bottom .header-bottom__inner .logo {
         margin-right: 30px;
     }
@@ -21,8 +21,20 @@
     table tr .so {
         display: none;
     }
+    .table tr .buch-name {
+        max-width: 200px;
+        text-overflow: "...";
+        overflow: hidden;
+    }
+    .autoren .autor {
+        display: block;
+        flex: 0 0 50%;
+        width: 30%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
     /* Responsive (900px) */
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:950px) {
         header .header-bottom .header-bottom__inner .main-nav {
             position: absolute;
             top: 100%;
@@ -170,6 +182,14 @@
             flex: 0 0 100%;
             width: 100%;
         }
+        table tr .bp900 {
+            display: none;
+        }
+        .table tr .buch-name {
+            max-width: 180px;
+            text-overflow: "...";
+            overflow: hidden;
+        }
     }
 }
 
@@ -204,5 +224,17 @@
     .locations-overview .location {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .table tr .buch-name {
+        max-width: 140px;
+        text-overflow: "...";
+        overflow: hidden;
+    }
+    .autoren .autor {
+        display: block;
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 }

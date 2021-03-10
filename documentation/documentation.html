@@ -4,52 +4,53 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Buuk - Dokumentation</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="style_dok.css" rel="stylesheet">
 </head>
 
 <body>
     <main>
-        <h1>Buuk - Dokumentation</h1>
-        <section class="index">
+        <h1> Dokumentation</h1>
+
+        <section id="Inhalt">
             <h2>Inhalt</h2>
             <ol>
-                <li><a href="#anwendungsbeschreibung">Beschreibung des Anwendungsszenarios</a></li>
-                <li>
-                    <a href="#fachobjekte">Fachobjekte der Anwendung</a>
+                <li><a href="#Anwendungsbeschreibung">Beschreibung des Anwendungsszenarios</a></li>
+                <li><a href="#Fachobjekte">Fachobjekte der Anwendung</a></li>
+                <ol>
+                    <li><a href="#Buch">Buch</a></li>
+                    <li><a href="#Autor">Autor</a></li>
+                    <li><a href="#Benutzer">Benutzer</a></li>
+                    <li><a href="#Standort">Standort</a></li>
+                    <li><a href="#Reservierung">Reserierung</a></li>
+                    <li><a href="#Ausleihen">Ausleihen</a></li>
+                </ol>
+                <li><a href="#Implementierungsentscheidungen">Beschreibung und Begründung der
+                        Implementierungsentscheidungen</a></li>
+                <ol>
+                    <li><a href="#Client">Client</a></li>
                     <ol>
-                        <li><a href="#fachobjekte-buch">Buch</a></li>
-                        <li><a href="#fachobjekte-autor">Autor</a></li>
-                        <li><a href="#fachobjekte-standort">Standort</a></li>
-                        <li><a href="#fachobjekte-reservierung">Reservierung</a></li>
-                        <li><a href="#fachobjekte-ausleihe">Ausleihe</a></li>
-                        <li><a href="#fachobjekte-sonstiges">Sonstiges</a></li>
+                        <li><a href="#Strukturierung__HTML">Strukturierung der HTML-Seiten</a></li>
+                        <li><a href="#Layout">Layout</a></li>
+                        <li><a href="#Responsivität">Responsivität</a></li>
                     </ol>
-                </li>
-                <li>
-                    <a href="#implementierungsentscheidungen">Beschreibung und Begründung der Implementierungsentscheidungen</a>
+                    <li><a href="#Server">Server</a></li>
                     <ol>
-                        <li>
-                            <a href="#implementierungsentscheidungen-client">Client</a>
-                            <ol>
-                                <li><a href="#implementierungsentscheidungen-client-struktur">Strukturierung der HTML-Seiten</a></li>
-                                <li><a href="#implementierungsentscheidungen-client-layout">Layout</a></li>
-                                <li><a href="#implementierungsentscheidungen-client-responsive">Responsivität</a></li>
-                            </ol>
-                        </li>
-                        <li>
-                            <a href="#implementierungsentscheidungen-server">Server</a>
-                            <ol>
-                                <li><a href="#implementierungsentscheidungen-server-modulstruktur">Modulstruktur</a></li>
-                                <li><a href="#implementierungsentscheidungen-server-urls">Unterstütze URLs/Endpunkte</a></li>
-                            </ol>
-                        </li>
+                        <li><a href="#Modulstruktur">Modulstruktur</a></li>
+                        <li><a href="#URLs__Endpunkte">Unterstützte URLs/Endpunkte</a></li>
                     </ol>
-                </li>
-                <li><a href="#autoren">Start der Anwendung</a></li>
-                <li><a href="#start">Autorenschaft der Quellcode-Dateien</a></li>
+                </ol>
+
+                <li><a href="#Start">Start der Anwendung</a></li>
+                <li><a href="#Autorenschaft">Autorenschaft der Quellcode-Dateien</a></li>
+
             </ol>
         </section>
-        <section id="anwendungsbeschreibung">
+
+        <hr>
+
+        <section id="Anwendungsbeschreibung">
             <h2>1. Beschreibung des Anwendungsszenarios</h2>
             <p>
                 Die Anwendung stellt einen Online-Dienst der Bibliothek der Fachhochschule dar. Hier hat der Benutzer die Möglichkeit, online nach Büchern zu suchen, die in einem der drei Bibliotheksstandorte vorhanden sind. Der Vorteil dabei ist es, dass dieser nicht
@@ -69,7 +70,8 @@
                 Wir haben uns in diesem Fall erst einmal auf die Online-Reservierung konzentriert und zusätzlich angeschnitten, was nach dem Scannen des QR-Codes passiert. Wichtig zu sagen ist außerdem, dass die Anwendung aus Sicht eines Administrators programmiert ist,
                 welcher nicht nur die Möglichkeit hat sich ein Buch auszuleihen sondern auch die Möglichkeit hat, neue Bücher, Standorte und Autoren hinzuzufügen.
             </p>
-            <section>
+
+            <section class="Hauptfeatures">
                 <h3>Hauptfeatures:</h3>
                 <ul>
                     <li>Der Nutzer hat die Möglichkeit, sich entweder alle Bücher anzeigen zu lassen, alle Bücher eines Autoren oder alle Bücher an einem bestimmten Standort.</li>
@@ -79,15 +81,18 @@
                     <li>Zurückgeben eines Buches an einem Terminal mit hilfe eines QR Codes</li>
                 </ul>
             </section>
+
         </section>
-        <section id="fachobjekte">
-            <h2>2. Fachobjekte der Anwendung (Jonas Lörken und Simon Widanski)</h2>
-            <figure>
-                <img src="img/uml.png" alt="UML-Klassendiagramm">
-                <figcaption>Das UML-Klassendiagramm von Buuk</figcaption>
-            </figure>
-            <section id="fachobjekte-buch">
-                <h3>2.1. Buch</h3>
+
+        <hr>
+
+        <section id="Fachobjekte">
+            <h2>2. Fachobjekte der Anwendung</h2>
+
+            <img src="img/Hausarbeit Webtechnologien.png" alt="UML-Klassendiagramm" style="max-width: 35%;">
+
+            <section id="Buch">
+                <h3>2.1 Buch</h3>
                 <p>
                     Das Buch ist das wichtigste Objekt der Anwendung. Jedes andere Fachobjekt steht mit diesem in irgend einer Art und Weise in einer Beziehung zu diesem. Es besitzt die Attribute:
                 </p>
@@ -107,9 +112,13 @@
                     unterschieden werden kann.
 
                 </p>
+
             </section>
-            <section id="fachobjekte-autor">
-                <h3>2.2. Autor</h3>
+
+            <hr style="border: 1px dashed black">
+
+            <section id="Autor">
+                <h3>2.2 Autor</h3>
                 <p>
                     Der Autor ist eine von der Anzahl der Attribute gesehen, recht kleine Klasse. Er besitzt lediglich die Attribute:
                 </p>
@@ -120,12 +129,19 @@
                 </ul>
                 <p>
                     Wir haben uns dazu entschieden, dem Autor eine eigene Klasse zu geben, da es oftmals vorkommt, dass ein Autor auch mehrere Bücher geschrieben hat. Sollte man nun ein Buch von diesem gefunden haben und möchte nun weitere Bücher von diesem lesen, weil man
-                    seinen schreibstil gut versteht, kann man sich auf der Seite alle Werke dieses Autors anzeigen lassen. Auf der Autorenseite findet man zusätzlich Links zu dessen Social-Media Profilen. In der Anwendung sind diese allerdings nicht belegt
-                    und nur zur "Ansicht" da. Nimmt man diese rein, werden die Links ebenfalls Attribute vom Autor.
+                    seinen schreibstil gut versteht, kann man sich auf der Seite alle Werke dieses Autors anzeigen lassen.
                 </p>
+
+
             </section>
-            <section id="fachobjekte-standort">
-                <h3>2.3. Standort</h3>
+
+            <hr style="border: 1px dashed black">
+
+
+
+
+            <section id="Standort">
+                <h3>2.3 Standort</h3>
                 <p>
                     Einem Standort werden alle dort enthaltenen Bücher zugeordnet. Das heißt sozusagen, dass der Standort die Digitale Version der Bibliothekt ist. Ein Standort hat folgende Attribute:
                 </p>
@@ -140,14 +156,19 @@
                     <li>Ausstattung</li>
                     <li>Bücher</li>
                 </ul>
+
                 <p>
                     Auch hier sind wieder fast alle Attribute reine Informationen für den Benutzer. Nur das Attirbut Bücher, welches ein Array mit allen im Standort vorhandenen Büchern ist, stellt hier die Beziehung zwischen den Objekten Standort und Buch dar. Ein Standort
                     kann halt beliebig viele Bücher haben (Wir gehen davon aus, dass der physische Platz in einer Bibliothek unendlich groß ist.), während ein Buch, nur einen Standort haben kann. Auch hier kommt wieder zum vorschein, warum jedes einzelne
                     Buch ein eigenes Objekt ist. Das selbe Buch, kann ja auch an mehreren Standorten vorhanden sein. Um dies zu unterscheiden, braucht jedes Buch eine eigene ID.
                 </p>
+
             </section>
-            <section id="fachobjekte-reservierung">
-                <h3>2.4. Reservieren</h3>
+
+            <hr style="border: 1px dashed black">
+
+            <section id="Reserierung">
+                <h3>2.4 Reserierung</h3>
                 <p>
                     Mit eine der Hauptfunkionen der Anwendung sind die Reservierungen der Bücher für einen Benutzer. Dies wird über ein eigenes Fachobjekt gelöst welche folgende Attribute hat:
                 </p>
@@ -157,15 +178,20 @@
                     <li>Datum bis</li>
                     <li>Token</li>
                 </ul>
+
                 <p>
                     Da die Reservierung einen QR Code bekommt, der eindeutig ist, haben wir uns dazu entschieden auch eine zufällig generierte ID zu erstellen, die ebenfalls eindeutig ist, woraus dann am Ende der QR Code vom System generiert werden kann. Außerdem bietet
                     die ID die Möglichkeit, dass man diese am Terminal eingibt, falls der QR-Code mal nicht gelesen werden kann. Will man ein Buch reservieren, ist es wichtig von wann bis wann man das Buch reservieren und ausliehen will. Deswegen muss
                     man beim reservieren als Benutzer die beiden Daten angeben. Dabei muss Datum bis, logischer Weise größer als Datum von sein und außerdem dürfen die beiden Daten nicht mehr als 4 Wochen auseinander liegen was in unserem Fall die maximale
                     Ausleihzeit ist.
                 </p>
+
             </section>
-            <section id="fachobjekte-ausleihe">
-                <h3>2.5. Ausleihen</h3>
+
+            <hr style="border: 1px dashed black">
+
+            <section id="Ausleihen">
+                <h3>2.5 Ausleihen</h3>
                 <p>
                     Die Ausleihe ist ähnlich der Reservierung und hat ebenso eine eindeutig generierte ID. Hat man ein reserviertes Buch am Terminal ausgeliehen, wird die Reservierung zu einer Ausleihe. Gibt man das Buch nicht mehr rechtzeigtig ab, kriegt es den Status überzogen.
                     Vorher hat es den Stauts Aktuell ausgeliehen. Dies wird in der Anwendung nur simuliert
@@ -177,22 +203,32 @@
                     <li>Status</li>
                     <li>Token</li>
                 </ul>
+
             </section>
-            <section id="fachobjekte-sonstiges">
-                <h3>2.6. Sonstige</h3>
+
+
+            <hr style="border: 1px dashed black">
+            <section id="Benutzer">
+                <h3>2.6 Sonstige</h3>
                 <p>
                     Sonstige Fachobjekte die allerdings nicht implementiert sind, sind unteranderem die Fachrichtungen. Diese werden momentan einfach beim hinzufügen eines Buches zugewiesen, in Zukunft könnten diese allerdings auch als eigenes Objekt implementiert werden.
                 </p>
                 <p> Ein anderes Fachobjekt ist der Benutzer. Diesen haben wir in der Anwendung momentan nur simuliert, genauso wie den Login und Logout. Dort steckt noch keinerleid Funktion hinter. In Zukunft wird für ein laufendes Programm natürlich das
                     Fachobjekt Benutzer benötigt, der auch mit einer eindeutigen ID daherkommt sowie verschiedene Berechtigungsstufen besitzt (Administrator, Mitarbeiter, Kunde).
                 </p>
+
             </section>
         </section>
-        <section id="implementierungsentscheidungen">
+
+        <hr>
+
+        <section id="Implementierungsentscheidungen">
             <h2>3. Beschreibung und Begründung der Implementierungsentscheidungen</h2>
-            <section id="implementierungsentscheidungen-client">
+
+
+            <section id="Client">
                 <h3>3.1 Client</h3>
-                <section id="implementierungsentscheidungen-client-struktur">
+                <section id="Strukturierung__HTML">
                     <h4>3.1.1 Strukturierung der HTML-Seiten</h4>
                     <p>Insgesamt besteht unser Projekt aus 21 verschiedenen HTML-Seiten.</p>
                     <ul>
@@ -218,6 +254,7 @@
                         <li>login.html</li>
                         <li>logout.html</li>
                     </ul>
+
                     <p>
                         Um durch die vielen Seiten der Website zu navigieren, haben wir uns für eine Navigationsbar entschieden, die sich im Header-Bereich der Website befindet und den unteren Teil des Headers verwendet, der aus einer Liste von Elementen besteht, die die Links
                         enthalten, welche den Benutzer zur gewünschten Seite führen.
@@ -252,16 +289,20 @@
                         <li>Meine Ausleiehen</li>
                         <li>Abmelden</li>
                     </ul>
+
                     <p>Ist man abgemeldet, steht dort nur "Anmelden".</p>
+
                 </section>
-                <section id="implementierungsentscheidungen-client-layout">
+
+                <hr style="border: 1px dotted black">
+
+                <section id="Layout">
                     <h4>3.1.2 Layout</h4>
                     <p>
                         Um ein einheitliches Layout auf der gesamten Website zu erzielen, haben wir uns entschlossen, zunächst die Kopf-, Seiten- und Fußzeile zu entwerfen und sie dann mit Ejs auf jede Seite der Website anzuwenden. Auf diese Weise haben wir ein einheitliches
                         Design erstellt, das dem Benutzer hilft, sich mit der Struktur der vielen Seiten auf der Website vertraut zu machen.
                     </p>
-                    <p>
-                        Zum Beispiel: Unabhängig davon, welche Seite der Benutzer gerade durchsucht, kann er immer die wichtigen Nachrichten und Informationen sehen, die auf der Webseite angezeigt werden.
+                    Zum Beispiel: Unabhängig davon, welche Seite der Benutzer gerade durchsucht, kann er immer die wichtigen Nachrichten und Informationen sehen, die auf der Webseite angezeigt werden.
                     </p>
                     <p>
                         Nachdem wir das Grundlayout der Seiten fertiggestellt hatten, mussten wir die Mitte jeder Seite mit den relevanten Informationen für diese Seite füllen. Dafür haben wir auf allen Seiten der Website ein Flex-Design verwendet, da ein Flex-Design sehr dynamisch
@@ -280,7 +321,10 @@
                         benutzt um besser auf einzelne oder auf mehrere Objekte gleichzeitig zugreifen zu können, sodass wir uns beim Css und Js Zeit und Arbeit sparen konnten.
                     </p>
                 </section>
-                <section id="implementierungsentscheidungen-client-responsive">
+
+                <hr style="border: 1px dotted black">
+
+                <section id="Responsivität">
                     <h4>3.1.3 Responsivität</h4>
                     <p>
                         Die Verwendung eines Flex-Container-Designs mit CSS erleichterte unsere Arbeit mit Reaktionsfähigkeit erheblich, weil ein Flex-Container bereits eine gewisse Reaktionsfähigkeit zwischen seinen Elementen hinzufügt.
@@ -309,19 +353,26 @@
                         Danach stellten wir fest, dass der obere Teil des Headers bei 600 Pixel auf Sichtbarkeitsprobleme stieß, und das war unserer letzter break-point: Wir stellten sicher, dass dies behoben wurde, indem wir die Elemente des oberen Teils des Headers mit Display:
                         block übereinanderstapelten. Danach reagierte unsere Website auf allen Bildschirmgrößen eines Desktops vollständig und stabil.
                     </p>
+
+                    </p>
                 </section>
             </section>
-            <section id="implementierungsentscheidungen-server">
+
+            <hr style="border: 1px dashed black">
+            <section id="Server">
                 <h3>3.2 Server</h3>
-                <section id="implementierungsentscheidungen-server-modulstruktur">
-                    <h4>3.2.1 Modulstruktur (Jonas Lörken)</h4>
+                <section id="Modulstruktur">
+                    <h4>3.2.1 Modulstruktur</h4>
                     <p>
                         Grundsätzlich wurde das Projekt nach dem MVC (Model View Controller) Muster aufgebaut. Hierbei werden die verschiedenen Zuständigkeiten sauber in eine Modell-Schicht (Ordner „models“), eine Präsentationsschicht (Ordner „views“) und eine Steuerungsschrift
                         (Ordner „controller“) unterteilt. Dies hat vor allem eine saubere Trennung von Zuständigkeiten und eine hohe Wartbarkeit zur Folge.
                     </p>
+
                     <figure>
-                        <img src="img/mvc.png" alt="Model-View-Controller Diagram">
-                        <figcaption>Quelle: <a href="https://commons.wikimedia.org/wiki/File:ModelViewControllerDiagram2.svg">https://commons.wikimedia.org/wiki/File:ModelViewControllerDiagram2.svg</a></figcaption>
+                        <img src="img/ModelViewControllerDiagram2.svg.png" alt="Model View Controller Diagram" style="max-width: 35%;">
+                        <figcaption style="font-size: 10px; font-style: italic;">Quelle:
+                            <a href="https://commons.wikimedia.org/wiki/File:ModelViewControllerDiagram2.svg">https://commons.wikimedia.org/wiki/File:ModelViewControllerDiagram2.svg</a>
+                        </figcaption>
                     </figure>
                     <p>
                         Die Modell-Schicht repräsentiert die Datenhaltung bzw. die Datenbank. Für jede Objektklasse wurde ein eigenes Modell erstellt, um eine noch bessere Übersichtlichkeit und Wartbarkeit zu realisieren. Die Brücke zwischen allen Modellen bildet hierbei die
@@ -345,9 +396,13 @@
                         werde die aufzurufenden URLs abgefangen. Gegebenenfalls werden nun Controller-Funktionen aufgerufen, zum Beispiel um eine Objektinstanz hinzuzufügen. Ein Statuscode wird gesetzt und das zur URL gehörige Template (EJS, siehe oben)
                         wird gerendert. Innerhalb der Render-Funktion werden dem Template noch Variables mithilfe des Controllers übergeben, welche für eine dynamische Inhaltsausgabe sorgen.
                     </p>
+
                 </section>
-                <section id="implementierungsentscheidungen-server-urls">
-                    <h4>3.2.2 Unterstützte URLs / Endpunkte (Jonas Lörken und Simon Widanksi)</h4>
+
+                <hr style=" border: 1px dotted black ">
+
+                <section id="URLs__Endpunkte ">
+                    <h4>3.2.2 Unterstützte URLs / Endpunkte</h4>
                     <table>
                         <thead>
                             <tr>
@@ -356,160 +411,169 @@
                                 <th>Aktion</th>
                             </tr>
                         </thead>
+                        <tr>
+                            <td>/</td>
+                            <td>GET</td>
+                            <td>Anzeige des Dashboards</td>
+                        </tr>
+                        <tr>
+                            <td>/login</td>
+                            <td>GET</td>
+                            <td>Anzeige einer Loginmaske (Simuliert)</td>
+                        </tr>
+                        <tr>
+                            <td>/logout</td>
+                            <td>GET</td>
+                            <td>Anzeige einer Logoutseite (Simuliert)</td>
+                        </tr>
+                        <tr>
+                            <td>/impressum</td>
+                            <td>GET</td>
+                            <td>Anzeige der Impressumsseite</td>
+                        </tr>
+                        <tr>
+                            <td>/datenschutz</td>
+                            <td>GET</td>
+                            <td>Anzeige der Datenschutzseite</td>
+                        </tr>
+                        <tr>
+                            <td>/autoren</td>
+                            <td>GET</td>
+                            <td>Anzeige der Autorenübersicht</td>
+                        </tr>
+                        <tr>
+                            <td>/autoren</td>
+                            <td>POST</td>
+                            <td>Neuanlage eines Autors</td>
+                        </tr>
+                        <tr>
+                            <td>/autor/detail</td>
+                            <td>GET</td>
+                            <td>Anzeige der Detailseite eines Autors</td>
+                        </tr>
+                        <tr>
+                            <td>/autor/neu</td>
+                            <td>GET</td>
+                            <td>Anzeige des Anlegeformulars eines Autors</td>
+                        </tr>
+                        <tr>
+                            <td>/buecher</td>
+                            <td>GET</td>
+                            <td>Anzeige der Bücherübersicht</td>
+                        </tr>
+                        <tr>
+                            <td>/buecher</td>
+                            <td>POST</td>
+                            <td>????</td>
+                        </tr>
+                        <tr>
+                            <td>/beucher/detail</td>
+                            <td>GET</td>
+                            <td>????</td>
+                        </tr>
+                        <tr>
+                            <td>/beucher/detail</td>
+                            <td>POST</td>
+                            <td>????</td>
+                        </tr>
+                        <tr>
+                            <td>/beucher/neu</td>
+                            <td>GET</td>
+                            <td>Anzeige des Anlegeformulars eines Buches</td>
+                        </tr>
+
+                        <tr>
+                            <td>/standorte</td>
+                            <td>GET</td>
+                            <td>Anzeige der Standorteübersicht</td>
+                        </tr>
+                        <tr>
+                            <td>/standorte</td>
+                            <td>POST</td>
+                            <td>Neuanlage eines Standortes</td>
+                        </tr>
+                        <tr>
+                            <td>/standorte/detail</td>
+                            <td>GET</td>
+                            <td>Anzeige der Detailseite eines Standortes</td>
+                        </tr>
+                        <tr>
+                            <td>/standorte/neu</td>
+                            <td>GET</td>
+                            <td>Anzeige des Anlegeformulars eines Standortes</td>
+                        </tr>
+
+                        <tr>
+                            <td>/user/profil</td>
+                            <td>GET</td>
+                            <td>Anzeige des Benutzerprofils</td>
+                        </tr>
+
+                        <tr>
+                            <td>/reservierungen</td>
+                            <td>GET</td>
+                            <td>Anzeige der Reservierungen</td>
+                        </tr>
+                        <tr>
+                            <td>/reservierungen</td>
+                            <td>POST</td>
+                            <td>Neuanlage einer Reserierung</td>
+                        </tr>
+                        <tr>
+                            <td>/reservierungen/detail</td>
+                            <td>GET</td>
+                            <td>Anzeige der Detailseite einer Reserierung</td>
+                        </tr>
+                        <tr>
+                            <td>/reservierungen/neu</td>
+                            <td>GET</td>
+                            <td>Anzeige des Anlegeformulars einer Reservierung</td>
+                        </tr>
+
+                        <tr>
+                            <td>/user/ausleihen</td>
+                            <td>GET</td>
+                            <td>Anzeige der Ausleihen</td>
+                        </tr>
+                        <tr>
+                            <td>/user/ausleihen/detail</td>
+                            <td>GET</td>
+                            <td>Anzeige der Detailseite einer Ausleihe</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fall Seite nicht vorhanden</td>
+                            <td>USE</td>
+                            <td>404 anzeigen</td>
+                        </tr>
+
                         <tbody>
-                            <tr>
-                                <td>/</td>
-                                <td>GET</td>
-                                <td>Anzeige des Dashboards</td>
-                            </tr>
-                            <tr>
-                                <td>/login</td>
-                                <td>GET</td>
-                                <td>Anzeige einer Loginmaske (Simuliert)</td>
-                            </tr>
-                            <tr>
-                                <td>/logout</td>
-                                <td>GET</td>
-                                <td>Anzeige einer Logoutseite (Simuliert)</td>
-                            </tr>
-                            <tr>
-                                <td>/impressum</td>
-                                <td>GET</td>
-                                <td>Anzeige der Impressumsseite</td>
-                            </tr>
-                            <tr>
-                                <td>/datenschutz</td>
-                                <td>GET</td>
-                                <td>Anzeige der Datenschutzseite</td>
-                            </tr>
-                            <tr>
-                                <td>/autoren</td>
-                                <td>GET</td>
-                                <td>Anzeige der Autorenübersicht</td>
-                            </tr>
-                            <tr>
-                                <td>/autoren</td>
-                                <td>POST</td>
-                                <td>Neuanlage eines Autors</td>
-                            </tr>
-                            <tr>
-                                <td>/autor/detail</td>
-                                <td>GET</td>
-                                <td>Anzeige der Detailseite eines Autors</td>
-                            </tr>
-                            <tr>
-                                <td>/autor/neu</td>
-                                <td>GET</td>
-                                <td>Anzeige des Anlegeformulars eines Autors</td>
-                            </tr>
-                            <tr>
-                                <td>/buecher</td>
-                                <td>GET</td>
-                                <td>Anzeige der Bücherübersicht</td>
-                            </tr>
-                            <tr>
-                                <td>/buecher</td>
-                                <td>POST</td>
-                                <td>Neuanlage eines Buches</td>
-                            </tr>
-                            <tr>
-                                <td>/buecher/detail</td>
-                                <td>GET</td>
-                                <td>Anzeige der Buchdetailseite</td>
-                            </tr>
-                            <tr>
-                                <td>/buecher/detail</td>
-                                <td>POST</td>
-                                <td>Neuanlage einer Reservierung</td>
-                            </tr>
-                            <tr>
-                                <td>/beucher/neu</td>
-                                <td>GET</td>
-                                <td>Anzeige des Anlegeformulars eines Buches</td>
-                            </tr>
-                            <tr>
-                                <td>/standorte</td>
-                                <td>GET</td>
-                                <td>Anzeige der Standorteübersicht</td>
-                            </tr>
-                            <tr>
-                                <td>/standorte</td>
-                                <td>POST</td>
-                                <td>Neuanlage eines Standortes</td>
-                            </tr>
-                            <tr>
-                                <td>/standorte/detail</td>
-                                <td>GET</td>
-                                <td>Anzeige der Detailseite eines Standortes</td>
-                            </tr>
-                            <tr>
-                                <td>/standorte/neu</td>
-                                <td>GET</td>
-                                <td>Anzeige des Anlegeformulars eines Standortes</td>
-                            </tr>
-                            <tr>
-                                <td>/user/profil</td>
-                                <td>GET</td>
-                                <td>Anzeige des Benutzerprofils</td>
-                            </tr>
-                            <tr>
-                                <td>/reservierungen</td>
-                                <td>GET</td>
-                                <td>Anzeige der Reservierungen</td>
-                            </tr>
-                            <tr>
-                                <td>/reservierungen</td>
-                                <td>POST</td>
-                                <td>Neuanlage einer Reserierung</td>
-                            </tr>
-                            <tr>
-                                <td>/reservierungen/detail</td>
-                                <td>GET</td>
-                                <td>Anzeige der Detailseite einer Reserierung</td>
-                            </tr>
-                            <tr>
-                                <td>/reservierungen/neu</td>
-                                <td>GET</td>
-                                <td>Anzeige des Anlegeformulars einer Reservierung</td>
-                            </tr>
-                            <tr>
-                                <td>/user/ausleihen</td>
-                                <td>GET</td>
-                                <td>Anzeige der Ausleihen</td>
-                            </tr>
-                            <tr>
-                                <td>/user/ausleihen/detail</td>
-                                <td>GET</td>
-                                <td>Anzeige der Detailseite einer Ausleihe</td>
-                            </tr>
-                            <tr>
-                                <td>Fall Seite nicht vorhanden</td>
-                                <td>USE</td>
-                                <td>404 anzeigen</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </section>
             </section>
-        </section>
-        <section id="start">
-            <h2>4. Start der Anwendung (Jonas Lörken)</h2>
-            <p>
-                Die App benötigt die JavaScript-Laufzeitumgebung „Node.js“ (https://nodejs.org/en/). Diese bildet die Basis für den Webserver und die Applikation. Zum Start der Anwendung man das Verzeichnis über die Konsole mithilfe des cd-Befehls („change directory“)
-                aufrufen. Anschließend wird über den Befehl „node app.js“ die Anwendung gestartet. Das Node.js-Modul „open“ sorgt für ein automatisches Öffnen Root-URL im Standard-System-Browser. Alternativ kann die Applikation auch einfach über die URL
-                http://localhost:8040 aufgerufen werden.
-            </p>
-        </section>
-        <section id="autoren">
-            <h2>5. Autorenschaft der Quellcode-Dateien</h2>
-            <table>
-                <thead>
+
+            <hr>
+            <section id="Start ">
+                <h2>4. Start der Anwendung</h2>
+                <p>
+                    Die App benötigt die JavaScript-Laufzeitumgebung „Node.js“ (https://nodejs.org/en/). Diese bildet die Basis für den Webserver und die Applikation. Zum Start der Anwendung man das Verzeichnis über die Konsole mithilfe des cd-Befehls („change directory“)
+                    aufrufen. Anschließend wird über den Befehl „node app.js“ die Anwendung gestartet. Das Node.js-Modul „open“ sorgt für ein automatisches Öffnen Root-URL im Standard-System-Browser. Alternativ kann die Applikation auch einfach über die
+                    URL http://localhost:8040 aufgerufen werden.
+
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="Autoren ">
+                <h2>5. Autorenschaft der Quellcode-Dateien</h2>
+                <table style="border: 2px solid black ">
                     <tr>
                         <th>Autor (Name / Matrikelnummer)</th>
                         <th>Dateien</th>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>Jonas Lörken</td>
                         <td>
@@ -606,12 +670,9 @@
                             </ul>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </section>
-        <div class="copyright">Handgemacht in 2021 von Simon Widanski, Mo Tinawi und Jonas Lörken.</div>
+                </table>
+            </section>
     </main>
 </body>
-
 
 </html>

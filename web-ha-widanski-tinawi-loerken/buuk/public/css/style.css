@@ -491,6 +491,12 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background-color: rgb(211, 209, 209);
 }
 
+.table tr .buch-name {
+    max-width: 200px;
+    text-overflow: "...";
+    overflow: hidden;
+}
+
 .table th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -902,7 +908,8 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 #content main .autor-about .autor-discr {
-    padding-bottom: 80px;
+    height: 220px;
+    overflow-y: scroll;
 }
 
 #content main .autor-about .autor-discr p b {
@@ -955,7 +962,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 .autoren .autor {
     display: block;
-    flex: 0 0 30%;
+    flex: 0 0 33%;
     width: 30%;
     padding: 10px;
     margin-bottom: 20px;
@@ -1023,12 +1030,20 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     flex-flow: row wrap;
 }
 
+.autor-books h2 {
+    width: 100%;
+}
+
 .autor-books .book {
     display: block;
     flex: 0 0 33.33333333%;
     width: 33.33333333%;
-    padding: 10px;
+    padding-right: 10px;
     margin-bottom: 20px;
+}
+
+.autor-books .book:last-child {
+    padding-right: 10px;
 }
 
 .autor-books .book .inner {
@@ -1051,7 +1066,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     flex-grow: 1;
 }
 
-.autor-books .book .book__info .title h3 {
+.autor-books .book .book__info .title .buch-title {
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 10px;

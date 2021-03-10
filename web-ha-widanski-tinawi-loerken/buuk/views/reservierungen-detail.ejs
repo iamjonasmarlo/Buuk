@@ -8,7 +8,7 @@
             <section class="details">
                 <div class="details__image">
                     <figure>
-                        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3078042.jpg" alt="QR-Code Ausleihe">
+                        <img src="/img/qr-code.jpg" alt="QR-Code Ausleihe">
                         <figcaption>QR-Code am Terminal scannen um Buch auszuleihen</figcaption>
                     </figure>
                 </div>
@@ -42,13 +42,13 @@
                     <div class="detail__section">
                         <div class="detail-title">Datum von:</div>
                         <p>
-                            <%= reservierung.datumVon %>
+                            <%= ((reservierung.datumVon.getDate() > 9) ? reservierung.datumVon.getDate() : ('0' + reservierung.datumVon.getDate())) + '.' + ((reservierung.datumVon.getMonth() > 8) ? (reservierung.datumVon.getMonth() + 1) : ('0' + (reservierung.datumVon.getMonth() + 1))) + '.' + reservierung.datumVon.getFullYear() %>
                         </p>
                     </div>
                     <div class="detail__section">
                         <div class="detail-title">Datum Bis:</div>
                         <p>
-                            <%= reservierung.datumBis %>
+                            <%= ((reservierung.datumBis.getDate() > 9) ? reservierung.datumBis.getDate() : ('0' + reservierung.datumBis.getDate())) + '.' + ((reservierung.datumBis.getMonth() > 8) ? (reservierung.datumBis.getMonth() + 1) : ('0' + (reservierung.datumBis.getMonth() + 1))) + '.' + reservierung.datumBis.getFullYear() %>
                         </p>
                     </div>
                     <div class="detail__section">
