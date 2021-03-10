@@ -59,6 +59,7 @@
                     <div class="acc-title">Ausstattung</div>
                     <div class="acc-content">
                         <div class="inner">
+                            <% if(standort.ausstattung.length > 0) { %>
                             <ul>
                                 <% standort.ausstattung.forEach(function(ausstattung) { %>
                                 <li>
@@ -66,6 +67,9 @@
                                 </li>
                                 <% }); %>
                             </ul>
+                            <% } else { %>
+                                <p><strong>Keine Ausstattungsmerkmale vorhanden.</strong></p>
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -73,6 +77,7 @@
         </section>
         <section class="location-books">
             <h2>Bücher am Standort</h2>
+            <% if(standort.buecher.length > 0) { %>
             <div class="table-wrapper">
                 <table class="table">
                     <tr>
@@ -121,6 +126,9 @@
                     <% }); %>
                 </table>
             </div>
+            <% } else { %>
+                <p><strong>Keine Bücher vorhanden.</strong></p>
+            <% } %>
         </section>
     </main>
     <%- include("parts/aside") %>

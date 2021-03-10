@@ -89,7 +89,7 @@ function get_standorte_detail(id) {
     return standort;
 }
 
-function add_standort(name, adresse, plz, ort, telefon, fax, oeffnungszeiten, ausstattung) {
+function add_standort(name, adresse, plz, ort, telefon, fax, oeffnungszeiten, ausstattung = []) {
     let standort = new standorte_model.standort(name, adresse, plz, ort, telefon, fax, oeffnungszeiten, ausstattung);
     standorte_model.standorte.push(standort);
 }

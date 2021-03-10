@@ -64,6 +64,16 @@ if (featureTrigger) {
     });
 }
 
+/* Add Reservation */
+
+let dateFrom = document.getElementById("date-from"),
+    dateTo = document.getElementById("date-to");
+
+dateFrom.onchange = function() {
+    let date = new Date(dateFrom.value);
+    dateTo.setAttribute("min", date.getFullYear() + "-" + ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + "-" + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())));
+}
+
 /* Add Book location */
 
 let booklocTrigger = document.getElementById("add-bookloc");
