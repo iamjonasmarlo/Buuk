@@ -157,12 +157,12 @@
 - Header in EJS lassen? Titel der Seite ist immer BUUK
 - Evtl mehr Breakpoints?
 - Tabellen Overflow Scroll oder ausblenden?
-- Pattern in Inputs einfügen
+- 
 
 
 
 ## Zusatzaufwand:
-
+- Pattern in Inputs einfügen
 - Reservierungen
 - Datum von kann später als Datum bis sein
 - Wenn ein Buch für eine Zeit reserviert ist, kann es nicht nochmal in der gleichen Zeit ausgeliehen werden
