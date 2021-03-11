@@ -1,31 +1,40 @@
-/* Responsive (1100px) */
+/* Responsive (1150px) */
 
 @media screen and (max-width:1150px) {
+
+    /* Jonas Lörken */
     header .header-bottom .header-bottom__inner .logo {
         margin-right: 30px;
     }
+
     header .header-bottom .header-bottom__inner .logo img {
         max-height: 35px;
     }
+
     header .header-bottom .header-bottom__inner .main-nav ul li {
         margin-right: 20px;
     }
+
     #content main {
         flex: 0 0 70%;
         max-width: 70%;
     }
+
     #content aside {
         flex: 0 0 30%;
         max-width: 30%;
     }
+    /* Moe Tinawi */
     table tr .so {
         display: none;
     }
+
     .table tr .buch-name {
         max-width: 200px;
         text-overflow: "...";
         overflow: hidden;
     }
+
     .autoren .autor {
         display: block;
         flex: 0 0 50%;
@@ -33,8 +42,12 @@
         padding: 10px;
         margin-bottom: 20px;
     }
-    /* Responsive (900px) */
+
+    /* Responsive (950px) */
+
     @media screen and (max-width:950px) {
+
+        /* Jonas Lörken */
         header .header-bottom .header-bottom__inner .main-nav {
             position: absolute;
             top: 100%;
@@ -45,24 +58,30 @@
             transition: all 0.3s ease;
             overflow: hidden;
         }
+
         header .header-bottom .header-bottom__inner .main-nav.open {
             max-height: 300px;
         }
+
         header .header-bottom .header-bottom__inner .main-nav ul li {
             display: block;
             margin-right: 0;
             border-top: solid 1px #dc4c00;
         }
+
         header .header-bottom .header-bottom__inner .main-nav ul li a {
             display: block;
             padding: 20px 15px;
         }
+
         header .header-bottom .header-bottom__inner .main-nav ul li.active a {
             background: #dc4c00;
         }
+
         header .header-bottom .header-bottom__inner .main-nav ul li a:after {
             content: none;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle {
             display: block;
             height: 32px;
@@ -71,6 +90,7 @@
             margin-left: auto;
             cursor: pointer;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle span {
             position: absolute;
             left: 0;
@@ -81,6 +101,7 @@
             background: #fff;
             display: block;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle span:before {
             content: "";
             position: absolute;
@@ -91,6 +112,7 @@
             background: #fff;
             transition: transform 0.2s ease;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle span:after {
             content: "";
             position: absolute;
@@ -101,94 +123,121 @@
             background: #fff;
             transition: transform 0.2s ease;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle.open span {
             background: transparent;
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle.open span:before {
             top: 0;
             transform: rotate(135deg);
         }
+
         header .header-bottom .header-bottom__inner .nav-toggle.open span:after {
             bottom: 0;
             transform: rotate(225deg);
         }
+
         header .header-bottom .header-bottom__inner .profile-link {
             margin-left: 40px;
             padding-left: 0;
         }
+
         header .header-bottom .header-bottom__inner .profile-link .profile-link__menu {
             left: auto;
             right: 0;
             transform: none;
         }
+
         header .header-bottom .header-bottom__inner .profile-link .profile-link__menu:before {
             right: 35px;
             left: auto;
             transform: none;
         }
+
         #content main {
             flex: 0 0 100%;
             max-width: 100%;
         }
+
         #content aside {
             flex: 0 0 100%;
             max-width: 100%;
             margin-top: 80px;
         }
+
         .locations-overview .location {
             flex: 0 0 50%;
             max-width: 50%;
         }
+
         .location-detail .location-detail__contact {
             flex: 0 0 100%;
             max-width: 100%;
             margin-bottom: 40px;
         }
+
         .location-detail .location-detail__accordion {
             flex: 0 0 100%;
             max-width: 100%;
             padding-left: 0;
         }
+
+        /* Simon Widanski
+         */
         .form form .form__image {
             flex: 0 0 100%;
         }
+
         .form form .form__half {
             flex: 0 0 100%;
         }
+
         .details .details__image {
             flex: 0 0 100%;
         }
+
         .details .details__half {
             flex: 0 0 100%;
         }
+
         .details .details__half .detail__section {
             flex: 0 0 100%;
             width: 100%;
         }
+
+        /* Moe Tinawi */
         #content main .buch-main {
             flex-flow: column wrap;
         }
+
         .buch-main .book-image {
             flex: 0 0 100%;
             width: 100%;
         }
+
         .buch-main .buch-beschreibung p {
             margin-bottom: 5px;
         }
+
         #content main .autor-about {
             flex-flow: column wrap;
         }
+
         .autor-about .autor-image {
             flex: 0 0 100%;
             width: 100%;
         }
-        table tr .bp900 {
-            display: none;
-        }
+
         .table tr .buch-name {
             max-width: 180px;
             text-overflow: "...";
             overflow: hidden;
+        }
+
+        /* Simon Widanski */
+        table tr .bp900 {
+            display: none;
         }
     }
 }
@@ -196,40 +245,52 @@
 
 /* Responsive (600px) */
 
+/* Jonas Lörken */
 @media screen and (max-width:600px) {
     header .header-top .header-top__inner .contact-list li {
         display: block;
         margin-bottom: 5px;
     }
+
     header .header-top .header-top__inner {
         display: block;
     }
+
     header .header-bottom .header-bottom__inner .logo {
         margin-right: 10px;
     }
+
     header .header-bottom .header-bottom__inner .logo img {
         max-height: 30px;
     }
+
     header .header-bottom .header-bottom__inner .profile-link {
         margin-left: 20px;
     }
+
     header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger .image {
         margin-right: 5px;
         width: 40px;
         height: 40px;
     }
+
     header .header-bottom .header-bottom__inner .profile-link .profile-link__trigger .name span {
         display: none;
     }
+
     .locations-overview .location {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    /* Moe Tinawi */
     .table tr .buch-name {
         max-width: 140px;
         text-overflow: "...";
         overflow: hidden;
     }
+
+
     .autoren .autor {
         display: block;
         flex: 0 0 100%;

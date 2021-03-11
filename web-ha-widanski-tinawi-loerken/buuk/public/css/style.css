@@ -1,6 +1,4 @@
 /* JONAS LÖRKEN */
-
-
 /* Font (Import) */
 
 @font-face {
@@ -89,6 +87,10 @@ h2 {
 }
 
 
+
+
+
+/* Simon Widanski */
 /* Button */
 
 .button {
@@ -144,9 +146,11 @@ h2 {
 }
 
 
+
+
+
+
 /* JONAS LÖRKEN */
-
-
 /* Response */
 
 .response {
@@ -409,14 +413,17 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     display: inline-block;
 }
 
-/* Text */ 
+/* Text */
 
-#content main .text p{
+#content main .text p {
     margin-bottom: 20px;
 
 }
 
 
+
+
+/* Simon Widanski */
 /* Table */
 
 .table-wrapper {
@@ -502,6 +509,9 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+
+
+
 /* MOE TINAWI */
 
 .table td.status span.status__available {
@@ -525,9 +535,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
-/* SIMON WIDANSKI */
 
 
+
+/* MOE TINAWI / SIMON WIDANSKI */
 /* Legend */
 
 .legend {
@@ -557,9 +568,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-right: 8px;
 }
 
-
-/* MOE TINAWI / SIMON WIDANSKI */
-
 .legend .legend__element span.success,
 .legend .legend__element span.available {
     background-color: green;
@@ -578,9 +586,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
-/* JONAS LÖRKEN */
 
 
+
+/* Moe Tinawi */
 /* Aside */
 
 #content aside {
@@ -660,8 +669,9 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
-/* SIMON WIDANSKI */
 
+
+/* SIMON WIDANSKI */
 
 /* Form */
 
@@ -780,9 +790,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+
+
+
 /* MOE TINAWI */
-
-
 /* Buch Details */
 
 #content main .buch-main {
@@ -1052,6 +1063,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+
+
+
+/* SIMON WIDANSKI */
 /* Reservierungen */
 
 .details {
@@ -1113,8 +1128,11 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
-/* JONAS LÖRKEN */
 
+
+
+
+/* JONAS LÖRKEN */
 
 /* Locations */
 
@@ -1352,6 +1370,10 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 }
 
 
+
+
+
+/* SIMON WIDANSKI */
 /* Footer */
 
 footer .footer-top {

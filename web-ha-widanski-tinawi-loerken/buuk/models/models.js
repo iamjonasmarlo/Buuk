@@ -6,7 +6,7 @@ const standorte_model = require("../models/standorte.js");
 const reservierung_model = require("../models/reservierungen.js");
 
 function generate_values() {
-    /* Autoren */
+    /* Autoren (Moe Tinawi) */ 
 
     var autor1 = new autoren_model.autor("Jordan Peterson", "Psychologie", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur");
     var autor2 = new autoren_model.autor("Alan Watts", "Philosophie", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur");
@@ -16,7 +16,7 @@ function generate_values() {
     autoren_model.autoren.push(autor2);
     autoren_model.autoren.push(autor3);
 
-    /* Buecher */
+    /* Buecher (Moe Tinawi) */
 
     var buch1 = new buecher_model.buch("Programmieren in Java 1", 484845741, "Programmierung", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor1, true);
     var buch2 = new buecher_model.buch("C, C++ und C#", 484845741, "Programmierung", 2005, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore explicabo minus ducimus blanditiis pariatur quasi autem quidem quae aperiam quam, assumenda quo exercitationem odio ullam. Aliquid laudantium corporis quae aut.", autor2, true);
@@ -41,7 +41,7 @@ function generate_values() {
     buecher_model.buecher.push(buch10);
 
 
-    /* Ausleihen */
+    /* Ausleihen (Simon Widanski) */
 
     var ausleihe1 = new ausleihen_model.ausleihe(buch1, new Date("2020-01-05T00:00:00"), new Date("2020-01-12T00:00:00"), false);
     var ausleihe2 = new ausleihen_model.ausleihe(buch2, new Date("2020-01-10T00:00:00"), new Date("2020-01-17T00:00:00"), true);
@@ -56,10 +56,10 @@ function generate_values() {
     ausleihen_model.ausleihen.push(ausleihe5);
 
 
-    /* Reservierungen */
+    /* Reservierungen (Simon Widanski) */
     var reservierung1 = new reservierung_model.reservierung(buch10, new Date("2020-01-10T00:00:00"), new Date("2020-01-17T00:00:00"));
     reservierung_model.reservierungen.push(reservierung1);
-    /* Standorte */
+    /* Standorte  (Jonas Lörken) */
 
     var standort1 = new standorte_model.standort("Emil-Figge-Straße", "Emil-Figge-Str. 44", 44227, "Dortmund", "+49 (0231) 9112-4917", "+49 (0231) 9112-4922", [
         ["Montag", "08:00 Uhr - 18:00 Uhr"],

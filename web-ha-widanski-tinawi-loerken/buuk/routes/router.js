@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controller/controller.js");
 
-/* Dashboard / Startseite */
+/* Dashboard / Startseite (Jonas Lörken) */
 
 router.get("/", function(req, res, next) {
     res.status(200);
     res.render("index", {reservierungen: controller.get_reservierungen(), autoren: controller.get_autoren(), ausleihen: controller.get_ausleihen(), standorte: controller.get_standorte()});
 });
 
-/* Login & Logout */
+/* Login & Logout (Jonas Lörken) */
 
 router.get("/login", function(req, res, next) {
     res.status(200);
@@ -21,7 +21,7 @@ router.get("/logout", function(req, res, next) {
     res.render("logout");
 });
 
-/* Impressum / Datenschutz */
+/* Impressum / Datenschutz (Moe Tinawi) */
 
 router.get("/impressum", function(req, res, next) {
     res.status(200);
@@ -33,7 +33,7 @@ router.get("/datenschutz", function(req, res, next) {
     res.render("datenschutz");
 });
 
-/* Autor */
+/* Autor (Moe Tinawi) */
 
 router.get("/autoren", function(req, res, next) {
     res.status(200);
@@ -57,7 +57,7 @@ router.get("/autor/neu", function(req, res, next) {
     res.render("autoren-add");
 });
 
-/* Buecher */
+/* Buecher (Moe Tinawi) */
 
 router.get("/buecher/neu", function(req, res, next) {
     res.status(200);
@@ -88,7 +88,7 @@ router.post("/buecher", function(req, res, next) {
     res.render("buecher", { buecher: controller.get_buecher(), standorte: controller.get_standorte(), autoren: controller.get_autoren(), action: "added" });
 });
 
-/* Standorte */
+/* Standorte (Jonas Lörken)*/
 
 router.get("/standorte", function(req, res, next) {
     res.status(200);
@@ -118,14 +118,14 @@ router.get("/standorte/neu", function(req, res, next) {
     res.render("standorte-add");
 });
 
-/* Profil */
+/* Profil (Simon Widanski) */
 
 router.get("/user/profil", function(req, res, next) {
     res.status(200);
     res.render("profil");
 });
 
-/* Reservierungen */
+/* Reservierungen (Simon Widanski)*/
 
 router.get("/reservierungen/neu", function(req, res, next) {
     let buch = req.query.id;
@@ -151,7 +151,7 @@ router.get("/user/reservierungen/detail", function(req, res, next) {
     res.render("reservierungen-detail", {reservierung: controller.get_reservierung_detail(id), standorte: controller.get_standorte(), id: id});
 });
 
-/* Ausleihen */
+/* Ausleihen (Simon Widanski) */
 
 router.get("/user/ausleihen/detail", function(req, res, next) {
     let id = req.query.id;
@@ -164,7 +164,7 @@ router.get("/user/ausleihen", function(req, res, next) {
     res.render("ausleihen", {ausleihen: controller.get_ausleihen(), standorte: controller.get_standorte()});
 });
 
-/* 404 */
+/* 404 (Simon Widanski) */
 
 router.use(function(req, res, next) {
     res.status(404);

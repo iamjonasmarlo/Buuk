@@ -189,36 +189,45 @@
             </section>
         </section>
         <section id="implementierungsentscheidungen">
-            <h2>3. Beschreibung und Begründung der Implementierungsentscheidungen (Moe Tinawi)</h2>
+            <h2>3. Beschreibung und Begründung der Implementierungsentscheidungen</h2>
             <section id="implementierungsentscheidungen-client">
-                <h3>3.1 Client</h3>
+                <h3>3.1 Client (Moe Tinawi)</h3>
                 <section id="implementierungsentscheidungen-client-struktur">
                     <h4>3.1.1 Strukturierung der HTML-Seiten</h4>
-                    <p>Insgesamt besteht unser Projekt aus 21 verschiedenen HTML-Seiten.</p>
+                    <p>Insgesamt besteht unser Projekt aus 21 verschiedenen HTML-Seiten:</p>
                     <ul>
-                        <li>autor.html</li>
-                        <li>autor-detail.html</li>
-                        <li>autor-add.html</li>
-                        <li>buecher.html</li>
-                        <li>buecher-detail.html</li>
-                        <li>buecher-add.html</li>
-                        <li>ausleihen.html</li>
-                        <li>ausleihen-detail.html</li>
-                        <li>reservieren.html</li>
-                        <li>reservierungen-detail.html</li>
-                        <li>reservieren-add.html</li>
-                        <li>standorte.html</li>
-                        <li>standorte-detail.html</li>
-                        <li>standorte-add.html</li>
-                        <li>datasecurity.html</li>
-                        <li>impressum.html</li>
-                        <li>dashboard.html</li>
-                        <li>index.html</li>
-                        <li>profil.html</li>
-                        <li>login.html</li>
-                        <li>logout.html</li>
+                        <li>autor.ejs</li>
+                        <li>autor-detail.ejs</li>
+                        <li>autor-add.ejs</li>
+                        <li>buecher.ejs</li>
+                        <li>buecher-detail.ejs</li>
+                        <li>buecher-add.ejs</li>
+                        <li>ausleihen.ejs</li>
+                        <li>ausleihen-detail.ejs</li>
+                        <li>reservieren.ejs</li>
+                        <li>reservierungen-detail.ejs</li>
+                        <li>reservieren-add.ejs</li>
+                        <li>standorte.ejs</li>
+                        <li>standorte-detail.ejs</li>
+                        <li>standorte-add.ejs</li>
+                        <li>datasecurity.ejs</li>
+                        <li>impressum.ejs</li>
+                        <li>index.ejs</li>
+                        <li>profil.ejs</li>
+                        <li>login.ejs</li>
+                        <li>logout.ejs</li>
+                        <li>404.ejs</li>
                     </ul>
                     <p>
+                        <p>Und 4 Parts:</p>
+                        <ul>
+                            <li>aside.ejs</li>
+                            <li>header.ejs</li>
+                            <li>header_logout.ejs</li>
+                            <li>footer.ejs</li>
+                            
+                        </ul>
+                        <p>
                         Um durch die vielen Seiten der Website zu navigieren, haben wir uns für eine Navigationsbar entschieden, die sich im Header-Bereich der Website befindet und den unteren Teil des Headers verwendet, der aus einer Liste von Elementen besteht, die die Links
                         enthalten, welche den Benutzer zur gewünschten Seite führen.
                     </p>
@@ -294,15 +303,15 @@
                         die break-points als höchste Priorität beibehalten.
                     </p>
                     <p>
-                        Unser erster break-point wird erst ausgelöst, wenn die Bildschirmbreite kleiner als 1100 Pixel ist. Im 1100PX break-point wollten wir nicht viel ändern, da so große Bildschirme bereits genügend Platz bieten, um alle Informationen anzuzeigen, die wir auf
+                        Unser erster break-point wird erst ausgelöst, wenn die Bildschirmbreite kleiner als 1150 Pixel ist. Im 1150PX break-point wollten wir nicht viel ändern, da so große Bildschirme bereits genügend Platz bieten, um alle Informationen anzuzeigen, die wir auf
                         unserer Website anzeigen möchten. Deshalb haben wir uns dafür entschieden, den Header-Bereich zu verkleinern, wodurch das Gesamtdesign etwas enger an den Bildschirm angepasst wird.
                     </p>
                     <p>
-                        Danach haben wir weiter getestet und festgestellt, dass wir bei Erreichen einer Breite von 900 Pixel auf Sichtbarkeitsprobleme und einige Fehler gestoßen sind, sodass wir dort einen break-point festgelegt haben. Der 900PX break-point existiert, weil in
+                        Danach haben wir weiter getestet und festgestellt, dass wir bei Erreichen einer Breite von 950 Pixel auf Sichtbarkeitsprobleme und einige Fehler gestoßen sind, sodass wir dort einen break-point festgelegt haben. Der 950PX break-point existiert, weil in
                         dieser Breite die Elemente zu klein sein müssten, um nebeneinander angezeigt zu werden. Dies würde zur Unlesbarkeit der Elemente führen. Um sicherzustellen, dass die gesamte Seite sicht- und lesbar ist, haben wir alle Elemente,
                         die nebeneinander platziert waren, verschoben, um sie in einer einzigen Spalte untereinander zu platzieren. Aus diesem Grund steht der „Aside“ Bereich bei diesem Breakpunkt unter dem „Main-Content“. Auf den einzelnen Seiten haben
                         wir dann geschaut, welche Änderungen wir noch vornehmen müssen, damit der Inhalt auf die Seite passt. Da die Listen, je nach Inhalt nicht gut responsiv gestaltbar sind, haben wir uns dazu entschieden schon hier unwichtigere Spalten
-                        aus der Tabelle auszublenden, da der Inhalt sowieso auf in der Detailansicht verfügbar ist. Das Element, das von diesem break-point am stärksten beeinflusst wird, ist die Navigationsbar. Da die 900PX-Anzeigegröße die Links nicht
+                        aus der Tabelle auszublenden, da der Inhalt sowieso auf in der Detailansicht verfügbar ist. Das Element, das von diesem break-point am stärksten beeinflusst wird, ist die Navigationsbar. Da die 950PX-Anzeigegröße die Links nicht
                         mehr funktionsfähig machte, haben wir die gesamte Leiste in ein Burger-Menü umgewandelt, in welchem beim Anklicken desselben eine Liste der verschiedenen Navigationselemente angezeigt wird.
                     </p>
                     <p>
@@ -501,7 +510,7 @@
             </p>
         </section>
         <section id="autoren">
-            <h2>5. Autorenschaft der Quellcode-Dateien</h2>
+            <h2>5. Autorenschaft der Quellcode-Dateien (Simon Widanski)</h2>
             <table>
                 <thead>
                     <tr>
@@ -515,31 +524,52 @@
                         <td>
                             <ul>
                                 <li>
-                                    standorte.html
+                                    standorte.ejs
                                 </li>
                                 <li>
-                                    standorte-detail.html
+                                    standorte-detail.ejs
                                 </li>
                                 <li>
-                                    standorte-add.html
+                                    standorte-add.ejs
                                 </li>
                                 <li>
-                                    index.html
+                                    index.ejs
                                 </li>
                                 <li>
-                                    dashboard.html
+                                    dashboard.ejs
                                 </li>
                                 <li>
-                                    login.html
+                                    login.ejs
                                 </li>
                                 <li>
-                                    logout.html
+                                    logout.ejs
+                                </li>
+                                <li>
+                                    header.ejs
+                                </li>
+                                <li>
+                                    header_logout.ejs
+                                </li>
+                                <li>
+                                    style.css
                                 </li>
                                 <li>
                                     style.css
                                 </li>
                                 <li>
                                     script.js
+                                </li>
+                                <li>
+                                    controller.js
+                                </li>
+                                <li>
+                                    standorte.js
+                                </li>
+                                <li>
+                                    models.js
+                                </li>
+                                <li>
+                                    app.js
                                 </li>
                             </ul>
                         </td>
@@ -549,29 +579,48 @@
                         <td>
                             <ul>
                                 <li>
-                                    buecher.html
+                                    buecher.ejs
                                 </li>
                                 <li>
-                                    buecher-detail.html
+                                    buecher-detail.ejs
                                 </li>
                                 <li>
-                                    autoren.html
+                                    autoren.ejs
                                 </li>
                                 <li>
-                                    autor-detail.html
+                                    autor-detail.ejs
                                 </li>
                                 <li>
-                                    datasecurity.html
+                                    datasecurity.ejs
                                 </li>
                                 <li>
-                                    impressum.html
+                                    impressum.ejs
+                                </li>
+                                <li>
+                                    aside.ejs
                                 </li>
                                 <li>
                                     style.css
                                 </li>
                                 <li>
+                                    responsive.css
+                                </li>
+                                <li>
                                     script.js
                                 </li>
+                                <li>
+                                    controller.js
+                                </li>
+                                <li>
+                                    autoren.js
+                                </li>
+                                <li>
+                                    buecher.js
+                                </li>
+                                <li>
+                                    models.js
+                                </li>
+                                
                             </ul>
                         </td>
                     </tr>
@@ -580,29 +629,51 @@
                         <td>
                             <ul>
                                 <li>
-                                    ausleihen.html
+                                    ausleihen.ejs
                                 </li>
                                 <li>
-                                    ausleihen-detail.html
+                                    ausleihen-detail.ejs
                                 </li>
                                 <li>
-                                    profil.html
+                                    profil.ejs
                                 </li>
                                 <li>
-                                    reservieren.html
+                                    reservieren.ejs
                                 </li>
                                 <li>
-                                    reservierungen-detail.html
+                                    reservierungen-detail.ejs
                                 </li>
                                 <li>
-                                    reservierungen.html
+                                    reservierungen.ejs
+                                </li>
+                                <li>
+                                    404.ejs
+                                </li>
+                                <li>
+                                    footer.ejs
                                 </li>
                                 <li>
                                     style.css
                                 </li>
                                 <li>
+                                    responsive.css
+                                </li>
+                                <li>
                                     script.js
                                 </li>
+                                <li>
+                                    controller.js
+                                </li>
+                                <li>
+                                    ausleihen.js
+                                </li>
+                                <li>
+                                    reservierungen.js
+                                </li>
+                                <li>
+                                    models.js
+                                </li>
+                                
                             </ul>
                         </td>
                     </tr>

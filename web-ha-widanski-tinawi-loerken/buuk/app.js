@@ -1,3 +1,5 @@
+/* Jonas Lörken */
+
 /* Load dependencies */
 
 const open = require("open");
