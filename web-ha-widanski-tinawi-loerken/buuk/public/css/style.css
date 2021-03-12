@@ -25,7 +25,6 @@
     font-display: swap;
 }
 
-
 /* Reset Style */
 
 * {
@@ -59,14 +58,12 @@ h6 {
     margin: 0;
 }
 
-
 /* Global */
 
 body {
     font-family: 'Karla', sans-serif;
     font-size: 18px;
 }
-
 
 /* Font */
 
@@ -85,9 +82,6 @@ h2 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 }
-
-
-
 
 
 /* Simon Widanski */
@@ -145,11 +139,6 @@ h2 {
     color: #fff;
 }
 
-
-
-
-
-
 /* JONAS LÖRKEN */
 /* Response */
 
@@ -162,7 +151,6 @@ h2 {
     border-left: solid 10px #376e37;
     color: #fff;
 }
-
 
 /* Header */
 
@@ -388,7 +376,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background: #dc4c00;
 }
 
-
 /* Content */
 
 #content {
@@ -399,7 +386,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     width: 100%;
     margin: 0 auto;
 }
-
 
 /* Main */
 
@@ -419,9 +405,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 20px;
 
 }
-
-
-
 
 /* Simon Widanski */
 /* Table */
@@ -453,7 +436,7 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 
 .table tr .buch-name {
     max-width: 200px;
-    text-overflow: "...";
+    text-overflow: ellipsis;
     overflow: hidden;
 }
 
@@ -508,10 +491,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     color: white;
 }
 
-
-
-
-
 /* MOE TINAWI */
 
 .table td.status span.status__available {
@@ -533,10 +512,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     border-radius: 50%;
     background-color: red;
 }
-
-
-
-
 
 /* MOE TINAWI / SIMON WIDANSKI */
 /* Legend */
@@ -584,10 +559,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     background-color: rgb(255, 153, 0);
     border-radius: 50%;
 }
-
-
-
-
 
 /* Moe Tinawi */
 /* Aside */
@@ -659,7 +630,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 5px;
 }
 
-
 /* Headline */
 
 .headline {
@@ -667,9 +637,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     width: 100%;
     padding: 0 15px;
 }
-
-
-
 
 /* SIMON WIDANSKI */
 
@@ -789,10 +756,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-bottom: 20px;
 }
 
-
-
-
-
 /* MOE TINAWI */
 /* Buch Details */
 
@@ -849,7 +812,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     color: red;
     font-weight: bold;
 }
-
 
 /* Autor */
 
@@ -915,7 +877,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 #content main .autor-about .autor-socials .social-list li:last-child {
     margin-right: 0;
 }
-
 
 /* Autoren */
 
@@ -985,7 +946,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
 .autoren .autor .autor__link:hover i {
     margin-left: 10px;
 }
-
 
 /* Autor-Books */
 
@@ -1062,10 +1022,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-left: 10px;
 }
 
-
-
-
-
 /* SIMON WIDANSKI */
 /* Reservierungen */
 
@@ -1126,11 +1082,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     font-weight: bold;
     margin-bottom: 2px;
 }
-
-
-
-
-
 
 /* JONAS LÖRKEN */
 
@@ -1193,7 +1144,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     margin-left: 10px;
 }
 
-
 /* Location Image */
 
 .location-image {
@@ -1206,7 +1156,6 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     height: auto;
     display: block;
 }
-
 
 /* Location Detail */
 
@@ -1355,23 +1304,17 @@ header .header-bottom .header-bottom__inner .profile-link .profile-link__menu ul
     padding-bottom: 0;
 }
 
-
 /* Dashboard Intro */
 
 .dashboard-intro {
     padding-bottom: 80px;
 }
 
-
 /* Dashboard Reservations */
 
 .dashboard-reservations {
     padding-bottom: 80px;
 }
-
-
-
-
 
 /* SIMON WIDANSKI */
 /* Footer */

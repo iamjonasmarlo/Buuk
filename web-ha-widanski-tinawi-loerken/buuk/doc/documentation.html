@@ -49,8 +49,8 @@
                         </li>
                     </ol>
                 </li>
-                <li><a href="#autoren">Start der Anwendung</a></li>
-                <li><a href="#start">Autorenschaft der Quellcode-Dateien</a></li>
+                <li><a href="#start">Start der Anwendung</a></li>
+                <li><a href="#autoren">Autorenschaft der Quellcode-Dateien</a></li>
             </ol>
         </section>
         <section id="anwendungsbeschreibung">
@@ -460,7 +460,7 @@
                     </p>
                     <p>
                         Die Präsentationsschicht ist zuständig für die Darstellung der Seiten. Die Templates wurde
-                        mithilfe der Template Engine EJS (https://ejs.co/) realisiert. So lassen sich dynamische Inhalte
+                        mithilfe der Template Engine EJS (<a href="https://ejs.co/" target="_blank">Website</a>) realisiert. So lassen sich dynamische Inhalte
                         einfacher darstellen und die Möglichkeit des Einbindens von Templates
                         (in Fall der App ist dies der Header, der Footer und die Sidebar) erhöht die Wartbarkeit enorm.
                     </p>
@@ -628,9 +628,9 @@
                                 <td>Anzeige der Detailseite einer Ausleihe</td>
                             </tr>
                             <tr>
-                                <td>Fall Seite nicht vorhanden</td>
-                                <td>USE</td>
-                                <td>404 anzeigen</td>
+                                <td>Seite nicht gefunden</td>
+                                <td>GET</td>
+                                <td>Ausgabe der 404-Seite</td>
                             </tr>
                         </tbody>
                     </table>
@@ -640,18 +640,15 @@
         <section id="start">
             <h2>4. Start der Anwendung (Jonas Lörken)</h2>
             <p>
-                Die App benötigt die JavaScript-Laufzeitumgebung „Node.js“ (https://nodejs.org/en/). Diese bildet die
+                Die App benötigt die JavaScript-Laufzeitumgebung „Node.js“ (<a href="https://nodejs.org/en/" target="_blank">Zur Website</a>). Diese bildet die
                 Basis für den Webserver und die Applikation. Zum Start der Anwendung man das Verzeichnis über die
                 Konsole mithilfe des cd-Befehls („change directory“)
-                aufrufen (Oder in VS-Code "rechtsklick" auf die app.s und auf "open integrated terminal" gehen).
-                Anschließend wird über den Befehl „node app.js“ die Anwendung gestartet. Das Node.js-Modul „open“ sorgt
-                für ein automatisches Öffnen Root-URL im Standard-System-Browser. Alternativ kann die Applikation auch
-                einfach über die URL
-                http://localhost:8040 aufgerufen werden.
+                aufrufen. Anschließend wird über den Befehl „node app.js“ die Anwendung gestartet. Das Node.js-Modul „open“ sorgt
+                für ein automatisches Öffnen der Root-URL im Standard-System-Browser. Alternativ kann die Applikation, nach dem Start mithilfe von Node.js, auch
+                einfach über die URL http://localhost:8040 aufgerufen werden.
             </p>
             <p>
-                <strong style="color: red;">Wichtig</strong> <br>Für die beste User Experience die Anwendung im Firefox laufen lassen, da einige CSS
-                Befehle, wie "text-overflow" trotz kompatibiliät zu allen Browsern, nicht funktionieren.
+                <strong>Die Applikation für die Browser Firefox und Chrome optimiert.</strong>
             </p>
         </section>
         <section id="autoren">
